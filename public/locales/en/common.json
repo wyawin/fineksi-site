@@ -1,0 +1,208 @@
+{
+  "site": {
+    "title": "Fineksi - AI-Powered Document Automation for Financial Institutions",
+    "description": "Transform your credit process with advanced AI document automation, fraud detection, and cognitive analysis. Trusted by banks, multifinance, and P2P lending platforms.",
+    "name": "Fineksi"
+  },
+  "nav": {
+    "features": "AI Features",
+    "benefits": "Benefits", 
+    "industries": "Industries",
+    "about": "About Us",
+    "demo": "Request Demo",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service"
+  },
+  "hero": {
+    "badge": "Next-Gen AI Technology",
+    "title": "Transform Your Credit Process with AI Intelligence",
+    "subtitle": "Harness the power of advanced AI to streamline document processing, detect tampering with neural networks, and accelerate credit decisions with our cognitive automation platform.",
+    "cta_primary": "Experience AI Power",
+    "cta_secondary": "Watch AI Demo",
+    "stat_label": "AI Processing Speed",
+    "stat_value": "10x Faster"
+  },
+  "features": {
+    "badge": "AI-Powered Features",
+    "title": "Advanced AI Capabilities for Modern Finance",
+    "subtitle": "Our neural network-powered platform combines cutting-edge machine learning with deep financial expertise to revolutionize your credit operations with unprecedented accuracy.",
+    "ai_document": {
+      "title": "AI Document Processing",
+      "description": "Neural networks automatically extract, classify, and process financial documents with 99.8% accuracy. Advanced OCR and NLP handle any document format."
+    },
+    "fraud_detection": {
+      "title": "AI Fraud Detection", 
+      "description": "Deep learning algorithms analyze pixel-level patterns to detect document manipulation, alterations, and sophisticated forgeries with 99.9% accuracy."
+    },
+    "cognitive_analysis": {
+      "title": "Cognitive Credit Analysis",
+      "description": "Advanced AI models analyze 500+ financial indicators to provide intelligent credit risk assessments and predictive insights for optimal decision-making."
+    },
+    "lightning_fast": {
+      "title": "Lightning-Fast AI",
+      "description": "GPU-accelerated processing handles complete loan applications in seconds. Parallel AI processing reduces manual work by 95%."
+    },
+    "ai_secured": {
+      "title": "AI-Secured Infrastructure", 
+      "description": "Military-grade encryption with AI-powered threat detection, SOC 2 compliance, and zero-trust architecture for maximum security."
+    },
+    "predictive": {
+      "title": "Predictive Analytics",
+      "description": "Real-time AI dashboards with predictive modeling, anomaly detection, and intelligent forecasting for proactive decision-making."
+    }
+  },
+  "benefits": {
+    "badge": "AI-Driven Results",
+    "title": "Measurable AI Impact on Your Business",
+    "reduce_time": {
+      "title": "Reduce Processing Time by 95%",
+      "description": "AI transforms weeks of manual review into seconds of automated analysis."
+    },
+    "improve_fraud": {
+      "title": "Improve Fraud Detection by 99.9%", 
+      "description": "Neural networks catch sophisticated fraud attempts invisible to human review."
+    },
+    "increase_approval": {
+      "title": "Increase Approval Rates by 40%",
+      "description": "AI discovers creditworthy applicants missed by traditional scoring methods."
+    },
+    "scale_infinitely": {
+      "title": "Scale Infinitely with AI",
+      "description": "Handle 100x more applications with AI agents working 24/7."
+    }
+  },
+  "workflow": {
+    "badge": "AI Workflow",
+    "title": "How Our AI Works",
+    "subtitle": "Simple integration, revolutionary AI results. Deploy advanced neural networks in hours, not months.",
+    "ingestion": {
+      "title": "AI Document Ingestion",
+      "description": "Upload documents through our secure API. Advanced OCR and computer vision instantly digitize and structure any financial document format."
+    },
+    "analysis": {
+      "title": "Neural Network Analysis", 
+      "description": "Deep learning models extract data, verify authenticity, detect tampering, and perform comprehensive financial analysis with superhuman accuracy."
+    },
+    "insights": {
+      "title": "Intelligent Insights",
+      "description": "Receive AI-generated reports with credit recommendations, risk scores, predictive analytics, and actionable insights for instant decisions."
+    }
+  },
+  "stats": {
+    "accuracy": "AI Accuracy Rate",
+    "processing": "Processing Time", 
+    "data_points": "AI Data Points",
+    "documents": "Documents Trained"
+  },
+  "industries": {
+    "badge": "AI-Powered Solutions",
+    "title": "Trusted by Leading Financial Institutions",
+    "subtitle": "Our AI platform adapts to various financial sectors with specialized neural network models.",
+    "banks": {
+      "title": "Traditional Banks",
+      "description": "AI-powered mortgage processing, personal loans, and commercial lending with neural network document verification and predictive risk assessment.",
+      "features": ["AI Mortgage Processing", "Neural Loan Underwriting", "Intelligent Banking Services"]
+    },
+    "multifinance": {
+      "title": "Multifinance",
+      "description": "Accelerate auto loans, equipment financing, and consumer credit decisions with deep learning document analysis and predictive modeling.",
+      "features": ["AI Auto Loan Processing", "Smart Equipment Financing", "Predictive Consumer Credit"]
+    },
+    "p2p": {
+      "title": "P2P Lending",
+      "description": "Scale your platform with AI-powered borrower verification and neural network credit scoring for intelligent marketplace lending.",
+      "features": ["AI Borrower Verification", "Neural Credit Scoring", "Intelligent Portfolio Management"]
+    }
+  },
+  "contact": {
+    "badge": "Experience AI Revolution",
+    "title": "Ready to Transform Your Credit Process with AI?",
+    "subtitle": "Join leading financial institutions already using Fineksi to process applications with superhuman speed, accuracy, and security.",
+    "form": {
+      "title": "Experience AI Demo",
+      "name": "Full Name",
+      "email": "Work Email", 
+      "company": "Company Name",
+      "role": "Select Your Role",
+      "message": "Tell us about your AI automation needs...",
+      "submit": "Schedule AI Demo",
+      "roles": {
+        "cto": "CTO",
+        "cio": "CIO", 
+        "head_lending": "Head of Lending",
+        "risk_manager": "Risk Manager",
+        "operations": "Operations Director",
+        "other": "Other"
+      }
+    }
+  },
+  "footer": {
+    "description": "Empowering financial institutions with next-generation AI, neural networks, and cognitive automation for superhuman lending decisions.",
+    "security": "AI-Secured & SOC 2",
+    "security_desc": "Military-Grade Security",
+    "platform": "AI Platform",
+    "company": "Company",
+    "links": {
+      "pricing": "AI Pricing",
+      "api_docs": "Neural API Docs", 
+      "about_team": "About AI Team",
+      "contact": "Contact",
+      "privacy": "AI Privacy Policy"
+    },
+    "copyright": "Powered by Advanced Neural Networks. All rights reserved."
+  },
+  "about": {
+    "hero": {
+      "badge": "About Fineksi",
+      "title": "Pioneering the Future of AI-Powered Finance",
+      "subtitle": "We're revolutionizing financial services with cutting-edge artificial intelligence, neural networks, and cognitive automation to create superhuman lending capabilities."
+    },
+    "mission": {
+      "badge": "Our AI Mission",
+      "title": "Democratizing AI for Financial Excellence",
+      "description1": "At Fineksi, we believe that every financial institution deserves access to world-class artificial intelligence. Our mission is to transform the lending landscape through advanced neural networks, cognitive automation, and predictive analytics.",
+      "description2": "We're not just building software – we're creating an AI-powered ecosystem that empowers banks, multifinance companies, and P2P platforms to make faster, more accurate, and more inclusive lending decisions."
+    },
+    "values": {
+      "badge": "Our AI Values",
+      "title": "Built on Trust, Powered by Innovation",
+      "subtitle": "Our core values guide every AI model we train and every solution we deliver.",
+      "excellence": {
+        "title": "AI Excellence",
+        "description": "We push the boundaries of what's possible with artificial intelligence, constantly innovating to deliver superhuman performance in financial analysis."
+      },
+      "transparency": {
+        "title": "Transparency", 
+        "description": "Our AI models are explainable and auditable. We believe in transparent algorithms that financial institutions can trust and regulators can understand."
+      },
+      "security": {
+        "title": "Security First",
+        "description": "Every AI system we build incorporates military-grade security, ensuring your data and your customers' information remain protected at all times."
+      },
+      "success": {
+        "title": "Customer Success",
+        "description": "Your success is our success. We're committed to delivering AI solutions that drive measurable business outcomes and competitive advantages."
+      },
+      "learning": {
+        "title": "Continuous Learning",
+        "description": "Like our AI models, we never stop learning. We continuously improve our technology and adapt to the evolving needs of the financial industry."
+      },
+      "ethical": {
+        "title": "Ethical AI",
+        "description": "We're committed to responsible AI development, ensuring our models are fair, unbiased, and promote financial inclusion for all communities."
+      }
+    },
+    "team": {
+      "badge": "Our AI Team",
+      "title": "World-Class AI Experts",
+      "subtitle": "Our team combines decades of experience in artificial intelligence, machine learning, and financial technology to deliver cutting-edge solutions."
+    },
+    "cta": {
+      "badge": "Join the AI Revolution",
+      "title": "Ready to Experience the Future of Finance?",
+      "subtitle": "Discover how Fineksi can transform your lending operations with cutting-edge artificial intelligence and neural network technology.",
+      "demo": "Schedule AI Demo",
+      "features": "Explore AI Features"
+    }
+  }
+}

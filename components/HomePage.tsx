@@ -1,0 +1,600 @@
+'use client'
+
+import React, { useState } from 'react'
+import Image from 'next/image'
+import { 
+  Shield, 
+  Zap, 
+  FileCheck, 
+  Brain, 
+  ChevronRight, 
+  CheckCircle, 
+  ArrowRight,
+  Building2,
+  CreditCard,
+  TrendingUp,
+  Clock,
+  Users,
+  Lock,
+  Eye,
+  BarChart3,
+  Cpu,
+  Network,
+  Sparkles,
+  Bot,
+  Layers,
+  Scan
+} from 'lucide-react'
+
+// Import translations directly
+import enTranslations from '../public/locales/en/common.json'
+import idTranslations from '../public/locales/id/common.json'
+
+const translations = {
+  en: enTranslations,
+  id: idTranslations
+}
+
+const HomePage = ({ locale = 'en' }: { locale?: string }) => {
+  const t = (key: string) => {
+    const keys = key.split('.')
+    let value: any = translations[locale as keyof typeof translations] || translations.en
+    
+    for (const k of keys) {
+      value = value?.[k]
+    }
+    
+    return value || key
+  }
+  
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    company: '',
+    role: '',
+    message: ''
+  })
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    })
+  }
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault()
+    console.log('Form submitted:', formData)
+    // Handle form submission logic here
+  }
+
+  return (
+    <div className="min-h-screen bg-white">
+      {/* Hero Section */}
+      <section className="relative bg-gradient-to-br from-blue-50 via-white to-yellow-50 pt-16 pb-20 overflow-hidden" aria-labelledby="hero-heading">
+        {/* Animated Background */}
+        <div className="absolute inset-0" aria-hidden="true">
+          <div className="absolute top-0 left-1/4 w-96 h-96 bg-[#1f51fe]/5 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-[#fad85a]/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full h-full opacity-5">
+            <div className="grid grid-cols-12 gap-4 h-full">
+              {Array.from({ length: 144 }).map((_, i) => (
+                <div key={i} className="bg-[#1f51fe] rounded-full w-1 h-1 animate-pulse" style={{ animationDelay: `${i * 50}ms` }}></div>
+              ))}
+            </div>
+          </div>
+        </div>
+        
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="lg:grid lg:grid-cols-12 lg:gap-8 items-center">
+            <div className="lg:col-span-6 relative z-10">
+              <div className="text-center lg:text-left">
+                <div className="flex items-center justify-center lg:justify-start mb-4">
+                  <Sparkles className="h-6 w-6 text-[#1f51fe] mr-2 animate-pulse" aria-hidden="true" />
+                  <span className="text-[#1f51fe] font-semibold text-sm uppercase tracking-wider">{t('hero.badge')}</span>
+                </div>
+                <h1 id="hero-heading" className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+                  {t('hero.title')}
+                </h1>
+                <p className="text-xl text-gray-600 mb-8 leading-relaxed">
+                  {t('hero.subtitle')}
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                  <a 
+                    href="#contact" 
+                    className="bg-gradient-to-r from-[#1f51fe] to-[#072ba4] text-white px-8 py-4 rounded-lg text-lg font-semibold hover:shadow-lg hover:shadow-[#1f51fe]/25 transition-all duration-200 transform hover:scale-105 flex items-center justify-center group"
+                    aria-label={`${t('hero.cta_primary')} - Request Demo`}
+                  >
+                    {t('hero.cta_primary')}
+                    <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" aria-hidden="true" />
+                  </a>
+                  <a 
+                    href="#demo" 
+                    className="border-2 border-[#1f51fe]/30 text-[#1f51fe] px-8 py-4 rounded-lg text-lg font-semibold hover:border-[#1f51fe] hover:bg-[#1f51fe]/5 transition-all duration-200 flex items-center justify-center group"
+                    aria-label={`${t('hero.cta_secondary')} Video`}
+                  >
+                    {t('hero.cta_secondary')}
+                    <Eye className="ml-2 h-5 w-5 group-hover:scale-110 transition-transform" aria-hidden="true" />
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div className="lg:col-span-6 mt-12 lg:mt-0 relative z-10">
+              <div className="relative">
+                <div className="absolute inset-0 bg-gradient-to-r from-[#1f51fe]/10 to-[#fad85a]/10 rounded-2xl blur-xl" aria-hidden="true"></div>
+                <Image 
+                  src="https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=800" 
+                  alt="Financial technology automation"
+                  className="relative rounded-2xl shadow-2xl border border-[#1f51fe]/20"
+                  width={800}
+                  height={600}
+                  priority
+                />
+                <div className="absolute -bottom-6 -left-6 bg-white/90 backdrop-blur-md p-6 rounded-xl shadow-xl border border-[#1f51fe]/20">
+                  <div className="flex items-center">
+                    <div className="bg-gradient-to-r from-[#1f51fe]/10 to-[#fad85a]/10 p-3 rounded-lg mr-4">
+                      <Bot className="h-6 w-6 text-[#1f51fe]" aria-hidden="true" />
+                    </div>
+                    <div>
+                      <p className="text-sm text-gray-500">{t('hero.stat_label')}</p>
+                      <p className="text-2xl font-bold text-gray-900">{t('hero.stat_value')}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section id="features" className="py-20 bg-white relative" aria-labelledby="features-heading">
+        <div className="absolute inset-0 bg-gradient-to-b from-gray-50/50 via-white to-gray-50/50" aria-hidden="true"></div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16 relative z-10">
+            <div className="flex items-center justify-center mb-4">
+              <Cpu className="h-8 w-8 text-[#1f51fe] mr-3 animate-pulse" aria-hidden="true" />
+              <span className="text-[#1f51fe] font-semibold text-sm uppercase tracking-wider">{t('features.badge')}</span>
+            </div>
+            <h2 id="features-heading" className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">{t('features.title')}</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              {t('features.subtitle')}
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 relative z-10">
+            <article className="bg-white p-8 rounded-2xl border border-gray-200 hover:border-[#1f51fe]/30 hover:shadow-lg hover:shadow-[#1f51fe]/10 transition-all duration-300 group">
+              <div className="bg-gradient-to-r from-[#1f51fe]/10 to-blue-500/10 p-3 rounded-lg w-fit mb-6 group-hover:scale-110 transition-transform">
+                <FileCheck className="h-8 w-8 text-[#1f51fe]" aria-hidden="true" />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">{t('features.ai_document.title')}</h3>
+              <p className="text-gray-600 leading-relaxed">
+                {t('features.ai_document.description')}
+              </p>
+            </article>
+
+            <article className="bg-white p-8 rounded-2xl border border-gray-200 hover:border-[#072ba4]/30 hover:shadow-lg hover:shadow-[#072ba4]/10 transition-all duration-300 group">
+              <div className="bg-gradient-to-r from-[#072ba4]/10 to-red-500/10 p-3 rounded-lg w-fit mb-6 group-hover:scale-110 transition-transform">
+                <Shield className="h-8 w-8 text-[#072ba4]" aria-hidden="true" />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">{t('features.fraud_detection.title')}</h3>
+              <p className="text-gray-600 leading-relaxed">
+                {t('features.fraud_detection.description')}
+              </p>
+            </article>
+
+            <article className="bg-white p-8 rounded-2xl border border-gray-200 hover:border-[#fad85a]/50 hover:shadow-lg hover:shadow-[#fad85a]/20 transition-all duration-300 group">
+              <div className="bg-gradient-to-r from-[#fad85a]/20 to-yellow-500/20 p-3 rounded-lg w-fit mb-6 group-hover:scale-110 transition-transform">
+                <Brain className="h-8 w-8 text-[#f59e0b] animate-pulse" aria-hidden="true" />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">{t('features.cognitive_analysis.title')}</h3>
+              <p className="text-gray-600 leading-relaxed">
+                {t('features.cognitive_analysis.description')}
+              </p>
+            </article>
+
+            <article className="bg-white p-8 rounded-2xl border border-gray-200 hover:border-green-500/30 hover:shadow-lg hover:shadow-green-500/10 transition-all duration-300 group">
+              <div className="bg-gradient-to-r from-green-500/10 to-teal-500/10 p-3 rounded-lg w-fit mb-6 group-hover:scale-110 transition-transform">
+                <Zap className="h-8 w-8 text-green-600" aria-hidden="true" />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">{t('features.lightning_fast.title')}</h3>
+              <p className="text-gray-600 leading-relaxed">
+                {t('features.lightning_fast.description')}
+              </p>
+            </article>
+
+            <article className="bg-white p-8 rounded-2xl border border-gray-200 hover:border-indigo-500/30 hover:shadow-lg hover:shadow-indigo-500/10 transition-all duration-300 group">
+              <div className="bg-gradient-to-r from-indigo-500/10 to-purple-500/10 p-3 rounded-lg w-fit mb-6 group-hover:scale-110 transition-transform">
+                <Lock className="h-8 w-8 text-indigo-600" aria-hidden="true" />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">{t('features.ai_secured.title')}</h3>
+              <p className="text-gray-600 leading-relaxed">
+                {t('features.ai_secured.description')}
+              </p>
+            </article>
+
+            <article className="bg-white p-8 rounded-2xl border border-gray-200 hover:border-orange-500/30 hover:shadow-lg hover:shadow-orange-500/10 transition-all duration-300 group">
+              <div className="bg-gradient-to-r from-orange-500/10 to-red-500/10 p-3 rounded-lg w-fit mb-6 group-hover:scale-110 transition-transform">
+                <BarChart3 className="h-8 w-8 text-orange-600" aria-hidden="true" />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">{t('features.predictive.title')}</h3>
+              <p className="text-gray-600 leading-relaxed">
+                {t('features.predictive.description')}
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits Section */}
+      <section id="benefits" className="py-20 bg-gray-50 relative" aria-labelledby="benefits-heading">
+        <div className="absolute inset-0" aria-hidden="true">
+          <div className="absolute top-0 right-0 w-96 h-96 bg-[#1f51fe]/5 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#fad85a]/10 rounded-full blur-3xl"></div>
+        </div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="lg:grid lg:grid-cols-2 lg:gap-16 items-center relative z-10">
+            <div>
+              <div className="flex items-center mb-4">
+                <Network className="h-6 w-6 text-[#1f51fe] mr-2 animate-pulse" aria-hidden="true" />
+                <span className="text-[#1f51fe] font-semibold text-sm uppercase tracking-wider">{t('benefits.badge')}</span>
+              </div>
+              <h2 id="benefits-heading" className="text-3xl md:text-4xl font-bold text-gray-900 mb-8">{t('benefits.title')}</h2>
+              <div className="space-y-6">
+                <div className="flex items-start">
+                  <div className="bg-gradient-to-r from-green-500/10 to-teal-500/10 p-2 rounded-lg mr-4 mt-1">
+                    <Clock className="h-5 w-5 text-green-600" aria-hidden="true" />
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-semibold text-gray-900 mb-2">{t('benefits.reduce_time.title')}</h3>
+                    <p className="text-gray-600">{t('benefits.reduce_time.description')}</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start">
+                  <div className="bg-gradient-to-r from-[#072ba4]/10 to-red-500/10 p-2 rounded-lg mr-4 mt-1">
+                    <Shield className="h-5 w-5 text-[#072ba4]" aria-hidden="true" />
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-semibold text-gray-900 mb-2">{t('benefits.improve_fraud.title')}</h3>
+                    <p className="text-gray-600">{t('benefits.improve_fraud.description')}</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start">
+                  <div className="bg-gradient-to-r from-[#1f51fe]/10 to-blue-500/10 p-2 rounded-lg mr-4 mt-1">
+                    <TrendingUp className="h-5 w-5 text-[#1f51fe]" aria-hidden="true" />
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-semibold text-gray-900 mb-2">{t('benefits.increase_approval.title')}</h3>
+                    <p className="text-gray-600">{t('benefits.increase_approval.description')}</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start">
+                  <div className="bg-gradient-to-r from-[#fad85a]/20 to-yellow-500/20 p-2 rounded-lg mr-4 mt-1">
+                    <Bot className="h-5 w-5 text-[#f59e0b]" aria-hidden="true" />
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-semibold text-gray-900 mb-2">{t('benefits.scale_infinitely.title')}</h3>
+                    <p className="text-gray-600">{t('benefits.scale_infinitely.description')}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="mt-12 lg:mt-0">
+              <div className="relative">
+                <div className="absolute inset-0 bg-gradient-to-r from-[#1f51fe]/10 to-[#fad85a]/10 rounded-2xl blur-xl" aria-hidden="true"></div>
+                <Image 
+                  src="https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=800" 
+                  alt="Business growth analytics dashboard showing improved performance metrics and ROI from AI implementation"
+                  className="relative rounded-2xl shadow-xl border border-[#1f51fe]/20"
+                  width={800}
+                  height={600}
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* How It Works */}
+      <section className="py-20 bg-white relative" aria-labelledby="how-it-works-heading">
+        <div className="absolute inset-0 bg-gradient-to-b from-gray-50/50 via-white to-gray-50/50" aria-hidden="true"></div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16 relative z-10">
+            <div className="flex items-center justify-center mb-4">
+              <Layers className="h-6 w-6 text-[#1f51fe] mr-2 animate-pulse" aria-hidden="true" />
+              <span className="text-[#1f51fe] font-semibold text-sm uppercase tracking-wider">{t('workflow.badge')}</span>
+            </div>
+            <h2 id="how-it-works-heading" className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">{t('workflow.title')}</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              {t('workflow.subtitle')}
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8 relative z-10">
+            <div className="text-center group" role="article">
+              <div className="relative">
+                <div className="bg-gradient-to-r from-[#1f51fe] to-[#072ba4] text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6 group-hover:scale-110 transition-transform duration-200 shadow-lg shadow-[#1f51fe]/25">
+                  <Scan className="h-8 w-8" aria-hidden="true" />
+                </div>
+                <div className="absolute inset-0 w-16 h-16 rounded-full bg-gradient-to-r from-[#1f51fe] to-[#072ba4] mx-auto animate-ping opacity-20" aria-hidden="true"></div>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">{t('workflow.ingestion.title')}</h3>
+              <p className="text-gray-600">
+                {t('workflow.ingestion.description')}
+              </p>
+            </div>
+
+            <div className="text-center group" role="article">
+              <div className="relative">
+                <div className="bg-gradient-to-r from-[#fad85a] to-[#f59e0b] text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6 group-hover:scale-110 transition-transform duration-200 shadow-lg shadow-[#fad85a]/25">
+                  <Brain className="h-8 w-8 animate-pulse" aria-hidden="true" />
+                </div>
+                <div className="absolute inset-0 w-16 h-16 rounded-full bg-gradient-to-r from-[#fad85a] to-[#f59e0b] mx-auto animate-ping opacity-20 delay-300" aria-hidden="true"></div>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">{t('workflow.analysis.title')}</h3>
+              <p className="text-gray-600">
+                {t('workflow.analysis.description')}
+              </p>
+            </div>
+
+            <div className="text-center group" role="article">
+              <div className="relative">
+                <div className="bg-gradient-to-r from-green-500 to-teal-600 text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6 group-hover:scale-110 transition-transform duration-200 shadow-lg shadow-green-500/25">
+                  <Sparkles className="h-8 w-8" aria-hidden="true" />
+                </div>
+                <div className="absolute inset-0 w-16 h-16 rounded-full bg-gradient-to-r from-green-500 to-teal-600 mx-auto animate-ping opacity-20 delay-700" aria-hidden="true"></div>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">{t('workflow.insights.title')}</h3>
+              <p className="text-gray-600">
+                {t('workflow.insights.description')}
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* AI Stats Section */}
+      <section className="py-16 bg-gradient-to-r from-[#1f51fe]/5 via-[#fad85a]/5 to-[#1f51fe]/5 border-y border-[#1f51fe]/10" aria-labelledby="stats-heading">
+        <h2 id="stats-heading" className="sr-only">AI Performance Statistics</h2>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            <div className="group">
+              <div className="text-4xl font-bold bg-gradient-to-r from-[#1f51fe] to-[#072ba4] bg-clip-text text-transparent mb-2 group-hover:scale-110 transition-transform">
+                99.8%
+              </div>
+              <div className="text-gray-600 text-sm">{t('stats.accuracy')}</div>
+            </div>
+            <div className="group">
+              <div className="text-4xl font-bold bg-gradient-to-r from-[#fad85a] to-[#f59e0b] bg-clip-text text-transparent mb-2 group-hover:scale-110 transition-transform">
+                &lt;3s
+              </div>
+              <div className="text-gray-600 text-sm">{t('stats.processing')}</div>
+            </div>
+            <div className="group">
+              <div className="text-4xl font-bold bg-gradient-to-r from-green-500 to-teal-500 bg-clip-text text-transparent mb-2 group-hover:scale-110 transition-transform">
+                500+
+              </div>
+              <div className="text-gray-600 text-sm">{t('stats.data_points')}</div>
+            </div>
+            <div className="group">
+              <div className="text-4xl font-bold bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent mb-2 group-hover:scale-110 transition-transform">
+                1B+
+              </div>
+              <div className="text-gray-600 text-sm">{t('stats.documents')}</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Industries Section */}
+      <section id="industries" className="py-20 bg-gray-50 relative" aria-labelledby="industries-heading">
+        <div className="absolute inset-0" aria-hidden="true">
+          <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-[#1f51fe]/5 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-[#fad85a]/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        </div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16 relative z-10">
+            <div className="flex items-center justify-center mb-4">
+              <Building2 className="h-6 w-6 text-[#1f51fe] mr-2" aria-hidden="true" />
+              <span className="text-[#1f51fe] font-semibold text-sm uppercase tracking-wider">{t('industries.badge')}</span>
+            </div>
+            <h2 id="industries-heading" className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">{t('industries.title')}</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              {t('industries.subtitle')}
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8 relative z-10">
+            <article className="bg-white p-8 rounded-2xl border border-gray-200 hover:border-[#1f51fe]/30 shadow-lg hover:shadow-[#1f51fe]/10 transition-all duration-300 group">
+              <div className="bg-gradient-to-r from-[#1f51fe]/10 to-blue-500/10 p-4 rounded-lg w-fit mb-6 group-hover:scale-110 transition-transform">
+                <Building2 className="h-10 w-10 text-[#1f51fe]" aria-hidden="true" />
+              </div>
+              <h3 className="text-2xl font-semibold text-gray-900 mb-4">{t('industries.banks.title')}</h3>
+              <p className="text-gray-600 mb-6">
+                {t('industries.banks.description')}
+              </p>
+              <ul className="space-y-2">
+                {t('industries.banks.features').map((feature: string, index: number) => (
+                  <li key={index} className="flex items-center text-sm text-gray-600">
+                    <CheckCircle className="h-4 w-4 text-[#1f51fe] mr-2" aria-hidden="true" />
+                    {feature}
+                  </li>
+                ))}
+              </ul>
+            </article>
+
+            <article className="bg-white p-8 rounded-2xl border border-gray-200 hover:border-[#072ba4]/30 shadow-lg hover:shadow-[#072ba4]/10 transition-all duration-300 group">
+              <div className="bg-gradient-to-r from-[#072ba4]/10 to-purple-500/10 p-4 rounded-lg w-fit mb-6 group-hover:scale-110 transition-transform">
+                <CreditCard className="h-10 w-10 text-[#072ba4]" aria-hidden="true" />
+              </div>
+              <h3 className="text-2xl font-semibold text-gray-900 mb-4">{t('industries.multifinance.title')}</h3>
+              <p className="text-gray-600 mb-6">
+                {t('industries.multifinance.description')}
+              </p>
+              <ul className="space-y-2">
+                {t('industries.multifinance.features').map((feature: string, index: number) => (
+                  <li key={index} className="flex items-center text-sm text-gray-600">
+                    <CheckCircle className="h-4 w-4 text-[#072ba4] mr-2" aria-hidden="true" />
+                    {feature}
+                  </li>
+                ))}
+              </ul>
+            </article>
+
+            <article className="bg-white p-8 rounded-2xl border border-gray-200 hover:border-green-500/30 shadow-lg hover:shadow-green-500/10 transition-all duration-300 group">
+              <div className="bg-gradient-to-r from-green-500/10 to-teal-500/10 p-4 rounded-lg w-fit mb-6 group-hover:scale-110 transition-transform">
+                <TrendingUp className="h-10 w-10 text-green-600" aria-hidden="true" />
+              </div>
+              <h3 className="text-2xl font-semibold text-gray-900 mb-4">{t('industries.p2p.title')}</h3>
+              <p className="text-gray-600 mb-6">
+                {t('industries.p2p.description')}
+              </p>
+              <ul className="space-y-2">
+                {t('industries.p2p.features').map((feature: string, index: number) => (
+                  <li key={index} className="flex items-center text-sm text-gray-600">
+                    <CheckCircle className="h-4 w-4 text-green-600 mr-2" aria-hidden="true" />
+                    {feature}
+                  </li>
+                ))}
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section id="contact" className="py-20 bg-gradient-to-r from-[#1f51fe]/5 via-[#fad85a]/5 to-[#1f51fe]/5 relative overflow-hidden" aria-labelledby="contact-heading">
+        <div className="absolute inset-0" aria-hidden="true">
+          <div className="absolute top-0 left-1/4 w-96 h-96 bg-[#1f51fe]/10 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-[#fad85a]/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        </div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="lg:grid lg:grid-cols-2 lg:gap-16 items-center relative z-10">
+            <div className="text-gray-900">
+              <div className="flex items-center mb-4">
+                <Sparkles className="h-6 w-6 text-[#1f51fe] mr-2 animate-pulse" aria-hidden="true" />
+                <span className="text-[#1f51fe] font-semibold text-sm uppercase tracking-wider">{t('contact.badge')}</span>
+              </div>
+              <h2 id="contact-heading" className="text-3xl md:text-4xl font-bold mb-6">{t('contact.title')}</h2>
+              <p className="text-xl text-gray-600 mb-8">
+                {t('contact.subtitle')}
+              </p>
+              <div className="flex items-center space-x-6">
+                <div className="text-center">
+                  <div className="text-3xl font-bold bg-gradient-to-r from-[#1f51fe] to-[#072ba4] bg-clip-text text-transparent">99.8%</div>
+                  <div className="text-gray-500 text-sm">{t('stats.accuracy')}</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold bg-gradient-to-r from-[#fad85a] to-[#f59e0b] bg-clip-text text-transparent">100x</div>
+                  <div className="text-gray-500 text-sm">{t('stats.processing')}</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold bg-gradient-to-r from-green-500 to-teal-500 bg-clip-text text-transparent">95%</div>
+                  <div className="text-gray-500 text-sm">Cost Reduction</div>
+                </div>
+              </div>
+            </div>
+            
+            <div className="mt-12 lg:mt-0">
+              <div className="bg-white/80 backdrop-blur-md p-8 rounded-2xl shadow-xl border border-[#1f51fe]/20">
+                <div className="flex items-center mb-6">
+                  <Bot className="h-6 w-6 text-[#1f51fe] mr-2 animate-pulse" aria-hidden="true" />
+                  <h3 className="text-2xl font-bold text-gray-900">{t('contact.form.title')}</h3>
+                </div>
+                <form onSubmit={handleSubmit} className="space-y-4" noValidate>
+                  <div>
+                    <label htmlFor="name" className="sr-only">{t('contact.form.name')}</label>
+                    <input
+                      id="name"
+                      type="text"
+                      name="name"
+                      value={formData.name}
+                      onChange={handleInputChange}
+                      placeholder={t('contact.form.name')}
+                      className="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1f51fe] focus:border-transparent text-gray-900 placeholder-gray-500"
+                      autoComplete="name"
+                      required
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="email" className="sr-only">{t('contact.form.email')}</label>
+                    <input
+                      id="email"
+                      type="email"
+                      name="email"
+                      value={formData.email}
+                      onChange={handleInputChange}
+                      placeholder={t('contact.form.email')}
+                      className="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1f51fe] focus:border-transparent text-gray-900 placeholder-gray-500"
+                      autoComplete="email"
+                      required
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="company" className="sr-only">{t('contact.form.company')}</label>
+                    <input
+                      id="company"
+                      type="text"
+                      name="company"
+                      value={formData.company}
+                      onChange={handleInputChange}
+                      placeholder={t('contact.form.company')}
+                      className="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1f51fe] focus:border-transparent text-gray-900 placeholder-gray-500"
+                      autoComplete="organization"
+                      required
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="role" className="sr-only">{t('contact.form.role')}</label>
+                    <select
+                      id="role"
+                      name="role"
+                      value={formData.role}
+                      onChange={handleInputChange}
+                      className="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1f51fe] focus:border-transparent text-gray-900"
+                      autoComplete="organization-title"
+                      required
+                    >
+                      <option value="">{t('contact.form.role')}</option>
+                      <option value="cto">{t('contact.form.roles.cto')}</option>
+                      <option value="cio">{t('contact.form.roles.cio')}</option>
+                      <option value="head-lending">{t('contact.form.roles.head_lending')}</option>
+                      <option value="risk-manager">{t('contact.form.roles.risk_manager')}</option>
+                      <option value="operations">{t('contact.form.roles.operations')}</option>
+                      <option value="other">{t('contact.form.roles.other')}</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label htmlFor="message" className="sr-only">{t('contact.form.message')}</label>
+                    <textarea
+                      id="message"
+                      name="message"
+                      value={formData.message}
+                      onChange={handleInputChange}
+                      placeholder={t('contact.form.message')}
+                      rows={3}
+                      className="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1f51fe] focus:border-transparent text-gray-900 placeholder-gray-500"
+                    />
+                  </div>
+                  <button
+                    type="submit"
+                    className="w-full bg-gradient-to-r from-[#1f51fe] to-[#072ba4] text-white px-6 py-3 rounded-lg font-semibold hover:shadow-lg hover:shadow-[#1f51fe]/25 transition-all duration-200 flex items-center justify-center group"
+                    aria-label={`${t('contact.form.submit')} - Submit Form`}
+                  >
+                    {t('contact.form.submit')}
+                    <ChevronRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" aria-hidden="true" />
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  )
+}
+
+export default HomePage
