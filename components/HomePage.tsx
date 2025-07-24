@@ -87,14 +87,6 @@ const HomePage = ({ locale = 'en' }: { locale?: string }) => {
                     {t('hero.cta_primary')}
                     <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" aria-hidden="true" />
                   </a>
-                  <a 
-                    href="#demo" 
-                    className="border-2 border-[#1f51fe]/30 text-[#1f51fe] px-8 py-4 rounded-lg text-lg font-semibold hover:border-[#1f51fe] hover:bg-[#1f51fe]/5 transition-all duration-200 flex items-center justify-center group"
-                    aria-label={`${t('hero.cta_secondary')} Video`}
-                  >
-                    {t('hero.cta_secondary')}
-                    <Eye className="ml-2 h-5 w-5 group-hover:scale-110 transition-transform" aria-hidden="true" />
-                  </a>
                 </div>
               </div>
             </div>
