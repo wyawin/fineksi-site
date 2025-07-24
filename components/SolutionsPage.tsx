@@ -203,12 +203,12 @@ const SolutionsPage = ({ locale = 'en' }: { locale?: string }) => {
               <div className="bg-gradient-to-r from-[#fad85a]/20 to-yellow-500/20 p-3 rounded-lg w-fit mb-6 group-hover:scale-110 transition-transform">
                 <Receipt className="h-8 w-8 text-[#f59e0b]" aria-hidden="true" />
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">{t('solutions.documents.invoice_documents.title')}</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">{t('solutions.documents.operation_documents.title')}</h3>
               <p className="text-gray-600 leading-relaxed mb-4">
-                {t('solutions.documents.invoice_documents.description')}
+                {t('solutions.documents.operation_documents.description')}
               </p>
               <ul className="space-y-2">
-                {t('solutions.documents.invoice_documents.features').map((feature: string, index: number) => (
+                {t('solutions.documents.operation_documents.features').map((feature: string, index: number) => (
                   <li key={index} className="flex items-center text-sm text-gray-600">
                     <CheckCircle className="h-4 w-4 text-[#f59e0b] mr-2" aria-hidden="true" />
                     {feature}
@@ -235,6 +235,9 @@ const SolutionsPage = ({ locale = 'en' }: { locale?: string }) => {
                   </div>
                 ))}
               </div>
+              <p className="text-gray-600 mt-6 max-w-3xl mx-auto">
+                {t('solutions.documents.additional.and_many_more')}
+              </p>
             </div>
           </div>
         </div>
@@ -366,8 +369,8 @@ const SolutionsPage = ({ locale = 'en' }: { locale?: string }) => {
                     <Eye className="h-5 w-5 text-green-600" aria-hidden="true" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-gray-900 mb-2">{t('solutions.benefits.compliance.title')}</h3>
-                    <p className="text-gray-600">{t('solutions.benefits.compliance.description')}</p>
+                    <h3 className="text-lg font-semibold text-gray-900 mb-2">{t('solutions.benefits.frauds.title')}</h3>
+                    <p className="text-gray-600">{t('solutions.benefits.frauds.description')}</p>
                   </div>
                 </div>
                 
@@ -421,14 +424,6 @@ const SolutionsPage = ({ locale = 'en' }: { locale?: string }) => {
             >
               {t('solutions.cta.demo')}
               <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" aria-hidden="true" />
-            </a>
-            <a 
-              href={`/${currentLocale}#features`} 
-              className="border-2 border-[#1f51fe]/30 text-[#1f51fe] px-8 py-4 rounded-lg text-lg font-semibold hover:border-[#1f51fe] hover:bg-[#1f51fe]/5 transition-all duration-200 flex items-center justify-center group"
-              aria-label={`${t('solutions.cta.features')} - Learn More`}
-            >
-              {t('solutions.cta.features')}
-              <Eye className="ml-2 h-5 w-5 group-hover:scale-110 transition-transform" aria-hidden="true" />
             </a>
           </div>
         </div>

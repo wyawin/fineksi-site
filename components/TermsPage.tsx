@@ -185,7 +185,7 @@ const TermsPage = ({ locale = 'en' }: { locale?: string }) => {
                 </p>
               </div>
               <p className="text-gray-700 leading-relaxed mb-4">
-                To the maximum extent permitted by law, CogniCredit AI shall not be liable for any indirect, 
+                To the maximum extent permitted by law, Fineksi shall not be liable for any indirect, 
                 incidental, special, consequential, or punitive damages, including but not limited to loss of profits, 
                 data, or business opportunities.
               </p>

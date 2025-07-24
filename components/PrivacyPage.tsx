@@ -356,7 +356,7 @@ const PrivacyPage = ({ locale = 'en' }: { locale?: string }) => {
               <p className="text-gray-700 text-sm mb-3">
                 To exercise any of these rights, please contact our privacy team:
               </p>
-              <p className="text-[#1f51fe] font-medium">privacy@cognicredit.ai</p>
+              <p className="text-[#1f51fe] font-medium">support@fineksi.com</p>
             </div>
           </div>
 
