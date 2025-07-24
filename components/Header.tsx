@@ -51,12 +51,22 @@ const Header = ({ locale = 'en' }: { locale?: string }) => {
                 width={32}
                 height={32}
               />
+              <span className="text-xl font-bold bg-gradient-to-r from-[#1f51fe] to-[#072ba4] bg-clip-text text-transparent" aria-label="Fineksi Home">Fineksi</span>
             </a>
           </div>
           
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-6" role="menubar">
               <a href={`/${currentLocale}#features`} className="text-gray-600 hover:text-[#1f51fe] px-3 py-2 text-sm font-medium transition-colors" role="menuitem">{t('nav.features')}</a>
+              <a 
+                href={`/${currentLocale}/solutions`} 
+                className={`px-3 py-2 text-sm font-medium transition-colors ${
+                  isActive(`/${currentLocale}/solutions`) ? 'text-[#1f51fe]' : 'text-gray-600 hover:text-[#1f51fe]'
+                }`}
+                role="menuitem"
+              >
+                Solutions
+              </a>
               <a href={`/${currentLocale}#benefits`} className="text-gray-600 hover:text-[#1f51fe] px-3 py-2 text-sm font-medium transition-colors" role="menuitem">{t('nav.benefits')}</a>
               <a href={`/${currentLocale}#industries`} className="text-gray-600 hover:text-[#1f51fe] px-3 py-2 text-sm font-medium transition-colors" role="menuitem">{t('nav.industries')}</a>
               <a 
@@ -91,6 +101,14 @@ const Header = ({ locale = 'en' }: { locale?: string }) => {
         <div className="md:hidden" id="mobile-menu">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white/95 backdrop-blur-md border-t border-gray-200">
             <a href={`/${currentLocale}#features`} className="text-gray-600 hover:text-[#1f51fe] block px-3 py-2 text-base font-medium">{t('nav.features')}</a>
+            <a 
+              href={`/${currentLocale}/solutions`} 
+              className={`block px-3 py-2 text-base font-medium ${
+                isActive(`/${currentLocale}/solutions`) ? 'text-[#1f51fe]' : 'text-gray-600 hover:text-[#1f51fe]'
+              }`}
+            >
+              Solutions
+            </a>
             <a href={`/${currentLocale}#benefits`} className="text-gray-600 hover:text-[#1f51fe] block px-3 py-2 text-base font-medium">{t('nav.benefits')}</a>
             <a href={`/${currentLocale}#industries`} className="text-gray-600 hover:text-[#1f51fe] block px-3 py-2 text-base font-medium">{t('nav.industries')}</a>
             <a 

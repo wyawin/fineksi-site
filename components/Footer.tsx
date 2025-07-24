@@ -37,6 +37,7 @@ const Footer = ({ locale = 'en' }: { locale?: string }) => {
                 width={32}
                 height={32}
               />
+              <span className="text-xl font-bold bg-gradient-to-r from-[#1f51fe] to-[#fad85a] bg-clip-text text-transparent">Fineksi</span>
             </div>
             <p className="text-gray-400 mb-6 max-w-md">
               Empowering financial institutions with next-generation AI, neural networks, 
@@ -58,6 +59,7 @@ const Footer = ({ locale = 'en' }: { locale?: string }) => {
             <nav aria-label="AI Platform links">
               <ul className="space-y-2 text-gray-400">
                 <li><a href={`/${currentLocale}#features`} className="hover:text-[#1f51fe] transition-colors">{t('nav.features')}</a></li>
+                <li><a href={`/${currentLocale}/solutions`} className="hover:text-[#1f51fe] transition-colors">Solutions</a></li>
                 <li><a href={`/${currentLocale}#benefits`} className="hover:text-white transition-colors">{t('nav.benefits')}</a></li>
                 <li><a href="#" className="hover:text-[#1f51fe] transition-colors">AI Pricing</a></li>
                 <li><a href="#" className="hover:text-[#1f51fe] transition-colors">Neural API Docs</a></li>

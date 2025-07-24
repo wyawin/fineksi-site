@@ -151,6 +151,141 @@
     },
     "copyright": "Powered by Advanced Neural Networks. All rights reserved."
   },
+  "solutions": {
+    "hero": {
+      "badge": "AI Document Solutions",
+      "title": "Comprehensive AI Document Analysis Platform",
+      "subtitle": "Transform any financial document into actionable insights with our advanced AI technology. From bank statements to legal contracts, our neural networks process everything with superhuman accuracy.",
+      "cta_primary": "Explore Solutions"
+    },
+    "documents": {
+      "badge": "Document Types",
+      "title": "AI-Powered Analysis for Every Document Type",
+      "subtitle": "Our advanced neural networks can process and analyze any financial document with unprecedented accuracy and speed.",
+      "bank_statement": {
+        "title": "Bank Statement Analysis",
+        "description": "AI-powered analysis of bank statements with transaction categorization, cash flow analysis, and fraud detection.",
+        "features": [
+          "Transaction categorization and analysis",
+          "Cash flow pattern recognition",
+          "Income and expense tracking",
+          "Fraud and anomaly detection"
+        ]
+      },
+      "financial_statement": {
+        "title": "Financial Statement Analysis",
+        "description": "Comprehensive analysis of balance sheets, income statements, and cash flow statements with AI-driven insights.",
+        "features": [
+          "Balance sheet analysis",
+          "Income statement processing",
+          "Cash flow statement review",
+          "Financial ratio calculations"
+        ]
+      },
+      "legal_documents": {
+        "title": "Legal Document Processing",
+        "description": "AI analysis of business registrations, contracts, and legal documents with compliance verification.",
+        "features": [
+          "Business registration verification",
+          "Contract analysis and extraction",
+          "Legal compliance checking",
+          "Document authenticity validation"
+        ]
+      },
+      "collateral_documents": {
+        "title": "Collateral Document Analysis",
+        "description": "Automated processing of property certificates, vehicle ownership documents, and asset valuations.",
+        "features": [
+          "Property certificate verification",
+          "Vehicle ownership validation",
+          "Asset valuation analysis",
+          "Collateral risk assessment"
+        ]
+      },
+      "identity_documents": {
+        "title": "Identity Document Verification",
+        "description": "AI-powered verification of KTP, NPWP, tax cards, and other identification documents with fraud detection.",
+        "features": [
+          "KTP verification and validation",
+          "NPWP authenticity checking",
+          "Tax card processing",
+          "Identity fraud detection"
+        ]
+      },
+      "invoice_documents": {
+        "title": "Invoice & Purchase Order Analysis",
+        "description": "Automated processing of invoices, purchase orders, and commercial documents with data extraction.",
+        "features": [
+          "Invoice data extraction",
+          "Purchase order processing",
+          "Payment term analysis",
+          "Commercial document validation"
+        ]
+      },
+      "additional": {
+        "title": "And Many More Document Types",
+        "description": "Our AI platform continuously learns and adapts to process new document types. Whatever your financial institution needs, we can handle it.",
+        "types": [
+          "Payroll Documents",
+          "Insurance Policies",
+          "Loan Applications",
+          "Credit Reports",
+          "Audit Reports",
+          "Tax Returns",
+          "Employment Letters",
+          "Bank Guarantees"
+        ]
+      }
+    },
+    "workflow": {
+      "badge": "AI Workflow",
+      "title": "How Our AI Solution Works",
+      "subtitle": "A simple 4-step process that transforms complex document analysis into instant, actionable insights.",
+      "upload": {
+        "title": "User Uploads",
+        "description": "Securely upload documents through our API or web interface. Our system accepts any format and ensures data privacy."
+      },
+      "ai_process": {
+        "title": "AI Processing",
+        "description": "Advanced neural networks extract, analyze, and validate document data with 99.8% accuracy in seconds."
+      },
+      "human_validation": {
+        "title": "Human Validation",
+        "description": "Expert analysts review AI results for quality assurance and handle edge cases for maximum accuracy."
+      },
+      "insights_ready": {
+        "title": "Insights Ready",
+        "description": "Receive comprehensive credit analysis reports with risk scores, recommendations, and actionable insights."
+      }
+    },
+    "benefits": {
+      "badge": "Solution Benefits",
+      "title": "Why Choose Our AI Document Solutions",
+      "speed": {
+        "title": "Lightning-Fast Processing",
+        "description": "Process complete loan applications in seconds instead of days. Our AI works 24/7 without breaks."
+      },
+      "accuracy": {
+        "title": "Superhuman Accuracy",
+        "description": "99.8% accuracy rate with advanced fraud detection that catches what human reviewers miss."
+      },
+      "compliance": {
+        "title": "Regulatory Compliance",
+        "description": "Built-in compliance checks ensure all processed documents meet regulatory requirements and standards."
+      },
+      "cost_effective": {
+        "title": "Cost-Effective Solution",
+        "description": "Reduce operational costs by 95% while improving processing speed and accuracy significantly."
+      }
+    },
+    "cta": {
+      "badge": "Ready to Transform",
+      "title": "Transform Your Document Processing Today",
+      "subtitle": "Join leading financial institutions using Fineksi to process documents with AI-powered speed, accuracy, and intelligence.",
+      "demo": "Request Demo",
+      "features": "View Features"
+    }
+  },
   "about": {
     "hero": {
       "badge": "About CogniCredit AI",
