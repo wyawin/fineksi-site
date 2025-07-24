@@ -1,28 +1,10 @@
-import { Metadata } from 'next'
-import HomePage from '@/components/HomePage'
+import { redirect } from 'next/navigation'
 
-// Force SSR for this page
+// Force dynamic rendering for SSR
 export const dynamic = 'force-dynamic'
 export const revalidate = 0
 
-export const metadata: Metadata = {
-  title: 'Fineksi - AI-Powered Document Automation for Financial Institutions',
-  description: 'Transform your credit process with advanced AI document automation, fraud detection, and cognitive analysis. Trusted by banks, multifinance, and P2P lending platforms.',
-  openGraph: {
-    title: 'Fineksi - AI-Powered Document Automation for Financial Institutions',
-    description: 'Transform your credit process with advanced AI document automation, fraud detection, and cognitive analysis. Trusted by banks, multifinance, and P2P lending platforms.',
-    url: 'https://fineksi.com',
-    images: [
-      {
-        url: 'https://fineksi.com/og-image.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Fineksi Platform',
-      },
-    ],
-  },
-}
-
-export default function Home() {
-  return <HomePage />
+export default function RootPage() {
+  // Redirect to default locale
+  redirect('/en')
 }

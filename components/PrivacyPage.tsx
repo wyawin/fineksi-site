@@ -1,7 +1,27 @@
 import React from 'react'
 import { Shield, Lock, Eye, Database, AlertCircle, CheckCircle } from 'lucide-react'
 
+// Import translations directly
+import enTranslations from '../public/locales/en/common.json'
+import idTranslations from '../public/locales/id/common.json'
+
+const translations = {
+  en: enTranslations,
+  id: idTranslations
+}
+
 const PrivacyPage = ({ locale = 'en' }: { locale?: string }) => {
+  const t = (key: string) => {
+    const keys = key.split('.')
+    let value: any = translations[locale as keyof typeof translations] || translations.en
+    
+    for (const k of keys) {
+      value = value?.[k]
+    }
+    
+    return value || key
+  }
+  
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
@@ -15,17 +35,17 @@ const PrivacyPage = ({ locale = 'en' }: { locale?: string }) => {
           <div className="text-center">
             <div className="flex items-center justify-center mb-4">
               <Shield className="h-8 w-8 text-[#1f51fe] mr-3 animate-pulse" aria-hidden="true" />
-              <span className="text-[#1f51fe] font-semibold text-sm uppercase tracking-wider">Privacy & Security</span>
+              <span className="text-[#1f51fe] font-semibold text-sm uppercase tracking-wider">{t('privacy.hero.badge')}</span>
             </div>
             <h1 id="privacy-heading" className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-              Privacy Policy
+              {t('privacy.hero.title')}
             </h1>
             <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-              Your privacy and data security are fundamental to Fineksi's AI-powered financial services.
+              {t('privacy.hero.subtitle')}
             </p>
             <div className="flex items-center justify-center text-sm text-gray-500">
               <AlertCircle className="h-4 w-4 mr-2" aria-hidden="true" />
-              Last updated: January 15, 2025
+              {t('privacy.hero.last_updated')}
             </div>
           </div>
         </div>
@@ -40,32 +60,28 @@ const PrivacyPage = ({ locale = 'en' }: { locale?: string }) => {
             <div className="bg-gradient-to-r from-[#1f51fe]/5 to-[#fad85a]/5 p-8 rounded-2xl border border-[#1f51fe]/20 mb-8">
               <div className="flex items-center mb-4">
                 <Lock className="h-6 w-6 text-[#1f51fe] mr-2" aria-hidden="true" />
-                <h2 id="privacy-overview" className="text-2xl font-bold text-gray-900 m-0">Privacy Overview</h2>
+                <h2 id="privacy-overview" className="text-2xl font-bold text-gray-900 m-0">{t('privacy.overview.title')}</h2>
               </div>
               <p className="text-gray-700 leading-relaxed mb-4">
-                Fineksi is committed to protecting your privacy and maintaining the highest standards of data security. 
-                This Privacy Policy explains how we collect, use, process, and safeguard information when you use our 
-                AI-powered document automation and credit analysis services.
+                {t('privacy.overview.content')}
               </p>
               <div className="grid md:grid-cols-3 gap-4 mt-6">
-                <div className="text-center">
-                  <div className="bg-green-100 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-2">
-                    <CheckCircle className="h-6 w-6 text-green-600" aria-hidden="true" />
+                {t('privacy.overview.compliance').map((item: string, index: number) => (
+                  <div key={index} className="text-center">
+                    <div className={`w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-2 ${
+                      index === 0 ? 'bg-green-100' : index === 1 ? 'bg-blue-100' : 'bg-purple-100'
+                    }`}>
+                      {index === 0 ? (
+                        <CheckCircle className="h-6 w-6 text-green-600" aria-hidden="true" />
+                      ) : index === 1 ? (
+                        <Shield className="h-6 w-6 text-blue-600" aria-hidden="true" />
+                      ) : (
+                        <Lock className="h-6 w-6 text-purple-600" aria-hidden="true" />
+                      )}
+                    </div>
+                    <p className="text-sm font-semibold text-gray-900">{item}</p>
                   </div>
-                  <p className="text-sm font-semibold text-gray-900">SOC 2 Compliant</p>
-                </div>
-                <div className="text-center">
-                  <div className="bg-blue-100 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-2">
-                    <Shield className="h-6 w-6 text-blue-600" aria-hidden="true" />
-                  </div>
-                  <p className="text-sm font-semibold text-gray-900">GDPR Compliant</p>
-                </div>
-                <div className="text-center">
-                  <div className="bg-purple-100 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-2">
-                    <Lock className="h-6 w-6 text-purple-600" aria-hidden="true" />
-                  </div>
-                  <p className="text-sm font-semibold text-gray-900">End-to-End Encrypted</p>
-                </div>
+                ))}
               </div>
             </div>
           </div>
@@ -74,37 +90,34 @@ const PrivacyPage = ({ locale = 'en' }: { locale?: string }) => {
           <div className="mb-12">
             <div className="flex items-center mb-4">
               <Database className="h-6 w-6 text-[#1f51fe] mr-2" aria-hidden="true" />
-              <h2 className="text-2xl font-bold text-gray-900 m-0">1. Information We Collect</h2>
+              <h2 className="text-2xl font-bold text-gray-900 m-0">{t('privacy.sections.information_collected.title')}</h2>
             </div>
             
             <div className="space-y-6">
               <div className="bg-gray-50 p-6 rounded-lg">
-                <h3 className="font-semibold text-gray-900 mb-3">Account Information</h3>
+                <h3 className="font-semibold text-gray-900 mb-3">{t('privacy.sections.information_collected.account.title')}</h3>
                 <ul className="list-disc pl-6 space-y-1 text-gray-700 text-sm">
-                  <li>Name, email address, and contact information</li>
-                  <li>Company name and business details</li>
-                  <li>Account credentials and authentication data</li>
-                  <li>Billing and payment information</li>
+                  {t('privacy.sections.information_collected.account.items').map((item: string, index: number) => (
+                    <li key={index}>{item}</li>
+                  ))}
                 </ul>
               </div>
 
               <div className="bg-blue-50 p-6 rounded-lg">
-                <h3 className="font-semibold text-gray-900 mb-3">Financial Documents and Data</h3>
+                <h3 className="font-semibold text-gray-900 mb-3">{t('privacy.sections.information_collected.financial.title')}</h3>
                 <ul className="list-disc pl-6 space-y-1 text-gray-700 text-sm">
-                  <li>Documents uploaded for AI processing (bank statements, loan applications, etc.)</li>
-                  <li>Extracted data from financial documents</li>
-                  <li>Credit scores and financial analysis results</li>
-                  <li>Fraud detection and risk assessment data</li>
+                  {t('privacy.sections.information_collected.financial.items').map((item: string, index: number) => (
+                    <li key={index}>{item}</li>
+                  ))}
                 </ul>
               </div>
 
               <div className="bg-yellow-50 p-6 rounded-lg">
-                <h3 className="font-semibold text-gray-900 mb-3">Usage and Technical Data</h3>
+                <h3 className="font-semibold text-gray-900 mb-3">{t('privacy.sections.information_collected.usage.title')}</h3>
                 <ul className="list-disc pl-6 space-y-1 text-gray-700 text-sm">
-                  <li>API usage logs and performance metrics</li>
-                  <li>System access logs and security events</li>
-                  <li>Device information and IP addresses</li>
-                  <li>Service usage patterns and preferences</li>
+                  {t('privacy.sections.information_collected.usage.items').map((item: string, index: number) => (
+                    <li key={index}>{item}</li>
+                  ))}
                 </ul>
               </div>
             </div>
@@ -188,38 +201,36 @@ const PrivacyPage = ({ locale = 'en' }: { locale?: string }) => {
           <div className="mb-12">
             <div className="flex items-center mb-4">
               <Lock className="h-6 w-6 text-[#1f51fe] mr-2 animate-pulse" aria-hidden="true" />
-              <h2 className="text-2xl font-bold text-gray-900 m-0">3. Data Security Measures</h2>
+             <h2 className="text-2xl font-bold text-gray-900 m-0">{t('privacy.sections.data_security.title')}</h2>
             </div>
             
             <div className="bg-gradient-to-r from-[#1f51fe]/5 to-[#072ba4]/5 p-8 rounded-2xl border border-[#1f51fe]/20 mb-6">
               <p className="text-gray-700 leading-relaxed mb-6">
-                We implement military-grade security measures to protect your data throughout its lifecycle:
+               {t('privacy.sections.data_security.content')}
               </p>
               
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
                   <h3 className="font-semibold text-gray-900 mb-3 flex items-center">
                     <Shield className="h-5 w-5 text-[#1f51fe] mr-2" aria-hidden="true" />
-                    Encryption & Protection
+                   {t('privacy.sections.data_security.encryption.title')}
                   </h3>
                   <ul className="space-y-2 text-gray-700 text-sm">
-                    <li>• AES-256 encryption for data at rest</li>
-                    <li>• TLS 1.3 encryption for data in transit</li>
-                    <li>• End-to-end encryption for sensitive documents</li>
-                    <li>• Regular security audits and penetration testing</li>
+                   {t('privacy.sections.data_security.encryption.items').map((item: string, index: number) => (
+                     <li key={index}>• {item}</li>
+                   ))}
                   </ul>
                 </div>
                 
                 <div>
                   <h3 className="font-semibold text-gray-900 mb-3 flex items-center">
                     <Eye className="h-5 w-5 text-[#072ba4] mr-2" aria-hidden="true" />
-                    Access Controls
+                   {t('privacy.sections.data_security.access.title')}
                   </h3>
                   <ul className="space-y-2 text-gray-700 text-sm">
-                    <li>• Multi-factor authentication (MFA)</li>
-                    <li>• Role-based access control (RBAC)</li>
-                    <li>• Zero-trust security architecture</li>
-                    <li>• Continuous monitoring and logging</li>
+                   {t('privacy.sections.data_security.access.items').map((item: string, index: number) => (
+                     <li key={index}>• {item}</li>
+                   ))}
                   </ul>
                 </div>
               </div>
@@ -345,27 +356,27 @@ const PrivacyPage = ({ locale = 'en' }: { locale?: string }) => {
               <p className="text-gray-700 text-sm mb-3">
                 To exercise any of these rights, please contact our privacy team:
               </p>
-              <p className="text-[#1f51fe] font-medium">support@fineksi.com</p>
+              <p className="text-[#1f51fe] font-medium">privacy@cognicredit.ai</p>
             </div>
           </div>
 
           {/* Contact Information */}
           <div className="mb-12">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">7. Contact Us</h2>
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">{t('privacy.sections.contact.title')}</h2>
             <p className="text-gray-700 leading-relaxed mb-6">
-              If you have questions about this Privacy Policy or our data practices, please contact us:
+              {t('privacy.sections.contact.content')}
             </p>
             
             <div className="bg-gradient-to-r from-[#1f51fe]/5 to-[#fad85a]/5 p-8 rounded-2xl border border-[#1f51fe]/20">
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
                   <h3 className="font-semibold text-gray-900 mb-3">Privacy Officer</h3>
-                  <p className="text-gray-700 text-sm mb-1">Email: privacy@fineksi.com</p>
+                  <p className="text-gray-700 text-sm mb-1">{t('privacy.sections.contact.privacy_officer')}</p>
                   <p className="text-gray-700 text-sm">Response time: Within 48 hours</p>
                 </div>
                 <div>
                   <h3 className="font-semibold text-gray-900 mb-3">Data Protection</h3>
-                  <p className="text-gray-700 text-sm mb-1">Email: dpo@fineksi.com</p>
+                  <p className="text-gray-700 text-sm mb-1">{t('privacy.sections.contact.data_protection')}</p>
                   <p className="text-gray-700 text-sm">For GDPR-related inquiries</p>
                 </div>
               </div>

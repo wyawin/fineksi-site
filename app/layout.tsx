@@ -1,8 +1,6 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
-import Header from '@/components/Header'
-import Footer from '@/components/Footer'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -79,19 +77,6 @@ export default function RootLayout({
         <link rel="preconnect" href="https://images.pexels.com" />
         <link rel="dns-prefetch" href="https://images.pexels.com" />
         <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              // Disable Next.js client-side navigation
-              if (typeof window !== 'undefined') {
-                window.__NEXT_DATA__ = window.__NEXT_DATA__ || {};
-                window.__NEXT_DATA__.props = window.__NEXT_DATA__.props || {};
-                window.__NEXT_DATA__.props.pageProps = window.__NEXT_DATA__.props.pageProps || {};
-                window.__NEXT_DATA__.props.pageProps.router = { push: function(url) { window.location.href = url; } };
-              }
-            `
-          }}
-        />
-        <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
@@ -122,7 +107,7 @@ export default function RootLayout({
         />
       </head>
       <body className={inter.className}>
-      {children}
+        {children}
       </body>
     </html>
   )

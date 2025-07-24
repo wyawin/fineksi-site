@@ -38,15 +38,13 @@ const AboutPage = ({ locale = 'en' }: { locale?: string }) => {
           <div className="text-center">
             <div className="flex items-center justify-center mb-4">
               <Brain className="h-8 w-8 text-[#1f51fe] mr-3 animate-pulse" aria-hidden="true" />
-              <span className="text-[#1f51fe] font-semibold text-sm uppercase tracking-wider">About Fineksi</span>
+              <span className="text-[#1f51fe] font-semibold text-sm uppercase tracking-wider">{t('about.hero.badge')}</span>
             </div>
             <h1 id="about-hero-heading" className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-              Pioneering the Future of 
-              <span className="bg-gradient-to-r from-[#1f51fe] to-[#072ba4] bg-clip-text text-transparent"> AI-Powered Finance</span>
+              {t('about.hero.title')}
             </h1>
             <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
-              We're revolutionizing financial services with cutting-edge artificial intelligence, 
-              neural networks, and cognitive automation to create superhuman lending capabilities.
+              {t('about.hero.subtitle')}
             </p>
           </div>
         </div>
@@ -59,20 +57,16 @@ const AboutPage = ({ locale = 'en' }: { locale?: string }) => {
             <div>
               <div className="flex items-center mb-4">
                 <Target className="h-6 w-6 text-[#1f51fe] mr-2 animate-pulse" aria-hidden="true" />
-                <span className="text-[#1f51fe] font-semibold text-sm uppercase tracking-wider">Our AI Mission</span>
+                <span className="text-[#1f51fe] font-semibold text-sm uppercase tracking-wider">{t('about.mission.badge')}</span>
               </div>
               <h2 id="mission-heading" className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                Democratizing AI for Financial Excellence
+                {t('about.mission.title')}
               </h2>
               <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                At Fineksi, we believe that every financial institution deserves access to 
-                world-class artificial intelligence. Our mission is to transform the lending landscape 
-                through advanced neural networks, cognitive automation, and predictive analytics.
+                {t('about.mission.description1')}
               </p>
               <p className="text-lg text-gray-600 leading-relaxed">
-                We're not just building software – we're creating an AI-powered ecosystem that 
-                empowers banks, multifinance companies, and P2P platforms to make faster, 
-                more accurate, and more inclusive lending decisions.
+                {t('about.mission.description2')}
               </p>
             </div>
             <div className="mt-12 lg:mt-0">
@@ -101,13 +95,13 @@ const AboutPage = ({ locale = 'en' }: { locale?: string }) => {
           <div className="text-center mb-16 relative z-10">
             <div className="flex items-center justify-center mb-4">
               <Sparkles className="h-6 w-6 text-[#1f51fe] mr-2 animate-pulse" aria-hidden="true" />
-              <span className="text-[#1f51fe] font-semibold text-sm uppercase tracking-wider">Our AI Values</span>
+              <span className="text-[#1f51fe] font-semibold text-sm uppercase tracking-wider">{t('about.values.badge')}</span>
             </div>
             <h2 id="values-heading" className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Built on Trust, Powered by Innovation
+              {t('about.values.title')}
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Our core values guide every AI model we train and every solution we deliver.
+              {t('about.values.subtitle')}
             </p>
           </div>
 
@@ -116,10 +110,9 @@ const AboutPage = ({ locale = 'en' }: { locale?: string }) => {
               <div className="bg-gradient-to-r from-[#1f51fe]/10 to-blue-500/10 p-3 rounded-lg w-fit mb-6 group-hover:scale-110 transition-transform">
                 <Bot className="h-8 w-8 text-[#1f51fe]" aria-hidden="true" />
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">AI Excellence</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">{t('about.values.excellence.title')}</h3>
               <p className="text-gray-600 leading-relaxed">
-                We push the boundaries of what's possible with artificial intelligence, 
-                constantly innovating to deliver superhuman performance in financial analysis.
+                {t('about.values.excellence.description')}
               </p>
             </article>
 
@@ -127,10 +120,9 @@ const AboutPage = ({ locale = 'en' }: { locale?: string }) => {
               <div className="bg-gradient-to-r from-[#072ba4]/10 to-purple-500/10 p-3 rounded-lg w-fit mb-6 group-hover:scale-110 transition-transform">
                 <Network className="h-8 w-8 text-[#072ba4]" aria-hidden="true" />
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Transparency</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">{t('about.values.transparency.title')}</h3>
               <p className="text-gray-600 leading-relaxed">
-                Our AI models are explainable and auditable. We believe in transparent 
-                algorithms that financial institutions can trust and regulators can understand.
+                {t('about.values.transparency.description')}
               </p>
             </article>
 
@@ -138,10 +130,9 @@ const AboutPage = ({ locale = 'en' }: { locale?: string }) => {
               <div className="bg-gradient-to-r from-[#fad85a]/20 to-yellow-500/20 p-3 rounded-lg w-fit mb-6 group-hover:scale-110 transition-transform">
                 <Cpu className="h-8 w-8 text-[#f59e0b]" aria-hidden="true" />
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Security First</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">{t('about.values.security.title')}</h3>
               <p className="text-gray-600 leading-relaxed">
-                Every AI system we build incorporates military-grade security, ensuring 
-                your data and your customers' information remain protected at all times.
+                {t('about.values.security.description')}
               </p>
             </article>
 
@@ -149,10 +140,9 @@ const AboutPage = ({ locale = 'en' }: { locale?: string }) => {
               <div className="bg-gradient-to-r from-green-500/10 to-teal-500/10 p-3 rounded-lg w-fit mb-6 group-hover:scale-110 transition-transform">
                 <Users className="h-8 w-8 text-green-600" aria-hidden="true" />
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Customer Success</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">{t('about.values.success.title')}</h3>
               <p className="text-gray-600 leading-relaxed">
-                Your success is our success. We're committed to delivering AI solutions 
-                that drive measurable business outcomes and competitive advantages.
+                {t('about.values.success.description')}
               </p>
             </article>
 
@@ -160,10 +150,9 @@ const AboutPage = ({ locale = 'en' }: { locale?: string }) => {
               <div className="bg-gradient-to-r from-indigo-500/10 to-purple-500/10 p-3 rounded-lg w-fit mb-6 group-hover:scale-110 transition-transform">
                 <Award className="h-8 w-8 text-indigo-600" aria-hidden="true" />
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Continuous Learning</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">{t('about.values.learning.title')}</h3>
               <p className="text-gray-600 leading-relaxed">
-                Like our AI models, we never stop learning. We continuously improve our 
-                technology and adapt to the evolving needs of the financial industry.
+                {t('about.values.learning.description')}
               </p>
             </article>
 
@@ -171,10 +160,9 @@ const AboutPage = ({ locale = 'en' }: { locale?: string }) => {
               <div className="bg-gradient-to-r from-orange-500/10 to-red-500/10 p-3 rounded-lg w-fit mb-6 group-hover:scale-110 transition-transform">
                 <Sparkles className="h-8 w-8 text-orange-600" aria-hidden="true" />
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Ethical AI</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">{t('about.values.ethical.title')}</h3>
               <p className="text-gray-600 leading-relaxed">
-                We're committed to responsible AI development, ensuring our models are 
-                fair, unbiased, and promote financial inclusion for all communities.
+                {t('about.values.ethical.description')}
               </p>
             </article>
           </div>
@@ -187,14 +175,13 @@ const AboutPage = ({ locale = 'en' }: { locale?: string }) => {
           <div className="text-center mb-16">
             <div className="flex items-center justify-center mb-4">
               <Users className="h-6 w-6 text-[#1f51fe] mr-2" aria-hidden="true" />
-              <span className="text-[#1f51fe] font-semibold text-sm uppercase tracking-wider">Our AI Team</span>
+              <span className="text-[#1f51fe] font-semibold text-sm uppercase tracking-wider">{t('about.team.badge')}</span>
             </div>
             <h2 id="team-heading" className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              World-Class AI Experts
+              {t('about.team.title')}
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Our team combines decades of experience in artificial intelligence, machine learning, 
-              and financial technology to deliver cutting-edge solutions.
+              {t('about.team.subtitle')}
             </p>
           </div>
 
@@ -296,31 +283,29 @@ const AboutPage = ({ locale = 'en' }: { locale?: string }) => {
       <section className="py-20 bg-white" aria-labelledby="about-cta-heading">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="flex items-center justify-center mb-4">
-            <Brain className="h-6 w-6 text-[#1f51fe] mr-2 animate-pulse" aria-hidden="true" />
-            <span className="text-[#1f51fe] font-semibold text-sm uppercase tracking-wider">Join the AI Revolution</span>
+            <span className="text-[#1f51fe] font-semibold text-sm uppercase tracking-wider">{t('about.cta.badge')}</span>
           </div>
           <h2 id="about-cta-heading" className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-            Ready to Experience the Future of Finance?
+            {t('about.cta.title')}
           </h2>
           <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-            Discover how Fineksi can transform your lending operations with 
-            cutting-edge artificial intelligence and neural network technology.
+            {t('about.cta.subtitle')}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
               href={`/${currentLocale}#contact`} 
               className="bg-gradient-to-r from-[#1f51fe] to-[#072ba4] text-white px-8 py-4 rounded-lg text-lg font-semibold hover:shadow-lg hover:shadow-[#1f51fe]/25 transition-all duration-200 transform hover:scale-105 flex items-center justify-center group"
-              aria-label="Schedule AI Demo - Contact Us"
+              aria-label={`${t('about.cta.demo')} - Contact Us`}
             >
-              Schedule AI Demo
+              {t('about.cta.demo')}
               <Brain className="ml-2 h-5 w-5 group-hover:animate-pulse" aria-hidden="true" />
             </a>
             <a 
               href={`/${currentLocale}#features`} 
               className="border-2 border-[#1f51fe]/30 text-[#1f51fe] px-8 py-4 rounded-lg text-lg font-semibold hover:border-[#1f51fe] hover:bg-[#1f51fe]/5 transition-all duration-200 flex items-center justify-center group"
-              aria-label="Explore AI Features - Learn More"
+              aria-label={`${t('about.cta.features')} - Learn More`}
             >
-              Explore AI Features
+              {t('about.cta.features')}
               <Sparkles className="ml-2 h-5 w-5 group-hover:scale-110 transition-transform" aria-hidden="true" />
             </a>
           </div>

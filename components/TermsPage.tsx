@@ -1,7 +1,27 @@
 import React from 'react'
 import { FileText, Shield, AlertTriangle, Clock } from 'lucide-react'
 
+// Import translations directly
+import enTranslations from '../public/locales/en/common.json'
+import idTranslations from '../public/locales/id/common.json'
+
+const translations = {
+  en: enTranslations,
+  id: idTranslations
+}
+
 const TermsPage = ({ locale = 'en' }: { locale?: string }) => {
+  const t = (key: string) => {
+    const keys = key.split('.')
+    let value: any = translations[locale as keyof typeof translations] || translations.en
+    
+    for (const k of keys) {
+      value = value?.[k]
+    }
+    
+    return value || key
+  }
+  
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
@@ -15,17 +35,17 @@ const TermsPage = ({ locale = 'en' }: { locale?: string }) => {
           <div className="text-center">
             <div className="flex items-center justify-center mb-4">
               <FileText className="h-8 w-8 text-[#1f51fe] mr-3" aria-hidden="true" />
-              <span className="text-[#1f51fe] font-semibold text-sm uppercase tracking-wider">Legal Terms</span>
+              <span className="text-[#1f51fe] font-semibold text-sm uppercase tracking-wider">{t('terms.hero.badge')}</span>
             </div>
             <h1 id="terms-heading" className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-              Terms and Conditions
+              {t('terms.hero.title')}
             </h1>
             <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-              Please read these terms carefully before using Fineksi services.
+              {t('terms.hero.subtitle')}
             </p>
             <div className="flex items-center justify-center text-sm text-gray-500">
               <Clock className="h-4 w-4 mr-2" aria-hidden="true" />
-              Last updated: January 15, 2025
+              {t('terms.hero.last_updated')}
             </div>
           </div>
         </div>
@@ -40,60 +60,51 @@ const TermsPage = ({ locale = 'en' }: { locale?: string }) => {
             <div className="mb-12">
               <div className="flex items-center mb-4">
                 <Shield className="h-6 w-6 text-[#1f51fe] mr-2" aria-hidden="true" />
-                <h2 id="acceptance-terms" className="text-2xl font-bold text-gray-900 m-0">1. Acceptance of Terms</h2>
+                <h2 id="acceptance-terms" className="text-2xl font-bold text-gray-900 m-0">{t('terms.sections.acceptance.title')}</h2>
               </div>
               <div className="bg-gray-50 p-6 rounded-lg border-l-4 border-[#1f51fe]">
                 <p className="text-gray-700 leading-relaxed mb-4">
-                  By accessing or using Fineksi's services, you agree to be bound by these Terms and Conditions ("Terms"). 
-                  If you disagree with any part of these terms, you may not access our services.
+                  {t('terms.sections.acceptance.content')}
                 </p>
                 <p className="text-gray-700 leading-relaxed">
-                  These Terms apply to all visitors, users, and others who access or use our AI-powered document automation 
-                  and credit analysis services.
+                  {t('terms.sections.acceptance.additional')}
                 </p>
               </div>
             </div>
 
             {/* Service Description */}
             <div className="mb-12">
-              <h2 id="service-description" className="text-2xl font-bold text-gray-900 mb-4">2. Service Description</h2>
+              <h2 id="service-description" className="text-2xl font-bold text-gray-900 mb-4">{t('terms.sections.service_description.title')}</h2>
               <p className="text-gray-700 leading-relaxed mb-4">
-                Fineksi provides artificial intelligence-powered document automation, fraud detection, and credit analysis 
-                services to financial institutions including banks, multifinance companies, and peer-to-peer lending platforms.
+                {t('terms.sections.service_description.content')}
               </p>
               <p className="text-gray-700 leading-relaxed mb-4">Our services include but are not limited to:</p>
               <ul className="list-disc pl-6 space-y-2 text-gray-700">
-                <li>AI-powered document processing and data extraction</li>
-                <li>Neural network-based fraud and tampering detection</li>
-                <li>Cognitive credit risk analysis and scoring</li>
-                <li>Predictive analytics and financial insights</li>
-                <li>API integration and technical support</li>
+                {t('terms.sections.service_description.services').map((service: string, index: number) => (
+                  <li key={index}>{service}</li>
+                ))}
               </ul>
             </div>
 
             {/* User Responsibilities */}
             <div className="mb-12">
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">3. User Responsibilities</h2>
+              <h2 className="text-2xl font-bold text-gray-900 mb-4">{t('terms.sections.user_responsibilities.title')}</h2>
               <div className="bg-yellow-50 p-6 rounded-lg border-l-4 border-[#fad85a] mb-6">
                 <div className="flex items-start">
                   <AlertTriangle className="h-5 w-5 text-[#f59e0b] mr-2 mt-0.5" aria-hidden="true" />
                   <div>
                     <h3 className="font-semibold text-gray-900 mb-2">Important Compliance Requirements</h3>
                     <p className="text-gray-700 text-sm">
-                      Users must ensure compliance with all applicable financial regulations and data protection laws 
-                      in their jurisdiction when using our AI services.
+                      {t('terms.sections.user_responsibilities.warning')}
                     </p>
                   </div>
                 </div>
               </div>
-              <p className="text-gray-700 leading-relaxed mb-4">As a user of our services, you agree to:</p>
+              <p className="text-gray-700 leading-relaxed mb-4">{t('terms.sections.user_responsibilities.content')}</p>
               <ul className="list-disc pl-6 space-y-2 text-gray-700 mb-4">
-                <li>Provide accurate and complete information when using our services</li>
-                <li>Maintain the confidentiality of your account credentials</li>
-                <li>Use our services only for lawful purposes and in accordance with applicable regulations</li>
-                <li>Not attempt to reverse engineer, decompile, or extract our AI algorithms</li>
-                <li>Comply with all data protection and privacy laws applicable to your jurisdiction</li>
-                <li>Notify us immediately of any unauthorized use of your account</li>
+                {t('terms.sections.user_responsibilities.items').map((item: string, index: number) => (
+                  <li key={index}>{item}</li>
+                ))}
               </ul>
             </div>
 
@@ -174,7 +185,7 @@ const TermsPage = ({ locale = 'en' }: { locale?: string }) => {
                 </p>
               </div>
               <p className="text-gray-700 leading-relaxed mb-4">
-                To the maximum extent permitted by law, Fineksi shall not be liable for any indirect, 
+                To the maximum extent permitted by law, CogniCredit AI shall not be liable for any indirect, 
                 incidental, special, consequential, or punitive damages, including but not limited to loss of profits, 
                 data, or business opportunities.
               </p>
@@ -209,19 +220,19 @@ const TermsPage = ({ locale = 'en' }: { locale?: string }) => {
 
             {/* Contact Information */}
             <div className="mb-12">
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">10. Contact Information</h2>
+              <h2 className="text-2xl font-bold text-gray-900 mb-4">{t('terms.sections.contact.title')}</h2>
               <p className="text-gray-700 leading-relaxed mb-4">
-                If you have questions about these Terms and Conditions, please contact us:
+                {t('terms.sections.contact.content')}
               </p>
               <div className="bg-[#1f51fe]/5 p-6 rounded-lg">
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>
                     <h3 className="font-semibold text-gray-900 mb-2">Legal Department</h3>
-                    <p className="text-gray-700 text-sm">legal@fineksi.com</p>
+                    <p className="text-gray-700 text-sm">{t('terms.sections.contact.legal')}</p>
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-900 mb-2">Customer Support</h3>
-                    <p className="text-gray-700 text-sm">support@fineksi.com</p>
+                    <p className="text-gray-700 text-sm">{t('terms.sections.contact.support')}</p>
                   </div>
                 </div>
               </div>

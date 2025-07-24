@@ -153,7 +153,7 @@
   },
   "about": {
     "hero": {
-      "badge": "About Fineksi",
+      "badge": "About CogniCredit AI",
       "title": "Pioneering the Future of AI-Powered Finance",
       "subtitle": "We're revolutionizing financial services with cutting-edge artificial intelligence, neural networks, and cognitive automation to create superhuman lending capabilities."
     },
@@ -203,6 +203,128 @@
       "subtitle": "Discover how Fineksi can transform your lending operations with cutting-edge artificial intelligence and neural network technology.",
       "demo": "Schedule AI Demo",
       "features": "Explore AI Features"
+    }
+  },
+  "terms": {
+    "hero": {
+      "badge": "Legal Terms",
+      "title": "Terms and Conditions",
+      "subtitle": "Please read these terms carefully before using Fineksi services.",
+      "last_updated": "Last updated: January 15, 2025"
+    },
+    "sections": {
+      "acceptance": {
+        "title": "1. Acceptance of Terms",
+        "content": "By accessing or using Fineksi's services, you agree to be bound by these Terms and Conditions (\"Terms\"). If you disagree with any part of these terms, you may not access our services.",
+        "additional": "These Terms apply to all visitors, users, and others who access or use our AI-powered document automation and credit analysis services."
+      },
+      "service_description": {
+        "title": "2. Service Description",
+        "content": "Fineksi provides artificial intelligence-powered document automation, fraud detection, and credit analysis services to financial institutions including banks, multifinance companies, and peer-to-peer lending platforms.",
+        "services": [
+          "AI-powered document processing and data extraction",
+          "Neural network-based fraud and tampering detection",
+          "Cognitive credit risk analysis and scoring",
+          "Predictive analytics and financial insights",
+          "API integration and technical support"
+        ]
+      },
+      "user_responsibilities": {
+        "title": "3. User Responsibilities",
+        "warning": "Users must ensure compliance with all applicable financial regulations and data protection laws in their jurisdiction when using our AI services.",
+        "content": "As a user of our services, you agree to:",
+        "items": [
+          "Provide accurate and complete information when using our services",
+          "Maintain the confidentiality of your account credentials",
+          "Use our services only for lawful purposes and in accordance with applicable regulations",
+          "Not attempt to reverse engineer, decompile, or extract our AI algorithms",
+          "Comply with all data protection and privacy laws applicable to your jurisdiction",
+          "Notify us immediately of any unauthorized use of your account"
+        ]
+      },
+      "contact": {
+        "title": "10. Contact Information",
+        "content": "If you have questions about these Terms and Conditions, please contact us:",
+        "legal": "Legal Department: legal@fineksi.com",
+        "support": "Customer Support: support@fineksi.com"
+      }
+    }
+  },
+  "privacy": {
+    "hero": {
+      "badge": "Privacy & Security",
+      "title": "Privacy Policy",
+      "subtitle": "Your privacy and data security are fundamental to Fineksi's AI-powered financial services.",
+      "last_updated": "Last updated: January 15, 2025"
+    },
+    "overview": {
+      "title": "Privacy Overview",
+      "content": "Fineksi is committed to protecting your privacy and maintaining the highest standards of data security. This Privacy Policy explains how we collect, use, process, and safeguard information when you use our AI-powered document automation and credit analysis services.",
+      "compliance": [
+        "SOC 2 Compliant",
+        "GDPR Compliant", 
+        "End-to-End Encrypted"
+      ]
+    },
+    "sections": {
+      "information_collected": {
+        "title": "1. Information We Collect",
+        "account": {
+          "title": "Account Information",
+          "items": [
+            "Name, email address, and contact information",
+            "Company name and business details",
+            "Account credentials and authentication data",
+            "Billing and payment information"
+          ]
+        },
+        "financial": {
+          "title": "Financial Documents and Data",
+          "items": [
+            "Documents uploaded for AI processing (bank statements, loan applications, etc.)",
+            "Extracted data from financial documents",
+            "Credit scores and financial analysis results",
+            "Fraud detection and risk assessment data"
+          ]
+        },
+        "usage": {
+          "title": "Usage and Technical Data",
+          "items": [
+            "API usage logs and performance metrics",
+            "System access logs and security events",
+            "Device information and IP addresses",
+            "Service usage patterns and preferences"
+          ]
+        }
+      },
+      "data_security": {
+        "title": "3. Data Security Measures",
+        "content": "We implement military-grade security measures to protect your data throughout its lifecycle:",
+        "encryption": {
+          "title": "Encryption & Protection",
+          "items": [
+            "AES-256 encryption for data at rest",
+            "TLS 1.3 encryption for data in transit",
+            "End-to-end encryption for sensitive documents",
+            "Regular security audits and penetration testing"
+          ]
+        },
+        "access": {
+          "title": "Access Controls",
+          "items": [
+            "Multi-factor authentication (MFA)",
+            "Role-based access control (RBAC)",
+            "Zero-trust security architecture",
+            "Continuous monitoring and logging"
+          ]
+        }
+      },
+      "contact": {
+        "title": "7. Contact Us",
+        "content": "If you have questions about this Privacy Policy or our data practices, please contact us:",
+        "privacy_officer": "Privacy Officer: privacy@fineksi.com",
+        "data_protection": "Data Protection: dpo@fineksi.com"
+      }
     }
   }
 }
