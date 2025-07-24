@@ -47,27 +47,6 @@ const HomePage = ({ locale = 'en' }: { locale?: string }) => {
     return value || key
   }
   
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    company: '',
-    role: '',
-    message: ''
-  })
-
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    })
-  }
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    console.log('Form submitted:', formData)
-    // Handle form submission logic here
-  }
-
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
@@ -101,7 +80,7 @@ const HomePage = ({ locale = 'en' }: { locale?: string }) => {
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                   <a 
-                    href="#contact" 
+                    href="#calendly-contact" 
                     className="bg-gradient-to-r from-[#1f51fe] to-[#072ba4] text-white px-8 py-4 rounded-lg text-lg font-semibold hover:shadow-lg hover:shadow-[#1f51fe]/25 transition-all duration-200 transform hover:scale-105 flex items-center justify-center group"
                     aria-label={`${t('hero.cta_primary')} - Request Demo`}
                   >
@@ -498,96 +477,58 @@ const HomePage = ({ locale = 'en' }: { locale?: string }) => {
               </div>
             </div>
             
-            <div className="mt-12 lg:mt-0">
-              <div className="bg-white/80 backdrop-blur-md p-8 rounded-2xl shadow-xl border border-[#1f51fe]/20">
+            <div className="mt-12 lg:mt-0" id="calendly-contact">
+              <div className="bg-white/90 backdrop-blur-md p-8 rounded-2xl shadow-xl border border-[#1f51fe]/20">
                 <div className="flex items-center mb-6">
                   <Bot className="h-6 w-6 text-[#1f51fe] mr-2 animate-pulse" aria-hidden="true" />
-                  <h3 className="text-2xl font-bold text-gray-900">{t('contact.form.title')}</h3>
+                  <h3 className="text-2xl font-bold text-gray-900">{t('contact.calendly.title')}</h3>
                 </div>
-                <form onSubmit={handleSubmit} className="space-y-4" noValidate>
-                  <div>
-                    <label htmlFor="name" className="sr-only">{t('contact.form.name')}</label>
-                    <input
-                      id="name"
-                      type="text"
-                      name="name"
-                      value={formData.name}
-                      onChange={handleInputChange}
-                      placeholder={t('contact.form.name')}
-                      className="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1f51fe] focus:border-transparent text-gray-900 placeholder-gray-500"
-                      autoComplete="name"
-                      required
-                    />
+                
+                <div className="space-y-6">
+                  <p className="text-gray-600 leading-relaxed">
+                    {t('contact.calendly.description')}
+                  </p>
+                  
+                  {/* Calendly Integration */}
+                  <div className="bg-gray-50 rounded-lg p-6 border border-gray-200">
+                    <div className="text-center">
+                      <div className="mb-4">
+                        <div className="bg-gradient-to-r from-[#1f51fe]/10 to-[#fad85a]/10 p-4 rounded-full w-16 h-16 mx-auto flex items-center justify-center">
+                          <Bot className="h-8 w-8 text-[#1f51fe] animate-pulse" aria-hidden="true" />
+                        </div>
+                      </div>
+                      <h4 className="text-lg font-semibold text-gray-900 mb-2">{t('contact.calendly.meeting_title')}</h4>
+                      <p className="text-gray-600 text-sm mb-6">{t('contact.calendly.meeting_description')}</p>
+                      
+                      {/* Calendly Button */}
+                      <a
+                        href="https://calendly.com/business-fineksi/45min"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center justify-center w-full bg-gradient-to-r from-[#1f51fe] to-[#072ba4] text-white px-6 py-3 rounded-lg font-semibold hover:shadow-lg hover:shadow-[#1f51fe]/25 transition-all duration-200 transform hover:scale-105 group"
+                        aria-label={`${t('contact.calendly.schedule_button')} - Open Calendly`}
+                      >
+                        {t('contact.calendly.schedule_button')}
+                        <ChevronRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" aria-hidden="true" />
+                      </a>
+                    </div>
                   </div>
-                  <div>
-                    <label htmlFor="email" className="sr-only">{t('contact.form.email')}</label>
-                    <input
-                      id="email"
-                      type="email"
-                      name="email"
-                      value={formData.email}
-                      onChange={handleInputChange}
-                      placeholder={t('contact.form.email')}
-                      className="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1f51fe] focus:border-transparent text-gray-900 placeholder-gray-500"
-                      autoComplete="email"
-                      required
-                    />
+                  
+                  {/* Alternative Contact Methods */}
+                  <div className="border-t border-gray-200 pt-6">
+                    <h4 className="text-sm font-semibold text-gray-900 mb-3">{t('contact.calendly.alternative_title')}</h4>
+                    <div className="space-y-2 text-sm text-gray-600">
+                      <div className="flex items-center">
+                        <span className="font-medium text-gray-900 w-16">Email:</span>
+                        <a href="mailto:contact@fineksi.com" className="text-[#1f51fe] hover:underline">contact@fineksi.com</a>
+                      </div>
+                      <div className="flex items-center">
+                        <span className="font-medium text-gray-900 w-16">Phone:</span>
+                        <a href="tel:+622112345678" className="text-[#1f51fe] hover:underline">+62 21 1234 5678</a>
+                      </div>
+                    </div>
                   </div>
-                  <div>
-                    <label htmlFor="company" className="sr-only">{t('contact.form.company')}</label>
-                    <input
-                      id="company"
-                      type="text"
-                      name="company"
-                      value={formData.company}
-                      onChange={handleInputChange}
-                      placeholder={t('contact.form.company')}
-                      className="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1f51fe] focus:border-transparent text-gray-900 placeholder-gray-500"
-                      autoComplete="organization"
-                      required
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="role" className="sr-only">{t('contact.form.role')}</label>
-                    <select
-                      id="role"
-                      name="role"
-                      value={formData.role}
-                      onChange={handleInputChange}
-                      className="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1f51fe] focus:border-transparent text-gray-900"
-                      autoComplete="organization-title"
-                      required
-                    >
-                      <option value="">{t('contact.form.role')}</option>
-                      <option value="cto">{t('contact.form.roles.cto')}</option>
-                      <option value="cio">{t('contact.form.roles.cio')}</option>
-                      <option value="head-lending">{t('contact.form.roles.head_lending')}</option>
-                      <option value="risk-manager">{t('contact.form.roles.risk_manager')}</option>
-                      <option value="operations">{t('contact.form.roles.operations')}</option>
-                      <option value="other">{t('contact.form.roles.other')}</option>
-                    </select>
-                  </div>
-                  <div>
-                    <label htmlFor="message" className="sr-only">{t('contact.form.message')}</label>
-                    <textarea
-                      id="message"
-                      name="message"
-                      value={formData.message}
-                      onChange={handleInputChange}
-                      placeholder={t('contact.form.message')}
-                      rows={3}
-                      className="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1f51fe] focus:border-transparent text-gray-900 placeholder-gray-500"
-                    />
-                  </div>
-                  <button
-                    type="submit"
-                    className="w-full bg-gradient-to-r from-[#1f51fe] to-[#072ba4] text-white px-6 py-3 rounded-lg font-semibold hover:shadow-lg hover:shadow-[#1f51fe]/25 transition-all duration-200 flex items-center justify-center group"
-                    aria-label={`${t('contact.form.submit')} - Submit Form`}
-                  >
-                    {t('contact.form.submit')}
-                    <ChevronRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" aria-hidden="true" />
-                  </button>
-                </form>
+                </div>
               </div>
             </div>
           </div>

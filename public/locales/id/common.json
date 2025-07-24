@@ -11,7 +11,9 @@
     "about": "Tentang Kami",
     "demo": "Minta Demo",
     "privacy": "Kebijakan Privasi",
-    "terms": "Syarat Layanan"
+    "terms": "Syarat Layanan",
+    "solution": "Solusi",
+    "home": "Beranda"
   },
   "hero": {
     "badge": "Teknologi AI Generasi Terbaru",
@@ -118,22 +120,14 @@
     "badge": "Rasakan Revolusi AI",
     "title": "Siap Mentransformasi Proses Kredit Anda dengan AI?",
     "subtitle": "Bergabunglah dengan institusi keuangan terkemuka yang sudah menggunakan Fineksi untuk memproses aplikasi dengan kecepatan, akurasi, dan keamanan superhuman.",
-    "form": {
-      "title": "Rasakan Demo AI",
-      "name": "Nama Lengkap",
-      "email": "Email Kerja",
-      "company": "Nama Perusahaan", 
-      "role": "Pilih Peran Anda",
-      "message": "Ceritakan tentang kebutuhan otomatisasi AI Anda...",
-      "submit": "Jadwalkan Demo AI",
-      "roles": {
-        "cto": "CTO",
-        "cio": "CIO",
-        "head_lending": "Kepala Pinjaman",
-        "risk_manager": "Manajer Risiko",
-        "operations": "Direktur Operasi",
-        "other": "Lainnya"
-      }
+    "calendly": {
+      "title": "Jadwalkan Demo AI Anda",
+      "description": "Pesan demonstrasi personal platform otomatisasi dokumen bertenaga AI kami. Lihat bagaimana Fineksi dapat mentransformasi proses kredit Anda hanya dalam 30 menit.",
+      "meeting_title": "Demo Platform AI & Konsultasi",
+      "meeting_description": "Demo personal 45 menit dengan tim kami",
+      "schedule_button": "Jadwalkan Demo Sekarang",
+      "alternative_title": "Lebih suka menghubungi kami langsung?",
+      "alternative_description": "Hubungi melalui email atau telepon untuk bantuan segera."
     }
   },
   "footer": {
@@ -149,7 +143,13 @@
       "contact": "Kontak",
       "privacy": "Kebijakan Privasi AI"
     },
-    "copyright": "Didukung oleh Jaringan Neural Canggih. Semua hak dilindungi."
+    "copyright": "Didukung oleh Jaringan Neural Canggih. Semua hak dilindungi.",
+    "compliance": "Fineksi terdaftar sebagai penyelenggara sistem elektronik di Kementerian Komunikasi dan Digital RI (Komdigi), Nomor Registrasi 010595.02/DJAI.PSE/04/2024, serta merupakan anggota AFTECH Indonesia dengan nomor anggota 1113/REG/AFT/SU.",
+    "compliance_item": {
+      "registered": "Terdaftar",
+      "certified": "Bersertifikat",
+      "member": "Anggota"
+    }
   },
   "solutions": {
     "hero": {

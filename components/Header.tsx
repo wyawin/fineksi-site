@@ -45,19 +45,17 @@ const Header = ({ locale = 'en' }: { locale?: string }) => {
           <div className="flex items-center">
             <a href={`/${currentLocale}`} className="flex-shrink-0 flex items-center">
               <img 
-                src="/1.png" 
+                src="/images/1.png" 
                 alt="Fineksi Logo" 
                 className="h-8 w-auto mr-2"
                 width={32}
                 height={32}
               />
-              <span className="text-xl font-bold bg-gradient-to-r from-[#1f51fe] to-[#072ba4] bg-clip-text text-transparent" aria-label="Fineksi Home">Fineksi</span>
             </a>
           </div>
           
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-6" role="menubar">
-              <a href={`/${currentLocale}#features`} className="text-gray-600 hover:text-[#1f51fe] px-3 py-2 text-sm font-medium transition-colors" role="menuitem">{t('nav.features')}</a>
               <a 
                 href={`/${currentLocale}/solutions`} 
                 className={`px-3 py-2 text-sm font-medium transition-colors ${
@@ -65,10 +63,8 @@ const Header = ({ locale = 'en' }: { locale?: string }) => {
                 }`}
                 role="menuitem"
               >
-                Solutions
+                {t('nav.solution')}
               </a>
-              <a href={`/${currentLocale}#benefits`} className="text-gray-600 hover:text-[#1f51fe] px-3 py-2 text-sm font-medium transition-colors" role="menuitem">{t('nav.benefits')}</a>
-              <a href={`/${currentLocale}#industries`} className="text-gray-600 hover:text-[#1f51fe] px-3 py-2 text-sm font-medium transition-colors" role="menuitem">{t('nav.industries')}</a>
               <a 
                 href={`/${currentLocale}/about`} 
                 className={`px-3 py-2 text-sm font-medium transition-colors ${
@@ -79,7 +75,7 @@ const Header = ({ locale = 'en' }: { locale?: string }) => {
                 {t('nav.about')}
               </a>
               <LanguageSwitcher currentLocale={currentLocale} />
-              <a href={`/${currentLocale}#contact`} className="bg-gradient-to-r from-[#1f51fe] to-[#072ba4] text-white px-4 py-2 rounded-lg text-sm font-medium hover:shadow-lg hover:shadow-[#1f51fe]/25 transition-all duration-200" role="menuitem">{t('nav.demo')}</a>
+              <a href={`/${currentLocale}#calendly-contact`} className="bg-gradient-to-r from-[#1f51fe] to-[#072ba4] text-white px-4 py-2 rounded-lg text-sm font-medium hover:shadow-lg hover:shadow-[#1f51fe]/25 transition-all duration-200" role="menuitem">{t('nav.demo')}</a>
             </div>
           </div>
           
@@ -100,17 +96,14 @@ const Header = ({ locale = 'en' }: { locale?: string }) => {
       {isMenuOpen && (
         <div className="md:hidden" id="mobile-menu">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white/95 backdrop-blur-md border-t border-gray-200">
-            <a href={`/${currentLocale}#features`} className="text-gray-600 hover:text-[#1f51fe] block px-3 py-2 text-base font-medium">{t('nav.features')}</a>
             <a 
               href={`/${currentLocale}/solutions`} 
               className={`block px-3 py-2 text-base font-medium ${
                 isActive(`/${currentLocale}/solutions`) ? 'text-[#1f51fe]' : 'text-gray-600 hover:text-[#1f51fe]'
               }`}
             >
-              Solutions
+              {t('nav.solution')}
             </a>
-            <a href={`/${currentLocale}#benefits`} className="text-gray-600 hover:text-[#1f51fe] block px-3 py-2 text-base font-medium">{t('nav.benefits')}</a>
-            <a href={`/${currentLocale}#industries`} className="text-gray-600 hover:text-[#1f51fe] block px-3 py-2 text-base font-medium">{t('nav.industries')}</a>
             <a 
               href={`/${currentLocale}/about`} 
               className={`block px-3 py-2 text-base font-medium ${
@@ -122,7 +115,7 @@ const Header = ({ locale = 'en' }: { locale?: string }) => {
             <div className="px-3 py-2">
               <LanguageSwitcher currentLocale={currentLocale} />
             </div>
-            <a href={`/${currentLocale}#contact`} className="bg-gradient-to-r from-[#1f51fe] to-[#072ba4] text-white block px-3 py-2 rounded-lg text-base font-medium mx-3 mt-4">{t('nav.demo')}</a>
+            <a href={`/${currentLocale}#calendly-contact`} className="bg-gradient-to-r from-[#1f51fe] to-[#072ba4] text-white block px-3 py-2 rounded-lg text-base font-medium mx-3 mt-4">{t('nav.demo')}</a>
           </div>
         </div>
       )}

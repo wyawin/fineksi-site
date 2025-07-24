@@ -6,9 +6,7 @@ const nextConfig = {
     domains: ['images.pexels.com'],
   },
   // Disable client-side navigation optimizations
-  experimental: {
-    appDir: true,
-  },
+
   // Force full page reloads for navigation
 }
 

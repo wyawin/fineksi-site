@@ -11,7 +11,9 @@
     "about": "About Us",
     "demo": "Request Demo",
     "privacy": "Privacy Policy",
-    "terms": "Terms of Service"
+    "terms": "Terms of Service",
+    "solution": "Solutions",
+    "home": "Home"
   },
   "hero": {
     "badge": "Next-Gen AI Technology",
@@ -118,22 +120,14 @@
     "badge": "Experience AI Revolution",
     "title": "Ready to Transform Your Credit Process with AI?",
     "subtitle": "Join leading financial institutions already using Fineksi to process applications with superhuman speed, accuracy, and security.",
-    "form": {
-      "title": "Experience AI Demo",
-      "name": "Full Name",
-      "email": "Work Email", 
-      "company": "Company Name",
-      "role": "Select Your Role",
-      "message": "Tell us about your AI automation needs...",
-      "submit": "Schedule AI Demo",
-      "roles": {
-        "cto": "CTO",
-        "cio": "CIO", 
-        "head_lending": "Head of Lending",
-        "risk_manager": "Risk Manager",
-        "operations": "Operations Director",
-        "other": "Other"
-      }
+    "calendly": {
+      "title": "Schedule Your AI Demo",
+      "description": "Book a personalized demonstration of our AI-powered document automation platform. See how Fineksi can transform your credit process in just 30 minutes.",
+      "meeting_title": "AI Platform Demo & Consultation",
+      "meeting_description": "45-minute personalized demo with our team",
+      "schedule_button": "Schedule Demo Now",
+      "alternative_title": "Prefer to contact us directly?",
+      "alternative_description": "Reach out via email or phone for immediate assistance."
     }
   },
   "footer": {
@@ -149,7 +143,13 @@
       "contact": "Contact",
       "privacy": "AI Privacy Policy"
     },
-    "copyright": "Powered by Advanced Neural Networks. All rights reserved."
+    "copyright": "Powered by Advanced Neural Networks. All rights reserved.",
+    "compliance": "Fineksi is registered as an Electronic System Provider with the Ministry of Communication and Digital of the Republic of Indonesia (Komdigi), under registration number 010595.02/DJAI.PSE/04/2024, and is a member of AFTECH with registration number 1113/REG/AFT/SU.",
+    "compliance_item": {
+      "registered": "Registered",
+      "certified": "Certified",
+      "member": "Member"
+    }
   },
   "solutions": {
     "hero": {
