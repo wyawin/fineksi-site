@@ -1,20 +1,47 @@
 import { Metadata } from 'next'
 import SolutionsPage from '@/components/SolutionsPage'
 
+// Import translations directly
+import enTranslations from '../../../public/locales/en/common.json'
+import idTranslations from '../../../public/locales/id/common.json'
+
+const translations = {
+  en: enTranslations,
+  id: idTranslations
+}
+
 // Force SSR for this page
 export const dynamic = 'force-dynamic'
 export const revalidate = 0
 
-export const metadata: Metadata = {
-  title: 'AI Document Analysis Solutions - Comprehensive Financial Document Processing',
-  description: 'Discover Fineksi\'s comprehensive AI-powered document analysis solutions for banks, multifinance, and P2P lending. Process bank statements, financial reports, legal documents, and more with 99.8% accuracy.',
-  openGraph: {
-    title: 'AI Document Analysis Solutions - Comprehensive Financial Document Processing',
-    description: 'Discover Fineksi\'s comprehensive AI-powered document analysis solutions for banks, multifinance, and P2P lending. Process bank statements, financial reports, legal documents, and more with 99.8% accuracy.',
-    url: 'https://fineksi.com/solutions',
-  },
-}
+// Generate metadata based on locale
+export async function generateMetadata({ params: { locale } }: { params: { locale: string } }): Promise<Metadata> {
+  const t = (key: string) => {
+    const keys = key.split('.')
+    let value: any = translations[locale as keyof typeof translations] || translations.en
+    
+    for (const k of keys) {
+      value = value?.[k]
+    }
+    
+    return value || key
+  }
 
+  const title = t('metadata.solutions.title')
+  const description = t('metadata.solutions.description')
+
+  const canonicalUrl = `https://fineksi.com/${locale}/solutions`
+
+  return {
+    title,
+    description,
+    openGraph: {
+      title,
+      description,
+      url: canonicalUrl,
+    },
+  }
+}
 export default function Solutions({ params: { locale } }: { params: { locale: string } }) {
   return <SolutionsPage locale={locale} />
 }

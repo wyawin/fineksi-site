@@ -4,6 +4,24 @@
     "description": "Transform your credit process with advanced AI document automation, fraud detection, and cognitive analysis. Trusted by banks, multifinance, and P2P lending platforms.",
     "name": "Fineksi"
   },
+  "metadata": {
+    "about": {
+      "title": "About Us - Leading AI Experts in Financial Technology",
+      "description": "Meet the world-class AI team behind Fineksi. Learn about our mission to democratize AI for financial institutions and our cutting-edge neural network technology."
+    },
+    "solutions": {
+      "title": "AI Document Analysis Solutions - Comprehensive Financial Document Processing",
+      "description": "Discover Fineksi's comprehensive AI-powered document analysis solutions for banks, multifinance, and P2P lending. Process bank statements, financial reports, legal documents, and more with 99.8% accuracy."
+    },
+    "privacy": {
+      "title": "Privacy Policy - How Fineksi Protects Your Data",
+      "description": "Learn how Fineksi protects and handles your data with military-grade security, SOC 2 compliance, and GDPR adherence in our AI-powered financial services."
+    },
+    "terms": {
+      "title": "Terms and Conditions - Fineksi Service Agreement",
+      "description": "Read the terms and conditions for using Fineksi's document automation and credit analysis services. Updated January 2025."
+    }
+  },
   "nav": {
     "features": "AI Features",
     "benefits": "Benefits", 

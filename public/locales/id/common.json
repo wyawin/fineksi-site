@@ -4,6 +4,24 @@
     "description": "Transformasikan proses kredit Anda dengan otomatisasi dokumen AI canggih, deteksi penipuan, dan analisis kognitif. Dipercaya oleh bank, multifinance, dan platform P2P lending.",
     "name": "Fineksi"
   },
+  "metadata": {
+    "about": {
+      "title": "Tentang Kami - Ahli AI Terkemuka dalam Teknologi Keuangan",
+      "description": "Temui tim AI kelas dunia di balik Fineksi. Pelajari misi kami untuk mendemokratisasi AI untuk institusi keuangan dan teknologi jaringan neural terdepan kami."
+    },
+    "solutions": {
+      "title": "Solusi Analisis Dokumen AI - Pemrosesan Dokumen Keuangan Komprehensif",
+      "description": "Temukan solusi analisis dokumen bertenaga AI komprehensif Fineksi untuk bank, multifinance, dan P2P lending. Proses laporan bank, laporan keuangan, dokumen hukum, dan lainnya dengan akurasi 99,8%."
+    },
+    "privacy": {
+      "title": "Kebijakan Privasi - Bagaimana Fineksi Melindungi Data Anda",
+      "description": "Pelajari bagaimana Fineksi melindungi dan menangani data Anda dengan keamanan tingkat militer, kepatuhan SOC 2, dan kepatuhan GDPR dalam layanan keuangan bertenaga AI kami."
+    },
+    "terms": {
+      "title": "Syarat dan Ketentuan - Perjanjian Layanan Fineksi",
+      "description": "Baca syarat dan ketentuan untuk menggunakan layanan otomatisasi dokumen dan analisis kredit Fineksi. Diperbarui Januari 2025."
+    }
+  },
   "nav": {
     "features": "Fitur AI",
     "benefits": "Manfaat",

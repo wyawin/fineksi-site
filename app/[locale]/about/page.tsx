@@ -1,18 +1,46 @@
 import { Metadata } from 'next'
 import AboutPage from '@/components/AboutPage'
 
+// Import translations directly
+import enTranslations from '../../../public/locales/en/common.json'
+import idTranslations from '../../../public/locales/id/common.json'
+
+const translations = {
+  en: enTranslations,
+  id: idTranslations
+}
+
 // Force SSR for this page
 export const dynamic = 'force-dynamic'
 export const revalidate = 0
 
-export const metadata: Metadata = {
-  title: 'About Us - Leading AI Experts in Financial Technology',
-  description: 'Meet the world-class AI team behind Fineksi. Learn about our mission to democratize AI for financial institutions and our cutting-edge neural network technology.',
-  openGraph: {
-    title: 'About Fineksi - Leading AI Experts in Financial Technology',
-    description: 'Meet the world-class AI team behind Fineksi. Learn about our mission to democratize AI for financial institutions and our cutting-edge neural network technology.',
-    url: 'https://fineksi.com/about',
-  },
+// Generate metadata based on locale
+export async function generateMetadata({ params: { locale } }: { params: { locale: string } }): Promise<Metadata> {
+  const t = (key: string) => {
+    const keys = key.split('.')
+    let value: any = translations[locale as keyof typeof translations] || translations.en
+    
+    for (const k of keys) {
+      value = value?.[k]
+    }
+    
+    return value || key
+  }
+
+  const title = t('metadata.about.title')
+  const description = t('metadata.about.description')
+
+  const canonicalUrl = `https://fineksi.com/${locale}/about`
+
+  return {
+    title,
+    description,
+    openGraph: {
+      title: `About ${t('site.name')} - Leading AI Experts in Financial Technology`,
+      description,
+      url: canonicalUrl,
+    },
+  }
 }
 
 export default function About({ params: { locale } }: { params: { locale: string } }) {

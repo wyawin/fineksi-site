@@ -1,24 +1,51 @@
 import { Metadata } from 'next'
 import PrivacyPage from '@/components/PrivacyPage'
 
+// Import translations directly
+import enTranslations from '../../../public/locales/en/common.json'
+import idTranslations from '../../../public/locales/id/common.json'
+
+const translations = {
+  en: enTranslations,
+  id: idTranslations
+}
+
 // Force SSR for this page
 export const dynamic = 'force-dynamic'
 export const revalidate = 0
 
-export const metadata: Metadata = {
-  title: 'Privacy Policy - How Fineksi Protects Your Data',
-  description: 'Learn how Fineksi protects and handles your data with military-grade security, SOC 2 compliance, and GDPR adherence in our AI-powered financial services.',
-  openGraph: {
-    title: 'Privacy Policy - How Fineksi Protects Your Data',
-    description: 'Learn how Fineksi protects and handles your data with military-grade security, SOC 2 compliance, and GDPR adherence in our AI-powered financial services.',
-    url: 'https://fineksi.com/privacy',
-  },
-  robots: {
-    index: true,
-    follow: true,
-  },
-}
+// Generate metadata based on locale
+export async function generateMetadata({ params: { locale } }: { params: { locale: string } }): Promise<Metadata> {
+  const t = (key: string) => {
+    const keys = key.split('.')
+    let value: any = translations[locale as keyof typeof translations] || translations.en
+    
+    for (const k of keys) {
+      value = value?.[k]
+    }
+    
+    return value || key
+  }
 
+  const title = t('metadata.privacy.title')
+  const description = t('metadata.privacy.description')
+
+  const canonicalUrl = `https://fineksi.com/${locale}/privacy`
+
+  return {
+    title,
+    description,
+    openGraph: {
+      title,
+      description,
+      url: canonicalUrl,
+    },
+    robots: {
+      index: true,
+      follow: true,
+    },
+  }
+}
 export default function Privacy({ params: { locale } }: { params: { locale: string } }) {
   return <PrivacyPage locale={locale} />
 }
