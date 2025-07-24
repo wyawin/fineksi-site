@@ -109,10 +109,10 @@
     }
   },
   "stats": {
-    "accuracy": "Tingkat Akurasi AI",
-    "processing": "Waktu Pemrosesan",
-    "data_points": "Titik Data AI", 
-    "documents": "Dokumen Terlatih"
+    "faster": "Proses Lebih Cepat",
+    "productivity": "Produktivitas Meningkat",
+    "human_error": "Human Error Berkurang", 
+    "fraud": "Mengurangi Resiko Fraud"
   },
   "industries": {
     "badge": "Solusi Bertenaga AI",
@@ -137,12 +137,12 @@
   "contact": {
     "badge": "Rasakan Revolusi AI",
     "title": "Siap Mentransformasi Proses Kredit Anda dengan AI?",
-    "subtitle": "Bergabunglah dengan institusi keuangan terkemuka yang sudah menggunakan Fineksi untuk memproses aplikasi dengan kecepatan, akurasi, dan keamanan superhuman.",
+    "subtitle": "Bergabunglah dengan institusi keuangan terkemuka yang menggunakan Fineksi untuk memproses dokumen dengan kecepatan, akurasi, dan diandalkan dengan berbasis AI.",
     "calendly": {
       "title": "Jadwalkan Demo Anda",
-      "description": "Pesan demonstrasi personal platform otomatisasi dokumen bertenaga AI kami. Lihat bagaimana Fineksi dapat mentransformasi proses kredit Anda hanya dalam 30 menit.",
-      "meeting_title": "Demo Platform AI & Konsultasi",
-      "meeting_description": "Demo personal 45 menit dengan tim kami",
+      "description": "Jadwalkan demo untuk platform otomatisasi dokumen berbasis AI kami. Lihat bagaimana Fineksi dapat mentransformasi proses kredit Anda hanya dalam 45 menit.",
+      "meeting_title": "Demo & Konsultasi",
+      "meeting_description": "Demo dan diskusi 45 menit dengan tim kami",
       "schedule_button": "Jadwalkan Demo Sekarang",
       "alternative_title": "Lebih suka menghubungi kami langsung?",
       "alternative_description": "Hubungi melalui email atau telepon untuk bantuan segera."
@@ -167,7 +167,9 @@
       "registered": "Terdaftar",
       "certified": "Bersertifikat",
       "member": "Anggota"
-    }
+    },
+    "whatsapp": "Whatsapp",
+    "email": "Email"
   },
   "solutions": {
     "hero": {
@@ -300,7 +302,7 @@
     "cta": {
       "badge": "Siap Bertransformasi",
       "title": "Transformasikan Pemrosesan Dokumen Anda Hari Ini",
-      "subtitle": "Bergabunglah dengan institusi keuangan terkemuka yang menggunakan Fineksi untuk memproses dokumen dengan kecepatan, akurasi, dan kecerdasan berbasis AI.",
+      "subtitle": "Bergabunglah dengan institusi keuangan terkemuka yang menggunakan Fineksi untuk memproses dokumen dengan kecepatan, akurasi, dan diandalkan dengan berbasis AI.",
       "demo": "Jadwalkan Demo",
       "features": "Lihat Fitur"
     }

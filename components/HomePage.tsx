@@ -335,34 +335,28 @@ const HomePage = ({ locale = 'en' }: { locale?: string }) => {
         </div>
       </section>
 
-      {/* AI Stats Section */}
+      {/* Stats Section */}
       <section className="py-16 bg-gradient-to-r from-[#1f51fe]/5 via-[#fad85a]/5 to-[#1f51fe]/5 border-y border-[#1f51fe]/10" aria-labelledby="stats-heading">
-        <h2 id="stats-heading" className="sr-only">AI Performance Statistics</h2>
+        <h2 id="stats-heading" className="sr-only">Solutions</h2>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+          <div className="grid grid-cols-3 md:grid-cols-3 gap-8 text-center">
             <div className="group">
               <div className="text-4xl font-bold bg-gradient-to-r from-[#1f51fe] to-[#072ba4] bg-clip-text text-transparent mb-2 group-hover:scale-110 transition-transform">
-                99.8%
+                40x
               </div>
-              <div className="text-gray-600 text-sm">{t('stats.accuracy')}</div>
+              <div className="text-gray-600 text-sm">{t('stats.faster')}</div>
             </div>
             <div className="group">
               <div className="text-4xl font-bold bg-gradient-to-r from-[#fad85a] to-[#f59e0b] bg-clip-text text-transparent mb-2 group-hover:scale-110 transition-transform">
-                &lt;3s
+                80%
               </div>
-              <div className="text-gray-600 text-sm">{t('stats.processing')}</div>
+              <div className="text-gray-600 text-sm">{t('stats.productivity')}</div>
             </div>
             <div className="group">
               <div className="text-4xl font-bold bg-gradient-to-r from-green-500 to-teal-500 bg-clip-text text-transparent mb-2 group-hover:scale-110 transition-transform">
-                500+
+                95%
               </div>
-              <div className="text-gray-600 text-sm">{t('stats.data_points')}</div>
-            </div>
-            <div className="group">
-              <div className="text-4xl font-bold bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent mb-2 group-hover:scale-110 transition-transform">
-                1B+
-              </div>
-              <div className="text-gray-600 text-sm">{t('stats.documents')}</div>
+              <div className="text-gray-600 text-sm">{t('stats.human_error')}</div>
             </div>
           </div>
         </div>
@@ -463,16 +457,16 @@ const HomePage = ({ locale = 'en' }: { locale?: string }) => {
               </p>
               <div className="flex items-center space-x-6">
                 <div className="text-center">
-                  <div className="text-3xl font-bold bg-gradient-to-r from-[#1f51fe] to-[#072ba4] bg-clip-text text-transparent">99.8%</div>
-                  <div className="text-gray-500 text-sm">{t('stats.accuracy')}</div>
+                  <div className="text-3xl font-bold bg-gradient-to-r from-[#1f51fe] to-[#072ba4] bg-clip-text text-transparent">40x</div>
+                  <div className="text-gray-500 text-sm">{t('stats.faster')}</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold bg-gradient-to-r from-[#fad85a] to-[#f59e0b] bg-clip-text text-transparent">100x</div>
-                  <div className="text-gray-500 text-sm">{t('stats.processing')}</div>
+                  <div className="text-3xl font-bold bg-gradient-to-r from-[#fad85a] to-[#f59e0b] bg-clip-text text-transparent">80%</div>
+                  <div className="text-gray-500 text-sm">{t('stats.productivity')}</div>
                 </div>
                 <div className="text-center">
                   <div className="text-3xl font-bold bg-gradient-to-r from-green-500 to-teal-500 bg-clip-text text-transparent">95%</div>
-                  <div className="text-gray-500 text-sm">Cost Reduction</div>
+                  <div className="text-gray-500 text-sm">{t('stats.human_error')}</div>
                 </div>
               </div>
             </div>
@@ -519,12 +513,12 @@ const HomePage = ({ locale = 'en' }: { locale?: string }) => {
                     <h4 className="text-sm font-semibold text-gray-900 mb-3">{t('contact.calendly.alternative_title')}</h4>
                     <div className="space-y-2 text-sm text-gray-600">
                       <div className="flex items-center">
-                        <span className="font-medium text-gray-900 w-16">Email:</span>
-                        <a href="mailto:contact@fineksi.com" className="text-[#1f51fe] hover:underline">contact@fineksi.com</a>
+                        <span className="font-medium text-gray-900 w-20">{t('footer.whatsapp')}:</span>
+                        <span className="text-[#1f51fe]">+62 851 5907 9011</span>
                       </div>
                       <div className="flex items-center">
-                        <span className="font-medium text-gray-900 w-16">Phone:</span>
-                        <a href="tel:+622112345678" className="text-[#1f51fe] hover:underline">+62 21 1234 5678</a>
+                        <span className="font-medium text-gray-900 w-20">{t('footer.email')}:</span>
+                        <span className="text-[#1f51fe]">support@fineksi.com</span>
                       </div>
                     </div>
                   </div>

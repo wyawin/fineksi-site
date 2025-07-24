@@ -47,11 +47,11 @@ const Footer = ({ locale = 'en' }: { locale?: string }) => {
             {/* Contact Information */}
             <div className="flex space-x-10 mb-6">
               <div>
-                <div className="font-medium text-white mb-1">Phone</div>
+                <div className="font-medium text-white mb-1">{t('footer.whatsapp')}</div>
                 <div className="space-y-3 text-gray-400 text-sm">+62 851 5907 9011</div>
               </div>
               <div>
-                <div className="font-medium text-white mb-1">Email</div>
+                <div className="font-medium text-white mb-1">{t('footer.email')}</div>
                 <div className="space-y-3 text-gray-400 text-sm">support@fineksi.com</div>
               </div>
             </div>
