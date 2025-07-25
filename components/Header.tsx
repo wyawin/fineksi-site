@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react'
 import { usePathname } from 'next/navigation'
-import { Brain, Menu, X } from 'lucide-react'
+import { Menu, X } from 'lucide-react'
 import LanguageSwitcher from './LanguageSwitcher'
 
 // Import translations directly
@@ -28,6 +28,10 @@ const Header = ({ locale = 'en' }: { locale?: string }) => {
   
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const pathname = usePathname()
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen)
+  }
 
   const isActive = (path: string) => pathname === path
 
@@ -80,11 +84,12 @@ const Header = ({ locale = 'en' }: { locale?: string }) => {
           <div className="md:hidden flex items-center space-x-3">
             <LanguageSwitcher currentLocale={currentLocale} />
             <button
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              onClick={toggleMenu}
               className="text-gray-600 hover:text-[#1f51fe] p-2"
               aria-expanded={isMenuOpen}
               aria-controls="mobile-menu"
               aria-label="Toggle navigation menu"
+              type="button"
             >
               {isMenuOpen ? <X className="h-6 w-6" aria-hidden="true" /> : <Menu className="h-6 w-6" aria-hidden="true" />}
             </button>
@@ -100,6 +105,7 @@ const Header = ({ locale = 'en' }: { locale?: string }) => {
               className={`block px-3 py-2 text-base font-medium ${
                 isActive(`/${currentLocale}/solutions`) ? 'text-[#1f51fe]' : 'text-gray-600 hover:text-[#1f51fe]'
               }`}
+              onClick={() => setIsMenuOpen(false)}
             >
               {t('nav.solution')}
             </a>
@@ -108,10 +114,17 @@ const Header = ({ locale = 'en' }: { locale?: string }) => {
               className={`block px-3 py-2 text-base font-medium ${
                 isActive(`/${currentLocale}/about`) ? 'text-[#1f51fe]' : 'text-gray-600 hover:text-[#1f51fe]'
               }`}
+              onClick={() => setIsMenuOpen(false)}
             >
               {t('nav.about')}
             </a>
-            <a href={`/${currentLocale}#calendly-contact`} className="bg-gradient-to-r from-[#1f51fe] to-[#072ba4] text-white block px-3 py-2 rounded-lg text-base font-medium mx-3 mt-4">{t('nav.demo')}</a>
+            <a 
+              href={`/${currentLocale}#calendly-contact`} 
+              className="bg-gradient-to-r from-[#1f51fe] to-[#072ba4] text-white block px-3 py-2 rounded-lg text-base font-medium mx-3 mt-4"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              {t('nav.demo')}
+            </a>
           </div>
         </div>
       )}
