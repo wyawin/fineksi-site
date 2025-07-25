@@ -77,7 +77,8 @@ const Header = ({ locale = 'en' }: { locale?: string }) => {
             </div>
           </div>
           
-          <div className="md:hidden">
+          <div className="md:hidden flex items-center space-x-3">
+            <LanguageSwitcher currentLocale={currentLocale} />
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="text-gray-600 hover:text-[#1f51fe] p-2"
@@ -110,9 +111,6 @@ const Header = ({ locale = 'en' }: { locale?: string }) => {
             >
               {t('nav.about')}
             </a>
-            <div className="px-3 py-2">
-              <LanguageSwitcher currentLocale={currentLocale} />
-            </div>
             <a href={`/${currentLocale}#calendly-contact`} className="bg-gradient-to-r from-[#1f51fe] to-[#072ba4] text-white block px-3 py-2 rounded-lg text-base font-medium mx-3 mt-4">{t('nav.demo')}</a>
           </div>
         </div>
