@@ -328,96 +328,120 @@
     "hero": {
       "badge": "Ketentuan Layanan",
       "title": "Syarat dan Ketentuan",
-      "subtitle": "Selamat datang di platform Fineksi yang dikelola oleh PT FINSKOR TEKNOLOGI INDONESIA. Mohon untuk membaca Syarat dan Ketentuan ini dengan seksama dan secara menyeluruh.",
+      "subtitle": "Selamat datang di platform Fineksi (\"Platform\") yang dikelola oleh PT FINSKOR TEKNOLOGI INDONESIA (\"Kami\" atau \"Perusahaan\").",
       "last_updated": "Terakhir diperbarui: 12 Juni 2024"
     },
     "sections": {
       "introduction": {
-        "title": "Pengantar",
-        "content": "Dengan mengakses dan/atau menggunakan Platform, Anda memahami dan setuju untuk tunduk terhadap Syarat dan Ketentuan ini. Dalam hal Anda tidak setuju dengan Syarat dan Ketentuan ini, Anda berhak untuk tidak mengakses dan/atau tidak menggunakan Platform."
+        "content": "Dengan mengakses dan/atau menggunakan Platform, Anda memahami dan setuju untuk tunduk terhadap Syarat dan Ketentuan ini. Mohon untuk membaca Syarat dan Ketentuan ini dengan seksama dan secara menyeluruh. Dalam hal Anda tidak setuju dengan Syarat dan Ketentuan ini, Anda berhak untuk tidak mengakses dan/atau tidak menggunakan Platform."
       },
       "platform_usage": {
-        "title": "A. Penggunaan Platform",
-        "content": "Anda dapat mengakses atau menggunakan Platform setelah Anda menyelesaikan proses pendaftaran pada Platform dengan tunduk pada syarat dan ketentuan yang ditentukan dari waktu ke waktu oleh Perusahaan, dan memiliki Akun.",
-        "responsibilities": [
+        "title": "A. Penggunaan Platform (The Usage of Platform)",
+        "content": [
+          "Anda dapat mengakses atau menggunakan Platform setelah Anda menyelesaikan proses pendaftaran pada Platform dengan tunduk pada syarat dan ketentuan yang ditentukan dari waktu ke waktu oleh Perusahaan, dan memiliki Akun. Ada beberapa fitur atau layanan pada Platform yang dapat Anda akses atau gunakan hanya jika Anda telah melakukan proses Verifikasi dasar (sebagaimana relevan).",
           "Anda bertanggung jawab penuh atas setiap dan semua aktivitas yang terjadi di Akun Anda.",
-          "Anda hanya dapat menggunakan Akun Anda sendiri dan berjanji untuk tidak mengizinkan orang lain menggunakan identitas Anda atau Akun Anda.",
-          "Anda harus melindungi kata sandi Akun Anda setiap akses atau identifikasi yang telah Anda buat atau Perusahaan berikan kepada Anda.",
-          "Anda berjanji untuk segera memberitahu Perusahaan jika Akun Anda dicuri dan/atau diretas.",
-          "Anda harus menghapus semua data dan/atau informasi dari semua perangkat elektronik jika Anda menerima data yang tidak terkait dengan Platform."
-        ],
-        "prohibited_activities": [
-          "melanggar hukum atau melanggar hak pihak ketiga",
-          "melakukan kegiatan yang bertentangan dengan peraturan perundang-undangan yang berlaku",
-          "menyebarkan materi yang dilindungi hak cipta tanpa persetujuan",
-          "mengakses atau melakukan upaya untuk mendapatkan akses tidak sah ke Platform",
-          "mengirimkan materi yang mengandung virus atau program yang merusak",
-          "merekayasa balik atau mengakses Platform untuk membuat produk serupa",
-          "meluncurkan program atau skrip yang dapat membebani kinerja Platform"
+          "Anda hanya dapat menggunakan Akun Anda sendiri dan berjanji untuk tidak mengizinkan orang lain menggunakan identitas Anda atau Akun Anda. Anda harus melindungi kata sandi Akun Anda setiap akses atau identifikasi yang telah Anda buat atau Perusahaan berikan kepada Anda. Dalam hal terjadi pengungkapan atau kebocoran kata sandi, akses, atau identifikasi Anda yang menyebabkan penggunaan Akun atau identitas Anda oleh pihak ketiga dalam hal apa pun, maka setiap aktivitas atau perintah yang timbul dari Akun tersebut akan dianggap sah dan tetap menjadi tanggung jawab Anda, kecuali Anda telah memberitahukan pengungkapan atau kebocoran tersebut kepada Perusahaan dalam jangka waktu 48 (empat puluh delapan) jam sebelumnya ke saluran yang disediakan oleh Perusahaan.",
+          "Anda berjanji untuk segera memberitahu Perusahaan jika (i) Akun Anda dicuri dan/atau diretas, atau (ii) jika perangkat elektronik atau seluler atau ponsel Anda yang di dalamnya terdapat Platform hilang, dicuri, dan/atau kejadian lainnya yang menyebabkan alat elektronik atau telepon seluler atau telepon genggam tersebut tidak lagi berada dalam penguasaan Anda yang berpotensi mengganggu keamanan atau memungkinkan Akun Anda diakses oleh pihak lain yang tidak berwenang.",
+          "Jika diharuskan oleh ketentuan hukum yang berlaku, Kami berhak dari waktu ke waktu meminta Anda untuk mengisi dan/atau memberikan informasi, data dan/atau dokumen tertentu lainnya yang diperlukan, termasuk secara elektronik, kepada Kami.",
+          "Berdasarkan pertimbangan Kami sendiri, Kami berhak untuk sewaktu-waktu melakukan pemeriksaan terhadap Anda, termasuk namun tidak terbatas pada meminta Anda untuk menunjukkan bukti identitas diri atau dokumen lain yang Kami anggap perlu atau berdasarkan peraturan perundang-undangan yang berlaku diperlukan (termasuk peraturan perundang-undangan yang terkait dengan anti pencucian uang dan pencegahan pendanaan terorisme), dan Anda memahami dan menyetujui bahwa Kami berhak untuk menghentikan atau menolak akses atau penggunaan Platform dalam hal Anda menolak untuk memberikan bukti identitas atau dokumen lainnya.",
+          "Anda harus menghapus semua data dan/atau informasi dari semua perangkat elektronik atau telepon seluler atau ponsel Anda jika Anda menerima atau memperoleh data dan/atau informasi yang tidak terkait dengan Platform atau tidak ditujukan untuk Anda.",
+          "Kecuali secara tegas diizinkan berdasarkan Syarat dan Ketentuan ini, Anda dilarang melakukan hal-hal yang melawan hukum atau tanpa wewenang dan/atau tidak sesuai dengan tujuan kepemilikan Akun dan/atau penggunaan Platform, termasuk namun tidak terbatas pada:",
+          "melanggar hukum atau melanggar hak pihak ketiga;",
+          "melakukan kegiatan atau transaksi yang bertentangan atau tidak sesuai dengan peraturan perundang-undangan yang berlaku, termasuk yang mengandung pornografi dan/atau suku, agama, ras, dan antargolongan (SARA), barang dan/atau jasa yang dilarang, pelanggaran terhadap ketentuan anti pencucian uang dan pencegahan pendanaan terorisme (APUPPT) serta transaksi terkait aktivitas layanan keuangan ilegal lainnya;",
+          "menyebarkan, atau memperbanyak materi yang dilindungi oleh hak cipta, merek dagang, atau hak kekayaan intelektual lainnya dalam bentuk apapun sebelum memperoleh persetujuan terlebih dahulu dari pemiliknya;",
+          "mengunggah, mendistribusikan, menyebarkan, atau memperbanyak materi yang dilindungi oleh hak cipta, merek dagang, atau hak kekayaan intelektual lainnya dalam bentuk apapun sebelum memperoleh persetujuan terlebih dahulu dari pemiliknya;",
+          "menghapus pemberitahuan atau tanda-tanda hak cipta, merek dagang, atau hak kekayaan intelektual lainnya dalam Platform;",
+          "mengakses atau melakukan upaya untuk mendapatkan akses tidak sah ke Platform, atau sistem atau jaringan atau server yang terkait dengannya;",
+          "Dengan cara apapun tanpa hak atau melawan hukum mengubah, menambah, mengurangi, mentransmisikan, memusnahkan, menghilangkan, memindahkan, memindahtangankan, dan/atau menyembunyikan informasi elektronik dan/atau dokumen elektronik milik Perusahaan atau publik tanpa hak atau melawan hukum;",
+          "mengirimkan materi yang mengandung virus, worm, trojan horse, kode, file, skrip, atau program yang merusak, mengganggu, atau membahayakan Platform, atau sistem atau jaringan atau server yang terkait dengannya;",
+          "menghalangi, mengintervensi, mengganggu dan/atau merugikan kinerja, integritas atau kinerja Platform, atau sistem atau jaringan atau server yang terkait dengannya atau data yang terkandung di dalamnya;",
+          "merekayasa balik atau mengakses Platform atau perangkat lunak Perusahaan untuk (i) membuat Platform atau produk atau layanan serupa, (ii) menyalin ide, fitur, fungsi, grafik dan/atau desain Platform, dan/atau (iii) membuat produk atau layanan yang menggunakan ide, fitur, fungsi, grafik dan/atau desain yang serupa dengan Platform;",
+          "menyalin, memodifikasi, mengadaptasi, menerjemahkan, membuat karya turunan dari, mendistribusikan, menyebarkan, mentransmisikan, menjual, menjual kembali, mentransfer, membongkar, menyusun, atau melisensikan atau mensublisensikan bagian mana pun dari Platform;",
+          "membuat tautan ke Platform atau membuat 'bingkai' atau 'cermin' bagian mana pun dari Platform ke server atau perangkat nirkabel atau berbasis internet;",
+          "meluncurkan program atau skrip, termasuk namun tidak terbatas pada spider web, perayap web, robot web, semut web, pengindeks web, bot, virus, worm, atau program yang menghasilkan atau dapat menghasilkan beberapa permintaan ke server dalam hitungan detik, atau secara tidak sah menghalangi atau membebani kinerja Platform;",
+          "meretas atau mencoba meretas atau membuat modifikasi pada Platform atau sistem atau jaringan atau server yang terkait dengannya yang dimiliki atau dikelola oleh Perusahaan;",
+          "Bertindak seolah-olah Anda adalah orang atau entitas lain atau memberikan kesan atau pernyataan palsu tentang afiliasi atau hubungan Anda dengan seseorang atau entitas; dan/atau;",
+          "Melakukan tindakan atau upaya yang dapat merugikan Perusahaan, dan/atau merusak reputasi atau menyebabkan pencemaran nama baik atau penghinaan terhadap Perusahaan.",
+          "Pengadaan dan segala biaya yang terkait dengan penggunaan alat elektronik atau telepon seluler atau telepon genggam yang Anda butuhkan untuk mengakses atau menggunakan Akun atau Platform sepenuhnya menjadi tanggung jawab Anda, termasuk namun tidak terbatas pada, pembelian dan pembayaran semua biaya yang dikenakan oleh pihak penyedia layanan telekomunikasi untuk paket data internet."
         ]
       },
-      "representations": {
-        "title": "B. Pernyataan dan Jaminan",
-        "content": "Pengguna menyatakan dan menjamin dari waktu ke waktu selama akses dan penggunaan Platform oleh Pengguna sebagai berikut:",
-        "warranties": [
-          "Pengguna adalah subjek hukum yang cakap dan berwenang menurut ketentuan hukum yang berlaku",
-          "Pembukaan dan/atau penggunaan Akun tidak dimaksudkan untuk melakukan tindak pidana",
-          "Pengguna tidak boleh memberikan hak kepada pihak tidak berwenang untuk menggunakan Akun",
-          "Setiap data dan informasi yang disampaikan adalah benar, akurat dan lengkap",
-          "Anda telah membaca dan memahami Syarat dan Ketentuan dan Kebijakan Privasi ini"
+      "representations_warranties": {
+        "title": "B. Pernyataan dan Jaminan (Representation and Warranties)",
+        "content": [
+          "Pengguna menyatakan dan menjamin dari waktu ke waktu selama akses dan penggunaan Platform oleh Pengguna sebagai berikut:",
+          "Pengguna adalah subjek hukum yang cakap dan berwenang menurut ketentuan hukum yang berlaku untuk melakukan perbuatan hukum, termasuk membuat Akun, menggunakan Platform dan fitur Platform, dan/atau mengikatkan diri pada Syarat dan Ketentuan ini dan/atau Kebijakan Privasi.",
+          "Pembukaan dan/atau penggunaan Akun tidak dimaksudkan atau disasarkan untuk melakukan tindak pidana atau hal-hal yang dilarang berdasarkan peraturan perundang-undangan yang berlaku, termasuk peraturan perundang-undangan tentang anti pencucian uang dan pencegahan pendanaan terorisme, atau untuk melakukan transaksi dalam rangka penipuan, mengaburkan, atau menghindari pelaporan ke Pusat Pelaporan dan Analisis Transaksi Keuangan (PPATK) sesuai dengan peraturan perundang-undangan yang berlaku, dengan ketentuan Pengguna bertanggung jawab penuh dan membebaskan Perusahaan dari segala tuntutan hukum, tuntutan, dan/atau kerugian dalam bentuk apapun yang timbul dari atau sehubungan dengan tindak pidana atau hal-hal yang dilarang berdasarkan peraturan perundang-undangan yang berlaku yang dilakukan oleh Pengguna;",
+          "Pengguna tidak boleh memberikan hak, wewenang dan/atau kuasa dalam bentuk apapun dan dalam keadaan apapun kepada pihak tidak berwenang untuk menggunakan Akun dan/atau mengakses Platform dengan alasan apapun dan dalam keadaan apapun, dan harus bertanggung jawab penuh atas penggunaan Akun tersebut dan/atau akses Platform oleh pihak tidak berwenang terlepas dari kelalaian Pengguna atas penggunaan pihak tidak berwenang tersebut.",
+          "Setiap data dan informasi yang disampaikan atau diserahkan Pengguna kepada Perusahaan terkait penggunaan Akun dan/atau akses Platform adalah benar, akurat dan lengkap, valid, dan/atau tidak menyesatkan dalam bentuk apapun;",
+          "Anda telah membaca dan memahami Syarat dan Ketentuan dan Kebijakan Privasi ini, dan Syarat dan Ketentuan dan Kebijakan Privasi ini adalah kewajiban hukum yang mengikat Anda secara hukum.",
+          "Dalam hal penggunaan Platform dilakukan oleh subjek hukum yang masih di bawah umur atau dibawah perwalian, maka setiap kegiatan atau perintah yang timbul dari penggunaan tersebut dianggap sah dan pemrosesan oleh Perusahaan untuk setiap kegiatan atau perintah tetap menjadi tanggung jawab Pengguna bersama dengan orang tua atau wali (sebagaimana relevan). Perusahaan tidak bertanggung jawab atas segala sebab atau akibat yang timbul dari atau terkait dengan penggunaan Platform yang dilakukan oleh subjek hukum yang masih di bawah umur atau di bawah perwalian."
         ]
       },
-      "default_events": {
-        "title": "C. Cidera Janji",
-        "content": "Cidera Janji terjadi ketika satu atau lebih dari peristiwa berikut terjadi:",
-        "events": [
-          "Anda melanggar ketentuan dalam Syarat dan Ketentuan ini",
-          "penggunaan Akun yang bertentangan dengan Syarat dan Ketentuan",
-          "Pernyataan dan/atau jaminan Anda tidak sah atau menyesatkan",
-          "terdapat hal-hal yang merugikan atau berpotensi merugikan Perusahaan"
-        ],
-        "company_rights": [
-          "mengakhiri atau memblokir akses Anda ke Akun dan/atau Platform",
-          "menolak transaksi yang Anda lakukan",
-          "melakukan tindakan dan/atau upaya hukum lainnya"
+      "event_of_default": {
+        "title": "C. Cidera Janji (Event of Default)",
+        "content": [
+          "\"Cidera Janji\" terjadi ketika satu atau lebih dari peristiwa berikut terjadi:",
+          "Anda melanggar ketentuan dalam Syarat dan Ketentuan ini, Kebijakan Privasi dan/atau syarat dan ketentuan lain yang diatur dalam Platform;",
+          "penggunaan Akun, Platform, dan/atau fitur atau layanan lain dalam Platform oleh Anda yang bertentangan atau melanggar Syarat dan Ketentuan, Kebijakan Privasi, syarat dan ketentuan lain yang diatur dalam Platform dan/atau peraturan perundang-undangan yang berlaku;",
+          "Pernyataan dan/atau jaminan Anda sehubungan dengan Platform, sebagian atau seluruhnya, tidak sah, tidak lengkap, dan/atau tidak sesuai dengan fakta yang sebenarnya atau menyesatkan;",
+          "Menurut pertimbangan Perusahaan, terdapat hal-hal yang merugikan atau berpotensi merugikan Perusahaan, termasuk namun tidak terbatas pada tindakan dan/atau pola penyalahgunaan dan/atau penipuan atau ketika sistem Perusahaan menunjukkan pola transaksi yang mencurigakan.",
+          "Setelah terjadinya Peristiwa Cidera Janji, Perusahaan berhak untuk:",
+          "mengakhiri atau memblokir akses Anda ke Akun dan/atau Platform, dan/atau mengakhiri Syarat dan Ketentuan ini secara sepihak;",
+          "menolak transaksi yang Anda lakukan yang timbul dari atau terkait dengan Peristiwa Cidera Janji;",
+          "melakukan tindakan dan/atau upaya hukum lainnya untuk membela serta melaksanakan hak-hak Perusahaan sesuai dengan Syarat dan Ketentuan ini serta peraturan perundang-undangan yang berlaku.",
+          "Dalam hal Perusahaan melakukan hal-hal tersebut di atas atas dasar Peristiwa Cidera Janji tetapi Anda memiliki bukti yang kuat bahwa tidak ada Peristiwa Cidera Janji yang terjadi, Anda dapat mengajukan sanggahan atau sanggahan kepada Perusahaan dengan mengajukan bukti. Perusahaan akan segera memeriksa sanggahan atau keberatan tersebut, dan berdasarkan pertimbangannya sendiri menentukan apakah terjadi Cidera Janji dan/atau untuk melanjutkan pelaksanaan hal-hal tersebut di atas.",
+          "Para pihak dengan ini setuju untuk mengesampingkan ketentuan Pasal 1266 KUHPerdata sepanjang ketentuan tersebut memerlukan persetujuan atau keputusan pengadilan untuk mengakhiri Syarat dan Ketentuan ini."
         ]
       },
       "liabilities": {
-        "title": "D. Pertanggung Jawaban",
-        "content": "Anda bertanggung jawab penuh atas validitas, kelengkapan dan keakuratan data dan informasi pribadi yang diberikan sehubungan dengan penggunaan Platform.",
-        "company_disclaimers": [
-          "Perusahaan tidak membuat pernyataan atau jaminan tentang tidak adanya gangguan pada Platform",
-          "Platform diberikan 'sebagaimana adanya' untuk Anda",
-          "Perusahaan tidak bertanggung jawab atas kerugian yang bukan akibat kesalahan Perusahaan",
-          "Kami tidak memberikan jaminan bahwa Platform akan bebas dari gangguan"
+        "title": "D. Pertanggung Jawaban (Liabilities)",
+        "content": [
+          "Anda bertanggung jawab penuh atas validitas, kelengkapan dan keakuratan data dan informasi pribadi yang diberikan sehubungan dengan penggunaan Platform. Perusahaan tidak bertanggung jawab atas segala akibat yang timbul dari ketidakabsahan, ketidakbenaran dan/atau ketidaksesuaian data dan informasi pribadi Anda yang diberikan sehubungan dengan penggunaan Platform.",
+          "Perusahaan tidak membuat pernyataan atau jaminan apapun tentang tidak adanya gangguan, gangguan, atau cacat pada Platform serta keakuratan dan kelengkapan data dan informasi yang tersedia pada Platform. Platform Perusahaan diberikan \"sebagaimana adanya\" untuk Anda. Anda mengetahui dan menyetujui bahwa Perusahaan tidak bertanggung jawab atas kerugian apa pun, termasuk namun tidak terbatas pada, kehilangan data, kerusakan properti, cedera, atau kerusakan lain dalam bentuk apa pun yang timbul dari atau terkait dengan penggunaan atau tidak dapat menggunakan Platform yang bukan timbul dari atau akibat kesalahan dan/atau kelalaian Perusahaan.",
+          "Anda sepenuhnya memahami dan mengerti upaya Perusahaan untuk selalu mengambil tindakan yang wajar untuk melindungi keamanan Platform dan agar Platform bebas dari virus dan/atau gangguan, dan dalam hal ini Perusahaan tidak dapat menjamin keamanan database atau menjamin bahwa informasi yang Anda berikan kepada Perusahaan tidak akan disadap saat dikirimkan ke Perusahaan. Kecuali ada kesalahan dan/atau kelalaian Perusahaan.",
+          "Kami tidak memberikan pernyataan atau jaminan apa pun, baik secara eksplisit maupun implisit. bahwa: (a) penggunaan Platform akan bebas dari gangguan atau interupsi apa pun; (b) Platform dapat berfungsi dengan baik bila digunakan dengan perangkat keras, perangkat lunak, sistem atau perangkat lain; (c) setiap kesalahan pada Platform akan diperbaiki; dan (d) Platform atau server yang memungkinkan ketersediaan Platform bebas dari virus atau komponen berbahaya.",
+          "Kami tidak berjanji bahwa materi pada Platform sesuai atau tersedia untuk digunakan di lokasi di luar Indonesia. Mengakses Platform dari wilayah di mana konten yang disediakan oleh Platform ilegal atau melanggar hukum adalah dilarang. Apabila Anda memilih untuk mengakses Platform dari tempat lain, Anda dianggap melakukannya atas inisiatif Anda sendiri dan bertanggung jawab untuk mematuhi hukum setempat.",
+          "Anda secara tegas membebaskan Perusahaan, afiliasinya, karyawan, direktur, komisaris, penasihat, dan perwakilan lainnya Perusahaan dari segala tuntutan hukum, tuntutan, kepentingan, kewajiban, kerugian, dan biaya (termasuk biaya jasa hukum) yang timbul dari atau dalam sehubungan dengan penggunaan Platform dan/atau pelanggaran hak pihak ketiga yang timbul dari Platform atau penggunaan tidak sahnya yang bukan timbul dari atau disebabkan oleh kesalahan dan/atau kelalaian Perusahaan."
         ]
       },
       "intellectual_property": {
-        "title": "E. Hak Kekayaan Intelektual",
-        "content": "Sepanjang Anda mematuhi Syarat dan Ketentuan ini, Kami memberikan Anda lisensi terbatas, non-eksklusif untuk menggunakan Platform.",
-        "ownership": "'Fineksi' atau 'fineksi', termasuk nama dan logonya dilindungi oleh hak cipta dan hak kekayaan intelektual yang berlaku berdasarkan hukum Republik Indonesia."
+        "title": "E. Hak Kekayaan Intelektual (Intellectual Property)",
+        "content": [
+          "Sepanjang Anda selalu mematuhi setiap ketentuan yang terdapat dalam Syarat dan Ketentuan ini, Kami memberikan Anda, lisensi terbatas, non-eksklusif, tidak dapat dialihkan atau tidak dapat dipindahtangankan, dan tidak dapat disublisensikan untuk mengunduh dan memasang salinan Platform di perangkat elektronik atau seluler atau ponsel yang Anda miliki dan/atau gunakan salinan Platform tersebut hanya untuk tujuan non-komersial Anda sendiri.",
+          "'Fineksi' atau 'fineksi', termasuk nama dan logonya dan layanan Kami dilindungi oleh hak cipta dan hak kekayaan intelektual yang berlaku berdasarkan hukum Republik Indonesia. Kami dan pemberi lisensi (sebagaimana berlaku) adalah pemilik semua hak dan manfaat dari nama, logo, Platform, dan semua hak kekayaan intelektual terkait. Setiap upaya untuk melanggar kekayaan intelektual sebagaimana diatur dalam ketentuan ini memungkinkan Kami untuk mengakhiri hak Anda berdasarkan Syarat dan Ketentuan ini.",
+          "Kami tidak memberikan hak atau lisensi apapun kepada Anda, dan penggunaan Platform tidak dapat diartikan sebagai persetujuan atau pemberian hak atau lisensi apapun kepada Anda oleh Perusahaan, dan setiap bagian Platform akan tetap menjadi milik Perusahaan, kecuali dinyatakan secara tegas dalam Syarat dan Ketentuan ini."
+        ]
       },
-      "governing_law": {
-        "title": "F. Hukum Yang Berlaku",
-        "content": "Syarat dan Ketentuan ini dan pelaksanaannya diatur oleh dan tunduk pada hukum Republik Indonesia."
+      "governing_laws": {
+        "title": "F. Hukum Yang Berlaku (Governing Laws)",
+        "content": [
+          "Syarat dan Ketentuan ini dan pelaksanaannya diatur oleh dan tunduk pada hukum Republik Indonesia."
+        ]
       },
-      "dispute_resolution": {
-        "title": "G. Penyelesaian Sengketa",
-        "content": "Para Pihak sepakat untuk menyelesaikan setiap perselisihan dengan musyawarah untuk mencapai kesepakatan. Apabila tidak dapat diselesaikan dalam waktu 30 hari, maka diselesaikan melalui Pengadilan Negeri Jakarta Selatan."
+      "dispute_settlement": {
+        "title": "G. Penyelesaian Sengketa (Dispute Settlement)",
+        "content": [
+          "Para Pihak sepakat untuk menyelesaikan setiap perselisihan terkait Syarat dan Ketentuan ini dengan musyawarah untuk mencapai kesepakatan. Apabila perselisihan tersebut tidak dapat diselesaikan secara musyawarah untuk mufakat dalam waktu 30 (tiga puluh) Hari Kalender setelah diterimanya pemberitahuan tertulis oleh salah satu Pihak dari Pihak lainnya mengenai timbulnya suatu perselisihan, maka perselisihan tersebut diselesaikan melalui Pengadilan Negeri Jakarta Selatan."
+        ]
       },
-      "contact": {
-        "title": "H. Hubungi Kami",
-        "content": "Anda dapat menyampaikan saran, permintaan, keluhan atau pertanyaan mengenai Platform kepada Kami setiap hari Senin s.d Minggu pada pukul 06.00-24.00 WIB melalui saluran yang disediakan oleh Perusahaan."
+      "contact_us": {
+        "title": "H. Hubungi Kami (Contact Us)",
+        "content": [
+          "Anda dapat menyampaikan saran, permintaan, keluhan atau pertanyaan mengenai Platform kepada Kami setiap hari Senin s.d Minggu pada pukul 06.00-24.00 WIB melalui saluran yang disediakan oleh Perusahaan. Dalam menanggapi saran, permintaan, keluhan atau pertanyaan Anda, Kami akan melakukan verifikasi atas informasi atau data Anda. Kami berhak menolak, melanjutkan atau menanggapi saran, permintaan, keluhan atau pertanyaan Anda dalam hal informasi atau data Anda tidak sesuai dengan informasi atau data yang terdapat dalam sistem Kami. Kami akan melakukan verifikasi atas setiap saran, permintaan, keluhan atau pertanyaan Anda dan memberikan tanggapan sesuai dengan Syarat dan Ketentuan ini serta prosedur dan kebijakan internal Kami yang berlaku dari waktu ke waktu setelah menerima saran, permintaan, keluhan atau pertanyaan lengkap dari Anda."
+        ]
       },
-      "miscellaneous": {
-        "title": "I. Lain-Lain",
-        "content": "Untuk dapat menggunakan Platform, Kami dapat meminta Pengguna untuk mengaktifkan cookie selama mengakses atau menggunakan Platform.",
-        "additional_terms": [
-          "Kami dapat menyediakan tautan ke situs pihak ketiga",
-          "Anda setuju untuk menerima pesan dari Perusahaan terkait Platform",
-          "Kami berhak memantau akses dan aktivitas Pengguna",
-          "Syarat dan Ketentuan ini berlaku sejak Anda mengakses Platform",
-          "Kami berhak mengubah Syarat dan Ketentuan ini setiap saat"
+      "others": {
+        "title": "I. Lain-Lain (Others)",
+        "content": [
+          "Untuk dapat menggunakan Platform, Kami dapat meminta Pengguna untuk mengaktifkan cookie selama mengakses atau menggunakan Platform. Dalam hal Pengguna menolak untuk mengaktifkan cookie, akses atau penggunaan Platform dan/atau fungsi atau bagian tertentu dari Platform dapat terpengaruh atau dihentikan.",
+          "Kami dapat menyediakan beberapa tautan tertentu pada Platform yang merujuk atau mengarahkan Anda ke situs atau Platform pihak ketiga. Anda mengetahui dan menyetujui bahwa Perusahaan tidak bertanggung jawab atas informasi, konten, dan/atau materi yang terkandung dalam tautan pihak ketiga tersebut.",
+          "Anda setuju untuk menerima pesan dalam bentuk apapun dari Perusahaan terkait Platform dan/atau fitur pada Platform, termasuk namun tidak terbatas pada layanan pesan singkat (SMS), pesan melalui Platform, pesan melalui Platform lain seperti 'WhatsApp' atau ' Telegram', push notification, dan/atau e-mail, dan Anda berjanji untuk memberikan balasan atau tanggapan sebagaimana diminta secara wajar oleh Perusahaan.",
+          "Kami dapat melakukan segala tindakan atau upaya yang mungkin dilakukan berdasarkan ketentuan hukum yang berlaku, termasuk namun tidak terbatas pada, menonaktifkan atau memblokir atau menutup atau tidak memberikan akses ke Akun dan/atau Platform, atau fitur tertentu pada Platform, menyampaikan laporan kepada pihak yang berwenang, memberikan surat peringatan, mengakhiri Syarat dan Ketentuan ini, mengajukan tuntutan atau tuntutan hukum, dan/atau menempuh segala upaya atau proses hukum yang ada berdasarkan ketentuan hukum dan peraturan perundang-undangan yang berlaku, dalam hal terdapat indikasi penipuan, ketentuan palsu dan menyesatkan informasi, data dan/atau dokumen, pelanggaran terhadap Syarat dan Ketentuan ini, Kebijakan Privasi, dan/atau peraturan perundang-undangan yang berlaku oleh Pengguna, Kami dapat melibatkan dan/atau bekerja sama dengan pihak ketiga yang independen dan/atau aparat penegak hukum dalam mengambil tindakan seperti yang disebutkan di atas.",
+          "Kami berhak memantau akses, aktivitas, atau penggunaan Akun dan/atau Platform oleh Pengguna untuk memastikan kepatuhan Pengguna terhadap Syarat dan Ketentuan ini, Kebijakan Privasi dan/atau peraturan perundang-undangan yang berlaku atau perintah pengadilan atau otoritas yang berwenang.",
+          "Syarat dan Ketentuan ini berlaku sejak Anda mengakses Platform dan terus menerus setiap kali Anda mengakses dan/atau menggunakan Platform. Syarat dan Ketentuan ini (bersama dengan Kebijakan Privasi) berlaku sebagai perjanjian yang sah dan diberlakukan secara elektronik sesuai dengan peraturan perundang-undangan yang berlaku serta mengikat Para Pihak. Jika lebih lanjut disyaratkan oleh undang-undang, peraturan yang berlaku dan/atau otoritas pemerintah, Para Pihak setuju untuk menggunakan metode tanda tangan elektronik sebagaimana disyaratkan dan semua biaya yang timbul darinya ditanggung bersama oleh Para Pihak.",
+          "Berdasarkan kebijaksanaan Perusahaan, Kami berhak untuk mengubah Syarat dan Ketentuan ini setiap saat dengan memberikan pemberitahuan kepada Anda. Anda dapat mengakses setiap perubahan Syarat dan Ketentuan ini melalui Platform. Anda akan dianggap menyetujui dan tunduk pada perubahan Syarat dan Ketentuan ini dengan terus mengakses dan/atau menggunakan Platform. Anda bebas untuk tidak mengakses atau tidak menggunakan Platform dalam hal Anda tidak setuju dengan perubahan Syarat dan Ketentuan tersebut.",
+          "Dalam hal terdapat satu atau lebih ketentuan dalam Syarat dan Ketentuan ini yang menjadi tidak berlaku atau tidak dapat dilaksanakan menurut peraturan perundang-undangan yang berlaku, maka ketidakberlakuan, ketidakabsahan, atau tidak dapat dilaksanakannya ketentuan tersebut tidak akan mempengaruhi keabsahan, pelaksanaan, dan keberlakuan ketentuan lain dalam Syarat dan Ketentuan ini.",
+          "Anda tidak dapat mengalihkan sebagian atau seluruh hak dan/atau kewajiban Anda berdasarkan Syarat dan Ketentuan ini. Perusahaan berhak untuk mengalihkan sebagian atau seluruh hak dan/atau kewajibannya kepada pihak lain, sebagaimana akan diberitahukan kepada Anda melalui perubahan Syarat dan Ketentuan ini. Pengalihan tersebut tidak menghilangkan hak dan kewajiban yang telah ada antara Para Pihak sebelum tanggal pengalihan."
         ]
       }
     }

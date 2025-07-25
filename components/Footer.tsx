@@ -113,8 +113,8 @@ const Footer = ({ locale = 'en' }: { locale?: string }) => {
               <ul className="space-y-2 text-gray-400">
                 <li><a href={`/${currentLocale}`} className="hover:text-[#1f51fe] transition-colors">{t('nav.home')}</a></li>
                 <li><a href={`/${currentLocale}/solutions`} className="hover:text-[#1f51fe] transition-colors">{t('nav.solution')}</a></li>
-                <li><a href={SITE_CONFIG.blogLink} target="_blank" rel="noopener noreferrer" className="hover:text-[#1f51fe] transition-colors">{t('nav.blog')}</a></li>
                 <li><a href={`/${currentLocale}#whyus`} className="hover:text-white transition-colors">{t('nav.whyus')}</a></li>
+                <li><a href={SITE_CONFIG.blogLink} target="_blank" rel="noopener noreferrer" className="hover:text-[#1f51fe] transition-colors">{t('nav.blog')}</a></li>
               </ul>
             </nav>
           </div>

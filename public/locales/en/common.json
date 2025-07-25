@@ -326,98 +326,122 @@
   },
   "terms": {
     "hero": {
-      "badge": "Terms of Services",
+      "badge": "Terms of Service",
       "title": "Terms and Conditions",
-      "subtitle": "Welcome to the Fineksi platform operated by PT FINSKOR TEKNOLOGI INDONESIA. Please read these Terms and Conditions carefully and thoroughly.",
+      "subtitle": "Welcome to the Fineksi platform (\"Platform\") operated by PT FINSKOR TEKNOLOGI INDONESIA (\"We\" or \"Company\").",
       "last_updated": "Last updated: June 12, 2024"
     },
     "sections": {
       "introduction": {
-        "title": "Introduction",
-        "content": "By accessing and/or using the Platform, you understand and agree to be subject to these Terms and Conditions. If you do not agree with these Terms and Conditions, you have the right not to access and/or not use the Platform."
+        "content": "By accessing and/or using the Platform, you understand and agree to be subject to these Terms and Conditions. Please read these Terms and Conditions carefully and thoroughly. If you do not agree with these Terms and Conditions, you have the right not to access and/or not use the Platform."
       },
       "platform_usage": {
         "title": "A. Platform Usage",
-        "content": "You can access or use the Platform after you complete the registration process on the Platform subject to the terms and conditions determined from time to time by the Company, and have an Account.",
-        "responsibilities": [
+        "content": [
+          "You can access or use the Platform after you complete the registration process on the Platform subject to the terms and conditions determined from time to time by the Company, and have an Account. There are some features or services on the Platform that you can access or use only if you have completed the basic Verification process (as relevant).",
           "You are fully responsible for each and all activities that occur in your Account.",
-          "You may only use your own Account and promise not to allow others to use your identity or Account.",
-          "You must protect your Account password for every access or identification you have created or the Company has provided to you.",
-          "You promise to immediately notify the Company if your Account is stolen and/or hacked.",
-          "You must delete all data and/or information from all electronic devices if you receive data unrelated to the Platform."
-        ],
-        "prohibited_activities": [
-          "violating the law or violating third party rights",
-          "conducting activities that are contrary to applicable laws and regulations",
-          "distributing copyrighted material without permission",
-          "accessing or attempting to gain unauthorized access to the Platform",
-          "sending material containing viruses or destructive programs",
-          "reverse engineering or accessing the Platform to create similar products",
-          "launching programs or scripts that may burden Platform performance"
+          "You may only use your own Account and promise not to allow others to use your identity or Account. You must protect your Account password for any access or identification that you have created or the Company has provided to you. In the event of disclosure or leakage of your password, access, or identification that causes the use of your Account or identity by third parties in any case, then any activity or command arising from such Account will be deemed valid and remain your responsibility, unless you have notified the disclosure or leakage to the Company within 48 (forty-eight) hours prior to the channels provided by the Company.",
+          "You promise to immediately notify the Company if (i) your Account is stolen and/or hacked, or (ii) if your electronic or mobile device or phone containing the Platform is lost, stolen, and/or other events that cause the electronic device or mobile phone or cell phone to no longer be in your possession that potentially disrupts security or allows your Account to be accessed by other unauthorized parties.",
+          "If required by applicable legal provisions, We have the right from time to time to ask you to fill in and/or provide certain other information, data and/or documents required, including electronically, to Us.",
+          "Based on Our own consideration, We have the right to conduct examinations of you at any time, including but not limited to asking you to show proof of identity or other documents that We deem necessary or required based on applicable laws and regulations (including laws and regulations related to anti-money laundering and prevention of terrorism financing), and you understand and agree that We have the right to stop or refuse access or use of the Platform if you refuse to provide proof of identity or other documents.",
+          "You must delete all data and/or information from all your electronic devices or mobile phones or cell phones if you receive or obtain data and/or information that is not related to the Platform or not intended for you.",
+          "Except as expressly permitted under these Terms and Conditions, you are prohibited from doing things that are against the law or without authority and/or not in accordance with the purpose of Account ownership and/or Platform use, including but not limited to:",
+          "violating the law or violating the rights of third parties;",
+          "conducting activities or transactions that are contrary or not in accordance with applicable laws and regulations, including those containing pornography and/or ethnicity, religion, race, and intergroup (SARA), prohibited goods and/or services, violations of anti-money laundering and prevention of terrorism financing (AML/CFT) provisions as well as transactions related to other illegal financial service activities;",
+          "distributing, or reproducing material protected by copyright, trademark, or other intellectual property rights in any form before obtaining prior approval from the owner;",
+          "uploading, distributing, disseminating, or reproducing material protected by copyright, trademark, or other intellectual property rights in any form before obtaining prior approval from the owner;",
+          "removing notices or signs of copyright, trademark, or other intellectual property rights on the Platform;",
+          "accessing or attempting to gain unauthorized access to the Platform, or systems or networks or servers related thereto;",
+          "In any way without right or against the law changing, adding, reducing, transmitting, destroying, eliminating, moving, transferring, and/or hiding electronic information and/or electronic documents belonging to the Company or the public without right or against the law;",
+          "sending material containing viruses, worms, trojan horses, codes, files, scripts, or programs that damage, interfere with, or endanger the Platform, or systems or networks or servers related thereto;",
+          "obstructing, intervening, interfering with and/or harming the performance, integrity or performance of the Platform, or systems or networks or servers related thereto or data contained therein;",
+          "reverse engineering or accessing the Platform or Company software to (i) create a Platform or similar product or service, (ii) copy ideas, features, functions, graphics and/or design of the Platform, and/or (iii) create products or services that use ideas, features, functions, graphics and/or designs similar to the Platform;",
+          "copying, modifying, adapting, translating, creating derivative works from, distributing, disseminating, transmitting, selling, reselling, transferring, dismantling, compiling, or licensing or sublicensing any part of the Platform;",
+          "creating links to the Platform or creating 'frames' or 'mirrors' of any part of the Platform to wireless or internet-based servers or devices;",
+          "launching programs or scripts, including but not limited to web spiders, web crawlers, web robots, web ants, web indexers, bots, viruses, worms, or programs that generate or can generate multiple requests to servers within seconds, or unlawfully obstruct or burden Platform performance;",
+          "hacking or attempting to hack or make modifications to the Platform or systems or networks or servers related thereto owned or managed by the Company;",
+          "Acting as if you are another person or entity or giving false impressions or statements about your affiliation or relationship with a person or entity; and/or;",
+          "Taking actions or attempts that may harm the Company, and/or damage reputation or cause defamation or insult to the Company.",
+          "Procurement and all costs associated with the use of electronic devices or mobile phones or cell phones that you need to access or use the Account or Platform are entirely your responsibility, including but not limited to, purchasing and paying all fees charged by telecommunications service providers for internet data packages."
         ]
       },
-      "representations": {
+      "representations_warranties": {
         "title": "B. Representations and Warranties",
-        "content": "Users represent and warrant from time to time during User's access and use of the Platform as follows:",
-        "warranties": [
-          "User is a legal entity that is competent and authorized under applicable legal provisions",
-          "Opening and/or use of Account is not intended to commit criminal acts",
-          "Users may not grant rights to unauthorized parties to use the Account",
-          "Every data and information submitted is true, accurate and complete",
-          "You have read and understood these Terms and Conditions and Privacy Policy"
+        "content": [
+          "Users represent and warrant from time to time during access and use of the Platform by Users as follows:",
+          "Users are legal subjects who are competent and authorized according to applicable legal provisions to perform legal acts, including creating Accounts, using the Platform and Platform features, and/or binding themselves to these Terms and Conditions and/or Privacy Policy.",
+          "Opening and/or use of the Account is not intended or targeted to commit crimes or things prohibited under applicable laws and regulations, including laws and regulations on anti-money laundering and prevention of terrorism financing, or to conduct transactions in the context of fraud, obscuring, or avoiding reporting to the Financial Transaction Reports and Analysis Center (PPATK) in accordance with applicable laws and regulations, with the provision that Users are fully responsible and release the Company from all legal claims, demands, and/or losses in any form arising from or in connection with crimes or things prohibited under applicable laws and regulations committed by Users;",
+          "Users may not grant rights, authority and/or power in any form and under any circumstances to unauthorized parties to use the Account and/or access the Platform for any reason and under any circumstances, and must be fully responsible for the use of such Account and/or Platform access by unauthorized parties regardless of User negligence over the use of such unauthorized parties.",
+          "Every data and information submitted or submitted by Users to the Company related to the use of Accounts and/or Platform access is true, accurate and complete, valid, and/or not misleading in any form;",
+          "You have read and understood these Terms and Conditions and Privacy Policy, and these Terms and Conditions and Privacy Policy are legal obligations that bind you legally.",
+          "In the case that the use of the Platform is carried out by legal subjects who are still minors or under guardianship, then every activity or command arising from such use is deemed valid and processing by the Company for every activity or command remains the responsibility of the User together with parents or guardians (as relevant). The Company is not responsible for any cause or effect arising from or related to the use of the Platform carried out by legal subjects who are still minors or under guardianship."
         ]
       },
-      "default_events": {
+      "event_of_default": {
         "title": "C. Event of Default",
-        "content": "An 'Event of Default' occurs when one or more of the following events occur:",
-        "events": [
-          "You violate the provisions in these Terms and Conditions",
-          "use of Account that is contrary to the Terms and Conditions",
-          "Your statements and/or warranties are invalid or misleading",
-          "there are things that harm or potentially harm the Company"
-        ],
-        "company_rights": [
-          "terminate or block your access to Account and/or Platform",
-          "reject transactions you make",
-          "take other legal actions and/or efforts"
+        "content": [
+          "\"Event of Default\" occurs when one or more of the following events occur:",
+          "You violate the provisions in these Terms and Conditions, Privacy Policy and/or other terms and conditions set forth in the Platform;",
+          "use of Account, Platform, and/or other features or services in the Platform by you that is contrary to or violates the Terms and Conditions, Privacy Policy, other terms and conditions set forth in the Platform and/or applicable laws and regulations;",
+          "Your statements and/or warranties in connection with the Platform, in part or in whole, are invalid, incomplete, and/or not in accordance with actual facts or misleading;",
+          "In the Company's consideration, there are things that harm or potentially harm the Company, including but not limited to actions and/or patterns of abuse and/or fraud or when the Company's system shows suspicious transaction patterns.",
+          "After the occurrence of an Event of Default, the Company has the right to:",
+          "terminate or block your access to the Account and/or Platform, and/or terminate these Terms and Conditions unilaterally;",
+          "reject transactions you make arising from or related to the Event of Default;",
+          "take other legal actions and/or efforts to defend and implement the Company's rights in accordance with these Terms and Conditions and applicable laws and regulations.",
+          "In the event that the Company does the above things on the basis of an Event of Default but you have strong evidence that no Event of Default has occurred, you may file an objection or objection to the Company by submitting evidence. The Company will immediately examine such objection or objection, and based on its own consideration determine whether a Default has occurred and/or to continue the implementation of the above things.",
+          "The parties hereby agree to set aside the provisions of Article 1266 of the Civil Code insofar as such provisions require the approval or decision of the court to terminate these Terms and Conditions."
         ]
       },
       "liabilities": {
         "title": "D. Liabilities",
-        "content": "You are fully responsible for the validity, completeness and accuracy of personal data and information provided in connection with the use of the Platform.",
-        "company_disclaimers": [
-          "The Company makes no representations or warranties about the absence of disruptions to the Platform",
-          "Platform is provided 'as is' to you",
-          "Company is not responsible for losses that are not the result of Company's fault",
-          "We do not guarantee that the Platform will be free from interference"
+        "content": [
+          "You are fully responsible for the validity, completeness and accuracy of personal data and information provided in connection with the use of the Platform. The Company is not responsible for any consequences arising from the invalidity, untruthfulness and/or incompatibility of your personal data and information provided in connection with the use of the Platform.",
+          "The Company makes no representations or warranties whatsoever about the absence of interference, disruption, or defects in the Platform as well as the accuracy and completeness of data and information available on the Platform. The Company's Platform is provided \"as is\" to you. You acknowledge and agree that the Company is not responsible for any losses, including but not limited to, data loss, property damage, injury, or other damage in any form arising from or related to the use or inability to use the Platform that does not arise from or as a result of the Company's error and/or negligence.",
+          "You fully understand and understand the Company's efforts to always take reasonable measures to protect the security of the Platform and so that the Platform is free from viruses and/or interference, and in this case the Company cannot guarantee database security or guarantee that information you provide to the Company will not be intercepted when transmitted to the Company. Except there is an error and/or negligence of the Company.",
+          "We do not make any representations or warranties, either explicitly or implicitly. that: (a) use of the Platform will be free from any interference or interruption; (b) the Platform can function properly when used with hardware, software, systems or other devices; (c) any errors in the Platform will be corrected; and (d) the Platform or servers that enable the availability of the Platform are free from viruses or harmful components.",
+          "We do not promise that the material on the Platform is suitable or available for use in locations outside Indonesia. Accessing the Platform from areas where content provided by the Platform is illegal or violates the law is prohibited. If you choose to access the Platform from elsewhere, you are deemed to do so on your own initiative and are responsible for complying with local laws.",
+          "You expressly release the Company, its affiliates, employees, directors, commissioners, advisors, and other representatives of the Company from all legal claims, demands, interests, obligations, losses, and costs (including legal service costs) arising from or in connection with the use of the Platform and/or violation of third party rights arising from the Platform or its unauthorized use that does not arise from or caused by the Company's error and/or negligence."
         ]
       },
       "intellectual_property": {
         "title": "E. Intellectual Property",
-        "content": "As long as you comply with these Terms and Conditions, We grant you a limited, non-exclusive license to use the Platform.",
-        "ownership": "'Fineksi' or 'fineksi', including its name and logo are protected by copyright and intellectual property rights applicable under Indonesian law."
+        "content": [
+          "As long as you always comply with every provision contained in these Terms and Conditions, We grant you, a limited, non-exclusive, non-transferable or non-transferable, and non-sublicensable license to download and install copies of the Platform on electronic or mobile devices or phones that you own and/or use copies of such Platform only for your own non-commercial purposes.",
+          "'Fineksi' or 'fineksi', including its name and logo and Our services are protected by copyright and intellectual property rights applicable under the laws of the Republic of Indonesia. We and licensors (as applicable) are the owners of all rights and benefits of the name, logo, Platform, and all related intellectual property rights. Any attempt to violate intellectual property as set forth in these provisions allows Us to terminate your rights under these Terms and Conditions.",
+          "We do not grant any rights or licenses to you, and the use of the Platform cannot be construed as approval or granting of any rights or licenses to you by the Company, and any part of the Platform will remain the property of the Company, unless expressly stated in these Terms and Conditions."
+        ]
       },
-      "governing_law": {
-        "title": "F. Governing Law",
-        "content": "These Terms and Conditions and their implementation are governed by and subject to the laws of the Republic of Indonesia."
+      "governing_laws": {
+        "title": "F. Governing Laws",
+        "content": [
+          "These Terms and Conditions and their implementation are governed by and subject to the laws of the Republic of Indonesia."
+        ]
       },
-      "dispute_resolution": {
-        "title": "G. Dispute Resolution",
-        "content": "The Parties agree to resolve any disputes through deliberation to reach agreement. If it cannot be resolved within 30 days, then it will be resolved through the South Jakarta District Court."
+      "dispute_settlement": {
+        "title": "G. Dispute Settlement",
+        "content": [
+          "The Parties agree to resolve any disputes related to these Terms and Conditions through deliberation to reach agreement. If such dispute cannot be resolved through deliberation for consensus within 30 (thirty) Calendar Days after receipt of written notice by one Party from the other Party regarding the emergence of a dispute, then such dispute is resolved through the South Jakarta District Court."
+        ]
       },
-      "contact": {
+      "contact_us": {
         "title": "H. Contact Us",
-        "content": "You can submit suggestions, requests, complaints or questions regarding the Platform to Us every Monday to Sunday from 06.00-24.00 WIB through channels provided by the Company."
+        "content": [
+          "You can submit suggestions, requests, complaints or questions regarding the Platform to Us every Monday to Sunday at 06.00-24.00 WIB through channels provided by the Company. In responding to your suggestions, requests, complaints or questions, We will verify your information or data. We have the right to refuse, continue or respond to your suggestions, requests, complaints or questions in the event that your information or data does not match the information or data contained in Our system. We will verify every suggestion, request, complaint or question from you and provide responses in accordance with these Terms and Conditions as well as Our internal procedures and policies that apply from time to time after receiving complete suggestions, requests, complaints or questions from you."
+        ]
       },
-      "miscellaneous": {
-        "title": "I. Miscellaneous",
-        "content": "To be able to use the Platform, We may ask Users to activate cookies while accessing or using the Platform.",
-        "additional_terms": [
-          "We may provide links to third party sites",
-          "You agree to receive messages from the Company regarding the Platform",
-          "We have the right to monitor User access and activities",
-          "These Terms and Conditions apply from when you access the Platform",
-          "We have the right to change these Terms and Conditions at any time"
+      "others": {
+        "title": "I. Others",
+        "content": [
+          "To be able to use the Platform, We may ask Users to activate cookies while accessing or using the Platform. In the event that Users refuse to activate cookies, access or use of the Platform and/or certain functions or parts of the Platform may be affected or stopped.",
+          "We may provide certain links on the Platform that refer or direct you to third party sites or Platforms. You acknowledge and agree that the Company is not responsible for information, content, and/or materials contained in such third party links.",
+          "You agree to receive messages in any form from the Company related to the Platform and/or features on the Platform, including but not limited to short message services (SMS), messages through the Platform, messages through other Platforms such as 'WhatsApp' or 'Telegram', push notifications, and/or e-mail, and you promise to provide replies or responses as reasonably requested by the Company.",
+          "We may take any actions or efforts that may be taken based on applicable legal provisions, including but not limited to, disabling or blocking or closing or not providing access to Accounts and/or Platforms, or certain features on the Platform, submitting reports to authorized parties, providing warning letters, terminating these Terms and Conditions, filing claims or legal claims, and/or pursuing all existing legal efforts or processes based on applicable legal provisions and laws and regulations, in the event that there are indications of fraud, false provisions and misleading information, data and/or documents, violations of these Terms and Conditions, Privacy Policy, and/or applicable laws and regulations by Users, We may involve and/or cooperate with independent third parties and/or law enforcement agencies in taking actions as mentioned above.",
+          "We have the right to monitor access, activity, or use of Accounts and/or Platforms by Users to ensure User compliance with these Terms and Conditions, Privacy Policy and/or applicable laws and regulations or court orders or competent authorities.",
+          "These Terms and Conditions apply from the time you access the Platform and continuously every time you access and/or use the Platform. These Terms and Conditions (together with the Privacy Policy) apply as a valid agreement and are enforced electronically in accordance with applicable laws and regulations and bind the Parties. If further required by law, applicable regulations and/or government authorities, the Parties agree to use electronic signature methods as required and all costs arising therefrom are borne jointly by the Parties.",
+          "Based on the Company's discretion, We have the right to change these Terms and Conditions at any time by providing notice to you. You can access any changes to these Terms and Conditions through the Platform. You will be deemed to agree and be subject to changes to these Terms and Conditions by continuing to access and/or use the Platform. You are free not to access or not use the Platform in the event that you do not agree with the changes to these Terms and Conditions.",
+          "In the event that there are one or more provisions in these Terms and Conditions that become invalid or unenforceable according to applicable laws and regulations, then the invalidity, invalidity, or unenforceability of such provisions will not affect the validity, implementation, and validity of other provisions in these Terms and Conditions.",
+          "You cannot transfer part or all of your rights and/or obligations under these Terms and Conditions. The Company has the right to transfer part or all of its rights and/or obligations to other parties, as will be notified to you through changes to these Terms and Conditions. Such transfer does not eliminate the rights and obligations that have existed between the Parties before the date of transfer."
         ]
       }
     }
