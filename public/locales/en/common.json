@@ -117,21 +117,21 @@
   "industries": {
     "badge": "AI-Powered Solutions",
     "title": "Trusted by Leading Financial Institutions",
-    "subtitle": "Our AI platform adapts to various financial sectors with specialized neural network models.",
+    "subtitle": "Our AI platform adapts to various financial insitutions needs in credit analysis.",
     "banks": {
-      "title": "Traditional Banks",
-      "description": "AI-powered mortgage processing, personal loans, and commercial lending with neural network document verification and predictive risk assessment.",
-      "features": ["AI Mortgage Processing", "Neural Loan Underwriting", "Intelligent Banking Services"]
+      "title": "Bank",
+      "description": "AI-powered mortgage processing, personal loans, and commercial lending with a comprehensive extraction and analysis.",
+      "features": ["Mortgage Loan", "Working Capital", "Vehicle Loan", "Investment Loan"]
     },
     "multifinance": {
       "title": "Multifinance",
-      "description": "Accelerate auto loans, equipment financing, and consumer credit decisions with deep learning document analysis and predictive modeling.",
-      "features": ["AI Auto Loan Processing", "Smart Equipment Financing", "Predictive Consumer Credit"]
+      "description": "Accelerate vehicle loans, equipment financing, and consumer credit decisions with deep document analysis for credit risk assessment.",
+      "features": ["Fleet Financing", "Heavy Equipment Financing", "Factoring", "Vehicle Financing"]
     },
     "p2p": {
       "title": "P2P Lending",
-      "description": "Scale your platform with AI-powered borrower verification and neural network credit scoring for intelligent marketplace lending.",
-      "features": ["AI Borrower Verification", "Neural Credit Scoring", "Intelligent Portfolio Management"]
+      "description": "Scale your platform with AI-powered borrower credit risk assessment for intelligent marketplace lending.",
+      "features": ["Invoice Financing", "PO Financing", "Supply Chain Financing", "Term Loan"]
     }
   },
   "contact": {

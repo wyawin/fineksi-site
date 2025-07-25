@@ -46,6 +46,74 @@ const HomePage = ({ locale = 'en' }: { locale?: string }) => {
     
     return value || key
   }
+
+  const logos = [
+    {
+      "id": "restock",
+      "name": "Restock",
+      "image": "/images/clients/logo-restock.png"
+    },
+    {
+      "id": "modalrakyat",
+      "name": "Modal Rakyat",
+      "image": "/images/clients/logo-modalrakyat.png"
+    },
+    {
+      "id": "pegadaian",
+      "name": "Pegadaian",
+      "image": "/images/clients/logo-pegadaian.png"
+    },
+    {
+      "id": "komunal",
+      "name": "Komunal",
+      "image": "/images/clients/logo-komunal.png"
+    },
+    {
+      "id": "alami",
+      "name": "Alami",
+      "image": "/images/clients/logo-alami.png"
+    },
+    {
+      "id": "bprkertiawan",
+      "name": "BPR Kertiawan",
+      "image": "/images/clients/logo-bprkertiawan.png"
+    },
+    {
+      "id": "cicil",
+      "name": "Cicil",
+      "image": "/images/clients/logo-cicil.png"
+    },
+    {
+      "id": "ifscapital",
+      "name": "IFS Capital",
+      "image": "/images/clients/logo-ifscapital.png"
+    },
+    {
+      "id": "mekar",
+      "name": "Mekar",
+      "image": "/images/clients/logo-mekar.png"
+    },
+    {
+      "id": "radanafinance",
+      "name": "Radana Finance",
+      "image": "/images/clients/logo-radanafinance.png"
+    },
+    {
+      "id": "hijra",
+      "name": "Bank Hijra",
+      "image": "/images/clients/logo-hijra.png"
+    },
+    {
+      "id": "venteny",
+      "name": "Venteny",
+      "image": "/images/clients/logo-venteny.png"
+    },
+    {
+      "id": "bprperdana",
+      "name": "BPR Perdana",
+      "image": "/images/clients/logo-bprperdana.png"
+    },
+  ];
   
   return (
     <div className="min-h-screen bg-white">
@@ -114,6 +182,55 @@ const HomePage = ({ locale = 'en' }: { locale?: string }) => {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Client Logo Carousel Section */}
+      <section className="py-20 bg-white relative overflow-hidden" aria-labelledby="clients-heading">
+        <div className="absolute inset-0" aria-hidden="true">
+          <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-[#1f51fe]/5 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-[#fad85a]/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        </div>
+        
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          {/* Logo Carousel */}
+          <div className="relative">
+            <div className="overflow-hidden">
+              <div className="flex animate-marquee hover:pause-marquee">
+                {/* First set of logos */}
+                <div className="flex items-center justify-around min-w-full flex-shrink-0 gap-8 md:gap-12">
+                  {logos.map((client: any) => (
+                    <div key={`first-${client.id}`} className="flex-shrink-0 group">
+                      <img 
+                        src={client.image}
+                        alt={`${client.name}`}
+                        className="h-8 md:h-8 w-auto"
+                        title={client.name}
+                      />
+                    </div>
+                  ))}
+                </div>
+                
+                {/* Second set of logos (duplicate for seamless loop) */}
+                <div className="flex items-center justify-around min-w-full flex-shrink-0 gap-8 md:gap-12 ml-8 md:ml-12">
+                  {logos.map((client: any) => (
+                    <div key={`second-${client.id}`} className="flex-shrink-0 group cursor-pointer">
+                      <img 
+                        src={client.image}
+                        alt={`${client.name}`}
+                        className="h-8 md:h-8 w-auto"
+                        title={client.name}
+                      />
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+            
+            {/* Gradient overlays for seamless effect */}
+            <div className="absolute inset-y-0 left-0 w-20 bg-gradient-to-r from-white to-transparent pointer-events-none" aria-hidden="true"></div>
+            <div className="absolute inset-y-0 right-0 w-20 bg-gradient-to-l from-white to-transparent pointer-events-none" aria-hidden="true"></div>
           </div>
         </div>
       </section>

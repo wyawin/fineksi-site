@@ -1,4 +1,6 @@
-import React from 'react'
+'use client'
+
+import React, { useRef, useState, useEffect } from 'react'
 import Image from 'next/image'
 import { ArrowRight, Brain, Users, Target, Award, Sparkles, Bot, Cpu, Network } from 'lucide-react'
 

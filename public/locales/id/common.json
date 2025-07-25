@@ -115,23 +115,23 @@
     "fraud": "Mengurangi Resiko Fraud"
   },
   "industries": {
-    "badge": "Solusi Bertenaga AI",
+    "badge": "Solusi Berbasis AI",
     "title": "Dipercaya oleh Institusi Keuangan Terkemuka",
-    "subtitle": "Platform AI kami beradaptasi dengan berbagai sektor keuangan dengan model jaringan neural khusus.",
+    "subtitle": "Platform AI kami beradaptasi dengan berbagai kebutuhan analisa kredit di institusi keuangan.",
     "banks": {
-      "title": "Bank Tradisional",
-      "description": "Pemrosesan hipotek bertenaga AI, pinjaman pribadi, dan pinjaman komersial dengan verifikasi dokumen jaringan neural dan penilaian risiko prediktif.",
-      "features": ["Pemrosesan Hipotek AI", "Underwriting Pinjaman Neural", "Layanan Perbankan Cerdas"]
+      "title": "Bank",
+      "description": "Pemrosesan berbasis AI pinjman pemilikkan properti, pinjaman pribadi, dan pinjaman komersial dengan ekstraksi dan analisis untuk penilaian risiko kredit.",
+      "features": ["Kredit Pemilikan Rumah", "Kredit Modal Usaha", "Kredit Kepemilikan Kendaraan", "Kredit Investasi"]
     },
     "multifinance": {
       "title": "Multifinance",
-      "description": "Percepat pinjaman mobil, pembiayaan peralatan, dan keputusan kredit konsumen dengan analisis dokumen pembelajaran mendalam dan pemodelan prediktif.",
-      "features": ["Pemrosesan Pinjaman Mobil AI", "Pembiayaan Peralatan Cerdas", "Kredit Konsumen Prediktif"]
+      "description": "Percepat keputusan untuk pinjaman mobil, pembiayaan peralatan, dan kredit konsumen dengan analisis dokumen untuk penilaian risiko kredit.",
+      "features": ["Pembiayaan Fleet", "Pembiayaan Alat Berat", "Anjak Piutang", "Pembiayaan Kendaraan"]
     },
     "p2p": {
       "title": "P2P Lending",
-      "description": "Skalakan platform Anda dengan verifikasi peminjam bertenaga AI dan penilaian kredit jaringan neural untuk pinjaman marketplace cerdas.",
-      "features": ["Verifikasi Peminjam AI", "Penilaian Kredit Neural", "Manajemen Portofolio Cerdas"]
+      "description": "Skalakan platform Anda dengan penilaian risiko kredit peminjam berbasis AI untuk marketplace pinjaman yang lebih cerdas.",
+      "features": ["Pinjaman Faktur Kerja", "Pinjaman PO", "Pinjaman Rantai Pasok", "Pinjaman Berjangka"]
     }
   },
   "contact": {
@@ -174,7 +174,7 @@
   "solutions": {
     "hero": {
       "badge": "Otomasi Dokumen dengan AI",
-      "title": "AI-Powered Analisa Dokumen untuk Credit Underwriting",
+      "title": "Analisa Dokumen Berbasis AI untuk Credit Underwriting",
       "subtitle": "Transformasikan dokumen analisa kredit menjadi insight untuk pengambilan keputusan kredit dengan teknologi AI kami. Dari rekening koran, laporan keuangan hingga dokumen legal dan kontrak, AI kami memproses semuanya dengan akurasi superhuman.",
       "cta_primary": "Jelajahi Solusi"
     },
