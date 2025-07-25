@@ -163,9 +163,9 @@ const HomePage = ({ locale = 'en' }: { locale?: string }) => {
               <div className="relative">
                 <div className="absolute inset-0 bg-gradient-to-r from-[#1f51fe]/10 to-[#fad85a]/10 rounded-2xl blur-xl" aria-hidden="true"></div>
                 <Image 
-                  src="https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=800" 
-                  alt="Financial technology automation"
-                  className="relative rounded-2xl shadow-2xl border border-[#1f51fe]/20"
+                  src="/images/fineksi-hero.png" 
+                  alt="Fineksi"
+                  className="relative"
                   width={800}
                   height={600}
                   priority
