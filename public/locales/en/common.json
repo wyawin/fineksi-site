@@ -41,31 +41,31 @@
   },
   "features": {
     "badge": "AI-Powered Features",
-    "title": "Advanced AI Capabilities for Modern Finance",
-    "subtitle": "Our neural network-powered platform combines cutting-edge machine learning with deep financial expertise to revolutionize your credit operations with unprecedented accuracy.",
+    "title": "Advanced AI Capabilities for Modern Credit Analysis",
+    "subtitle": "Our platform combines cutting-edge AI and machine learning with deep financial and credit analysis expertise to revolutionize your credit underwriting with unprecedented accuracy and risk assessment.",
     "ai_document": {
-      "title": "AI Document Processing",
-      "description": "Neural networks automatically extract, classify, and process financial documents with 99.8% accuracy. Advanced OCR and NLP handle any document format."
+      "title": "Document Processing",
+      "description": "Our AI automatically extract, classify, and process credit analysis related documents with high accuracy. Advanced OCR handle any document format."
     },
     "fraud_detection": {
-      "title": "AI Fraud Detection", 
-      "description": "Deep learning algorithms analyze pixel-level patterns to detect document manipulation, alterations, and sophisticated forgeries with 99.9% accuracy."
+      "title": "Fraud Detection", 
+      "description": "Our model analyze patterns to detect document manipulation, alterations, sophisticated forgeries and anomaly transactions."
     },
     "cognitive_analysis": {
-      "title": "Cognitive Credit Analysis",
-      "description": "Advanced AI models analyze 500+ financial indicators to provide intelligent credit risk assessments and predictive insights for optimal decision-making."
+      "title": "Intelligent Credit Analysis",
+      "description": "Advanced AI models analyze many indicators to provide intelligent credit risk assessments and predictive insights for optimal decision-making."
     },
     "lightning_fast": {
-      "title": "Lightning-Fast AI",
-      "description": "GPU-accelerated processing handles complete loan applications in seconds. Parallel AI processing reduces manual work by 95%."
+      "title": "Lightning-Fast",
+      "description": "Our AI models are optimized to deliver insights in a minutes, accelerate workflows, reduce bottlenecks, and serve customers faster without compromising quality."
     },
     "ai_secured": {
-      "title": "AI-Secured Infrastructure", 
-      "description": "Military-grade encryption with AI-powered threat detection, SOC 2 compliance, and zero-trust architecture for maximum security."
+      "title": "Secure Infrastructure", 
+      "description": "Our infrastructure is designed with a defense-in-depth approach—ensuring end-to-end protection of data and process across all layers."
     },
     "predictive": {
       "title": "Predictive Analytics",
-      "description": "Real-time AI dashboards with predictive modeling, anomaly detection, and intelligent forecasting for proactive decision-making."
+      "description": "Our AI provide predictive modeling, anomaly detection, and intelligent forecasting for proactive decision-making."
     }
   },
   "whyus": {
@@ -147,18 +147,8 @@
   },
   "footer": {
     "description": "Empowering financial institutions with next-generation AI, neural networks, and cognitive automation for superhuman lending decisions.",
-    "security": "AI-Secured & SOC 2",
-    "security_desc": "Military-Grade Security",
     "link_title": "Links",
     "company_title": "Company",
-    "links": {
-      "pricing": "AI Pricing",
-      "api_docs": "Neural API Docs", 
-      "about_team": "About AI Team",
-      "contact": "Contact",
-      "privacy": "AI Privacy Policy"
-    },
-    "copyright": "Powered by Advanced Neural Networks. All rights reserved.",
     "compliance": "Fineksi is registered as an Electronic System Provider with the Ministry of Communication and Digital of the Republic of Indonesia (Komdigi), under registration number 010595.02/DJAI.PSE/04/2024, and is a member of AFTECH with registration number 1113/REG/AFT/SU.",
     "compliance_item": {
       "registered": "Registered",
@@ -320,35 +310,6 @@
       "title": "Building the Future of Intelligent Credit Decision",
       "description1": "To empower every financial institution in all around the world with intelligent, trustworthy, and inclusive future where credit is accessible, decisions are data-driven, and growth is equitable."
     },
-    "values": {
-      "badge": "Our AI Values",
-      "title": "Built on Trust, Powered by Innovation",
-      "subtitle": "Our core values guide every AI model we train and every solution we deliver.",
-      "excellence": {
-        "title": "AI Excellence",
-        "description": "We push the boundaries of what's possible with artificial intelligence, constantly innovating to deliver superhuman performance in financial analysis."
-      },
-      "transparency": {
-        "title": "Transparency", 
-        "description": "Our AI models are explainable and auditable. We believe in transparent algorithms that financial institutions can trust and regulators can understand."
-      },
-      "security": {
-        "title": "Security First",
-        "description": "Every AI system we build incorporates military-grade security, ensuring your data and your customers' information remain protected at all times."
-      },
-      "success": {
-        "title": "Customer Success",
-        "description": "Your success is our success. We're committed to delivering AI solutions that drive measurable business outcomes and competitive advantages."
-      },
-      "learning": {
-        "title": "Continuous Learning",
-        "description": "Like our AI models, we never stop learning. We continuously improve our technology and adapt to the evolving needs of the financial industry."
-      },
-      "ethical": {
-        "title": "Ethical AI",
-        "description": "We're committed to responsible AI development, ensuring our models are fair, unbiased, and promote financial inclusion for all communities."
-      }
-    },
     "investors": {
       "title1": "Our Investors",
       "title2": "Supported By"
@@ -410,8 +371,8 @@
     "hero": {
       "badge": "Privacy & Security",
       "title": "Privacy Policy",
-      "subtitle": "Your privacy and data security are fundamental to Fineksi's AI-powered financial services.",
-      "last_updated": "Last updated: January 15, 2025"
+      "subtitle": "Your privacy and data security are fundamental to Fineksi's services.",
+      "last_updated": "Last updated: June 12, 2024"
     },
     "overview": {
       "title": "Privacy Overview",

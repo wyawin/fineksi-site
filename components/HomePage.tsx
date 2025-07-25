@@ -373,11 +373,11 @@ const HomePage = ({ locale = 'en' }: { locale?: string }) => {
             </div>
             <div className="mt-12 lg:mt-0">
               <div className="relative">
-                <div className="absolute inset-0 bg-gradient-to-r from-[#1f51fe]/10 to-[#fad85a]/10 rounded-2xl blur-xl" aria-hidden="true"></div>
+                <div className="absolute inset-0 blur-xl" aria-hidden="true"></div>
                 <Image 
-                  src="https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=800" 
-                  alt="Business growth analytics dashboard showing improved performance metrics and ROI from AI implementation"
-                  className="relative rounded-2xl shadow-xl border border-[#1f51fe]/20"
+                  src="/images/whyus.svg" 
+                  alt="Why Us - Fineksi"
+                  className="relative"
                   width={800}
                   height={600}
                 />

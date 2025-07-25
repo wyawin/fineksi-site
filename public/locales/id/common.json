@@ -40,32 +40,32 @@
     "stat_value": "40x Lebih Cepat"
   },
   "features": {
-    "badge": "Fitur Bertenaga AI",
-    "title": "Kemampuan AI Canggih untuk Keuangan Modern",
-    "subtitle": "Platform bertenaga jaringan neural kami menggabungkan pembelajaran mesin terdepan dengan keahlian keuangan mendalam untuk merevolusi operasi kredit Anda dengan akurasi yang belum pernah ada.",
+    "badge": "Fitur Berbasis AI",
+    "title": "Kemampuan AI untuk Analisis Kredit Modern",
+    "subtitle": "Platform kami menggabungkan AI dan machine learning dengan keahlian analisis finansial dan kredit untuk merevolusi analisa kredit Anda dengan penilaian risiko dan akurasi yang belum pernah ada.",
     "ai_document": {
-      "title": "Pemrosesan Dokumen AI",
-      "description": "Jaringan neural secara otomatis mengekstrak, mengklasifikasi, dan memproses dokumen keuangan dengan akurasi 99,8%. OCR dan NLP canggih menangani format dokumen apa pun."
+      "title": "Pemrosesan Dokumen",
+      "description": "AI kami secara otomatis mengekstrak, mengklasifikasikan, dan memproses dokumen terkait analisis kredit dengan akurasi tinggi. OCR kami menangani semua format dokumen."
     },
     "fraud_detection": {
-      "title": "Deteksi Penipuan AI",
-      "description": "Algoritma pembelajaran mendalam menganalisis pola tingkat piksel untuk mendeteksi manipulasi dokumen, perubahan, dan pemalsuan canggih dengan akurasi 99,9%."
+      "title": "Deteksi Pemalsuan",
+      "description": "Model kami menganalisis pola untuk mendeteksi manipulasi dokumen, perubahan dokumen, indikasi pemalsuan, dan transaksi anomali."
     },
     "cognitive_analysis": {
-      "title": "Analisis Kredit Kognitif",
-      "description": "Model AI canggih menganalisis 500+ indikator keuangan untuk memberikan penilaian risiko kredit cerdas dan wawasan prediktif untuk pengambilan keputusan optimal."
+      "title": "Analisis Kredit Cerdas",
+      "description": "Model AI canggih menganalisis banyak indikator untuk memberikan penilaian risiko kredit cerdas dan insight prediktif untuk pengambilan keputusan optimal."
     },
     "lightning_fast": {
-      "title": "AI Secepat Kilat",
-      "description": "Pemrosesan berakselerasi GPU menangani aplikasi pinjaman lengkap dalam hitungan detik. Pemrosesan AI paralel mengurangi pekerjaan manual hingga 95%."
+      "title": "Kecepatan Kilat",
+      "description": "Model AI kami dioptimalkan untuk memberikan insight dalam hitungan menit, mempercepat alur kerja, mengurangi hambatan, dan melayani pelanggan lebih cepat tanpa mengurangi kualitas."
     },
     "ai_secured": {
-      "title": "Infrastruktur Berkeamanan AI",
-      "description": "Enkripsi tingkat militer dengan deteksi ancaman bertenaga AI, kepatuhan SOC 2, dan arsitektur zero-trust untuk keamanan maksimal."
+      "title": "Infrastruktur yang Aman",
+      "description": "Infrastruktur kami dirancang dengan pendekatan pertahanan berlapis, memastikan perlindungan data dan proses menyeluruh di semua lapisan."
     },
     "predictive": {
       "title": "Analitik Prediktif",
-      "description": "Dashboard AI real-time dengan pemodelan prediktif, deteksi anomali, dan peramalan cerdas untuk pengambilan keputusan proaktif."
+      "description": "AI kami menyediakan pemodelan prediktif, deteksi anomali, dan perkiraan cerdas untuk pengambilan keputusan proaktif."
     }
   },
   "whyus": {
@@ -147,18 +147,8 @@
   },
   "footer": {
     "description": "Memberdayakan institusi keuangan dengan AI generasi terbaru, jaringan neural, dan otomatisasi kognitif untuk keputusan pinjaman superhuman.",
-    "security": "Berkeamanan AI & SOC 2",
-    "security_desc": "Keamanan Tingkat Militer",
     "link_title": "Link",
     "company_title": "Perusahaan",
-    "links": {
-      "pricing": "Harga AI",
-      "api_docs": "Dokumentasi API Neural",
-      "about_team": "Tentang Tim AI",
-      "contact": "Kontak",
-      "privacy": "Kebijakan Privasi AI"
-    },
-    "copyright": "Didukung oleh Jaringan Neural Canggih. Semua hak dilindungi.",
     "compliance": "Fineksi terdaftar sebagai penyelenggara sistem elektronik di Kementerian Komunikasi dan Digital RI (Komdigi), Nomor Registrasi 010595.02/DJAI.PSE/04/2024, serta merupakan anggota AFTECH Indonesia dengan nomor anggota 1113/REG/AFT/SU.",
     "compliance_item": {
       "registered": "Terdaftar",
@@ -320,35 +310,6 @@
       "title": "Membangun Masa Depan Pengambilan Keputusan Cerdas",
       "description1": "Mengoptimalkan setiap institusi keuangan di seluruh dunia dengan masa depan yang cerdas, tepercaya, dan inklusif di mana akses kredit merata, keputusan berbasis data, dan pertumbuhan yang merata."
     },
-    "values": {
-      "badge": "Nilai-Nilai AI Kami",
-      "title": "Dibangun atas Kepercayaan, Didukung oleh Inovasi",
-      "subtitle": "Nilai-nilai inti kami memandu setiap model AI yang kami latih dan setiap solusi yang kami berikan.",
-      "excellence": {
-        "title": "Keunggulan AI",
-        "description": "Kami mendorong batas-batas kemungkinan dengan kecerdasan buatan, terus berinovasi untuk memberikan kinerja superhuman dalam analisis keuangan."
-      },
-      "transparency": {
-        "title": "Transparansi",
-        "description": "Model AI kami dapat dijelaskan dan diaudit. Kami percaya pada algoritma transparan yang dapat dipercaya institusi keuangan dan dipahami regulator."
-      },
-      "security": {
-        "title": "Keamanan Utama",
-        "description": "Setiap sistem AI yang kami bangun menggabungkan keamanan tingkat militer, memastikan data Anda dan informasi pelanggan Anda tetap terlindungi setiap saat."
-      },
-      "success": {
-        "title": "Kesuksesan Pelanggan",
-        "description": "Kesuksesan Anda adalah kesuksesan kami. Kami berkomitmen untuk memberikan solusi AI yang mendorong hasil bisnis yang terukur dan keunggulan kompetitif."
-      },
-      "learning": {
-        "title": "Pembelajaran Berkelanjutan",
-        "description": "Seperti model AI kami, kami tidak pernah berhenti belajar. Kami terus meningkatkan teknologi kami dan beradaptasi dengan kebutuhan industri keuangan yang berkembang."
-      },
-      "ethical": {
-        "title": "AI Etis",
-        "description": "Kami berkomitmen pada pengembangan AI yang bertanggung jawab, memastikan model kami adil, tidak bias, dan mempromosikan inklusi keuangan untuk semua komunitas."
-      }
-    },
     "investors": {
       "title1": "Investor Kami",
       "title2": "Didukung Oleh"
@@ -410,8 +371,8 @@
     "hero": {
       "badge": "Privasi & Keamanan",
       "title": "Kebijakan Privasi",
-      "subtitle": "Privasi dan keamanan data Anda adalah fundamental bagi layanan keuangan bertenaga AI Fineksi.",
-      "last_updated": "Terakhir diperbarui: 15 Januari 2025"
+      "subtitle": "Privasi dan keamanan data Anda adalah fundamental bagi layanan Fineksi.",
+      "last_updated": "Terakhir diperbarui: 12 Juni 2024"
     },
     "overview": {
       "title": "Ikhtisar Privasi",
