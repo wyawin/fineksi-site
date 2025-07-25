@@ -1,13 +1,13 @@
 {
   "site": {
-    "title": "Fineksi - AI-Powered Document Automation for Financial Institutions",
+    "title": "Fineksi - AI-Powered Cognitive Document Automation for Financial Institutions",
     "description": "Transform your credit process with advanced AI cognitive document automation, fraud detection, and credit analysis with high speed and accuracy. Trusted by banks, multifinance, and P2P lending platforms.",
     "name": "Fineksi"
   },
   "metadata": {
     "about": {
       "title": "About Us",
-      "description": "Meet the world-class AI team behind Fineksi. Learn about our mission to democratize AI for financial institutions and our cutting-edge neural network technology."
+      "description": "Find more about information regarding Fineksi. Learn about our mission to democratize AI for financial institutions and who have been support us."
     },
     "solutions": {
       "title": "AI Bank Statement Analysis & Financial Statement Analysis",
@@ -149,8 +149,8 @@
     "description": "Empowering financial institutions with next-generation AI, neural networks, and cognitive automation for superhuman lending decisions.",
     "security": "AI-Secured & SOC 2",
     "security_desc": "Military-Grade Security",
-    "platform": "AI Platform",
-    "company": "Company",
+    "link_title": "Links",
+    "company_title": "Company",
     "links": {
       "pricing": "AI Pricing",
       "api_docs": "Neural API Docs", 

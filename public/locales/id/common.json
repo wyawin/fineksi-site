@@ -7,7 +7,7 @@
   "metadata": {
     "about": {
       "title": "Tentang Kami",
-      "description": "Temui tim AI kelas dunia di balik Fineksi. Pelajari misi kami untuk mendemokratisasi AI untuk institusi keuangan dan teknologi jaringan neural terdepan kami."
+      "description": "Temui informasi tentang Fineksi lebih lanjut. Pelajari misi kami untuk mendemokratisasi AI untuk institusi keuangan dan siapa yang telah mendukung kami."
     },
     "solutions": {
       "title": "Analisa Rekening Koran & Analisa Laporan Keuangan dengan AI",
@@ -149,8 +149,8 @@
     "description": "Memberdayakan institusi keuangan dengan AI generasi terbaru, jaringan neural, dan otomatisasi kognitif untuk keputusan pinjaman superhuman.",
     "security": "Berkeamanan AI & SOC 2",
     "security_desc": "Keamanan Tingkat Militer",
-    "platform": "Platform AI",
-    "company": "Perusahaan",
+    "link_title": "Link",
+    "company_title": "Perusahaan",
     "links": {
       "pricing": "Harga AI",
       "api_docs": "Dokumentasi API Neural",

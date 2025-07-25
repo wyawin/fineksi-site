@@ -25,6 +25,7 @@ import {
   Layers,
   Scan
 } from 'lucide-react'
+import { SITE_CONFIG } from '@/config/site'
 
 // Import translations directly
 import enTranslations from '../public/locales/en/common.json'
@@ -623,11 +624,11 @@ const HomePage = ({ locale = 'en' }: { locale?: string }) => {
                     <div className="space-y-2 text-sm text-gray-600">
                       <div className="flex items-center">
                         <span className="font-medium text-gray-900 w-20">{t('footer.whatsapp')}:</span>
-                        <span className="text-[#1f51fe]">+62 851 5907 9011</span>
+                        <span className="text-[#1f51fe]">{SITE_CONFIG.phone}</span>
                       </div>
                       <div className="flex items-center">
                         <span className="font-medium text-gray-900 w-20">{t('footer.email')}:</span>
-                        <span className="text-[#1f51fe]">support@fineksi.com</span>
+                        <span className="text-[#1f51fe]">{SITE_CONFIG.email}</span>
                       </div>
                     </div>
                   </div>

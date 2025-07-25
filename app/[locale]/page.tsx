@@ -1,5 +1,6 @@
 import { Metadata } from 'next'
 import HomePage from '@/components/HomePage'
+import { SITE_CONFIG } from '@/config/site'
 
 // Import translations directly
 import enTranslations from '../../public/locales/en/common.json'
@@ -31,15 +32,15 @@ export async function generateMetadata({ params: { locale } }: { params: { local
   const description = t('site.description')
   const keywords = t('site.keywords')
   const ogLocale = locale === 'id' ? 'id_ID' : 'en_US'
-  const canonicalUrl = `https://fineksi.com/${locale}`
+  const canonicalUrl = `${SITE_CONFIG.baseUrl}/${locale}`
 
   return {
     title,
     description,
     keywords: keywords.split(', '),
-    authors: [{ name: 'Fineksi' }],
-    creator: 'Fineksi',
-    publisher: 'Fineksi',
+    authors: [{ name: SITE_CONFIG.name }],
+    creator: SITE_CONFIG.name,
+    publisher: SITE_CONFIG.name,
     robots: {
       index: true,
       follow: true,
@@ -60,10 +61,10 @@ export async function generateMetadata({ params: { locale } }: { params: { local
       description,
       images: [
         {
-          url: 'https://fineksi.com/og-image.jpg',
+          url: `${SITE_CONFIG.baseUrl}/images/twitter-image.png`,
           width: 1200,
           height: 630,
-          alt: `${t('site.name')} - AI-Powered Financial Technology`,
+          alt: `${t('site.name')}`,
         },
       ],
     },
@@ -71,8 +72,8 @@ export async function generateMetadata({ params: { locale } }: { params: { local
       card: 'summary_large_image',
       title,
       description,
-      images: ['/images/twitter-image.png'],
-      creator: '@fineksi',
+      images: [`${SITE_CONFIG.baseUrl}/images/twitter-image.png`],
+      creator: `@${SITE_CONFIG.name}`,
     },
     verification: {
       google: 'your-google-verification-code',
@@ -80,8 +81,8 @@ export async function generateMetadata({ params: { locale } }: { params: { local
     alternates: {
       canonical: canonicalUrl,
       languages: {
-        'en': 'https://fineksi.com/en',
-        'id': 'https://fineksi.com/id',
+        'en': `${SITE_CONFIG.baseUrl}/en`,
+        'id': `${SITE_CONFIG.baseUrl}/id`,
       },
     },
   }

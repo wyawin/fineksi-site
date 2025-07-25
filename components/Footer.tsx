@@ -1,5 +1,5 @@
 import React from 'react'
-import { Brain, Shield } from 'lucide-react'
+import { SITE_CONFIG } from '@/config/site'
 
 // Import translations directly
 import enTranslations from '../public/locales/en/common.json'
@@ -48,11 +48,11 @@ const Footer = ({ locale = 'en' }: { locale?: string }) => {
             <div className="flex space-x-10 mb-6">
               <div>
                 <div className="font-medium text-white mb-1">{t('footer.whatsapp')}</div>
-                <div className="space-y-3 text-gray-400 text-sm">+62 851 5907 9011</div>
+                <div className="space-y-3 text-gray-400 text-sm">{SITE_CONFIG.phone}</div>
               </div>
               <div>
                 <div className="font-medium text-white mb-1">{t('footer.email')}</div>
-                <div className="space-y-3 text-gray-400 text-sm">support@fineksi.com</div>
+                <div className="space-y-3 text-gray-400 text-sm">{SITE_CONFIG.email}</div>
               </div>
             </div>
             <div className="flex space-x-4">
@@ -107,7 +107,7 @@ const Footer = ({ locale = 'en' }: { locale?: string }) => {
           </div>
           
           <div>
-            <h3 className="font-semibold mb-4">Links</h3>
+            <h3 className="font-semibold mb-4">{t('footer.link_title')}</h3>
             <nav aria-label="links">
               <ul className="space-y-2 text-gray-400">
                 <li><a href={`/${currentLocale}`} className="hover:text-[#1f51fe] transition-colors">{t('nav.home')}</a></li>
@@ -118,7 +118,7 @@ const Footer = ({ locale = 'en' }: { locale?: string }) => {
           </div>
           
           <div>
-            <h3 className="font-semibold mb-4">Company</h3>
+            <h3 className="font-semibold mb-4">{t('footer.company_title')}</h3>
             <nav aria-label="Company links">
               <ul className="space-y-2 text-gray-400">
                 <li><a href={`/${currentLocale}/about`} className="hover:text-[#fad85a] transition-colors">{t('nav.about')}</a></li>
@@ -130,7 +130,7 @@ const Footer = ({ locale = 'en' }: { locale?: string }) => {
         </div>
         
         <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-          <p>&copy; 2025 Fineksi. All rights reserved.</p>
+          <p>&copy; 2025 {SITE_CONFIG.name}. All rights reserved.</p>
         </div>
       </div>
     </footer>

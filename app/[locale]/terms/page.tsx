@@ -1,5 +1,6 @@
 import { Metadata } from 'next'
 import TermsPage from '@/components/TermsPage'
+import { SITE_CONFIG } from '@/config/site'
 
 // Import translations directly
 import enTranslations from '../../../public/locales/en/common.json'
@@ -30,7 +31,7 @@ export async function generateMetadata({ params: { locale } }: { params: { local
   const title = t('metadata.terms.title')
   const description = t('metadata.terms.description')
 
-  const canonicalUrl = `https://fineksi.com/${locale}/terms`
+  const canonicalUrl = `${SITE_CONFIG.baseUrl}/${locale}/terms`
 
   return {
     title,

@@ -4,6 +4,7 @@ import '../globals.css'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import { notFound } from 'next/navigation'
+import { SITE_CONFIG } from '@/config/site'
 
 // Import translations directly
 import enTranslations from '../../public/locales/en/common.json'
@@ -37,7 +38,7 @@ export async function generateMetadata({ params: { locale } }: { params: { local
   const description = t('site.description')
   const keywords = t('site.keywords')
   const ogLocale = locale === 'id' ? 'id_ID' : 'en_US'
-  const canonicalUrl = `https://fineksi.com/${locale}`
+  const canonicalUrl = `${SITE_CONFIG.baseUrl}/${locale}`
 
   return {
     title: {
@@ -46,9 +47,9 @@ export async function generateMetadata({ params: { locale } }: { params: { local
     },
     description,
     keywords: keywords.split(', '),
-    authors: [{ name: 'Fineksi' }],
-    creator: 'Fineksi',
-    publisher: 'Fineksi',
+    authors: [{ name: SITE_CONFIG.name }],
+    creator: SITE_CONFIG.name,
+    publisher: SITE_CONFIG.name,
     robots: {
       index: true,
       follow: true,
@@ -69,10 +70,10 @@ export async function generateMetadata({ params: { locale } }: { params: { local
       description,
       images: [
         {
-          url: 'https://fineksi.com/og-image.jpg',
+          url: `${SITE_CONFIG.baseUrl}/images/twitter-image.png`,
           width: 1200,
           height: 630,
-          alt: `${t('site.name')} - AI-Powered Financial Technology`,
+          alt: `${t('site.name')}`,
         },
       ],
     },
@@ -80,8 +81,8 @@ export async function generateMetadata({ params: { locale } }: { params: { local
       card: 'summary_large_image',
       title,
       description,
-      images: ['/images/twitter-image.png'],
-      creator: '@fineksi',
+      images: [`${SITE_CONFIG.baseUrl}/images/twitter-image.png`],
+      creator: `@${SITE_CONFIG.name}`,
     },
     verification: {
       google: 'your-google-verification-code',
@@ -89,8 +90,8 @@ export async function generateMetadata({ params: { locale } }: { params: { local
     alternates: {
       canonical: canonicalUrl,
       languages: {
-        'en': 'https://fineksi.com/en',
-        'id': 'https://fineksi.com/id',
+        'en': `${SITE_CONFIG.baseUrl}/en`,
+        'id': `${SITE_CONFIG.baseUrl}/id`,
       },
     },
   }
@@ -127,25 +128,25 @@ export default function LocaleLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Organization",
-              "name": "Fineksi",
-              "description": "AI-powered document automation and credit analysis for financial institutions",
-              "url": "https://fineksi.com",
-              "logo": "https://fineksi.com/logo.png",
-              "foundingDate": "2024",
-              "industry": "Financial Technology",
+              "name": SITE_CONFIG.name,
+              "description": SITE_CONFIG.description,
+              "url": SITE_CONFIG.baseUrl,
+              "logo": `${SITE_CONFIG.baseUrl}/images/1.png`,
+              "foundingDate": SITE_CONFIG.foundingYear,
+              "industry": SITE_CONFIG.industry,
               "address": {
                 "@type": "PostalAddress",
-                "addressCountry": "US"
+                "addressCountry": "ID"
               },
               "contactPoint": {
                 "@type": "ContactPoint",
-                "telephone": "+1-555-0123",
-                "contactType": "customer service",
-                "email": "contact@fineksi.com"
+                "telephone": SITE_CONFIG.phone,
+                "contactType": "support",
+                "email": SITE_CONFIG.email
               },
               "sameAs": [
-                "https://linkedin.com/company/fineksi",
-                "https://twitter.com/fineksi"
+                SITE_CONFIG.linkedinLink,
+                SITE_CONFIG.twitterLink
               ]
             })
           }}

@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
+import { SITE_CONFIG } from '@/config/site'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -10,10 +11,10 @@ export const revalidate = 0
 
 export const metadata: Metadata = {
   title: {
-    default: 'Fineksi - AI-Powered Document Automation for Financial Institutions',
+    default: SITE_CONFIG.siteTitle,
     template: '%s | Fineksi'
   },
-  description: 'Transform your credit process with advanced AI document automation, fraud detection, and cognitive analysis. Trusted by banks, multifinance, and P2P lending platforms.',
+  description: SITE_CONFIG.siteDescription,
   keywords: ['AI document automation', 'financial technology', 'credit analysis', 'fraud detection', 'neural networks', 'banking AI', 'fintech', 'document processing'],
   robots: {
     index: true,
@@ -29,31 +30,31 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://fineksi.com',
-    siteName: 'Fineksi',
-    title: 'Fineksi - AI-Powered Document Automation for Financial Institutions',
-    description: 'Transform your credit process with advanced AI document automation, fraud detection, and cognitive analysis. Trusted by banks, multifinance, and P2P lending platforms.',
+    url: SITE_CONFIG.baseUrl,
+    siteName: SITE_CONFIG.name,
+    title: SITE_CONFIG.siteTitle,
+    description: SITE_CONFIG.siteDescription,
     images: [
       {
-        url: 'https://fineksi.com/og-image.jpg',
+        url: `${SITE_CONFIG.baseUrl}/images/twitter-image.png`,
         width: 1200,
         height: 630,
-        alt: 'Fineksi - AI-Powered Financial Technology',
+        alt: SITE_CONFIG.siteTitle,
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Fineksi - AI-Powered Document Automation for Financial Institutions',
-    description: 'Transform your credit process with advanced AI document automation, fraud detection, and cognitive analysis. Trusted by banks, multifinance, and P2P lending platforms.',
-    images: ['https://fineksi.com/twitter-image.jpg'],
+    title: SITE_CONFIG.siteTitle,
+    description: SITE_CONFIG.siteDescription,
+    images: [`${SITE_CONFIG.baseUrl}/images/twitter-image.png`],
     creator: '@fineksi',
   },
   verification: {
     google: 'your-google-verification-code',
   },
   alternates: {
-    canonical: 'https://fineksi.com',
+    canonical: SITE_CONFIG.baseUrl,
   },
 }
 
@@ -79,25 +80,25 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Organization",
-              "name": "Fineksi",
-              "description": "AI-powered document automation and credit analysis for financial institutions",
-              "url": "https://fineksi.com",
-              "logo": "https://fineksi.com/logo.png",
-              "foundingDate": "2024",
-              "industry": "Financial Technology",
+              "name": SITE_CONFIG.name,
+              "description": SITE_CONFIG.description,
+              "url": SITE_CONFIG.baseUrl,
+              "logo": `${SITE_CONFIG.baseUrl}/images/1.png`,
+              "foundingDate": SITE_CONFIG.foundingYear,
+              "industry": SITE_CONFIG.industry,
               "address": {
                 "@type": "PostalAddress",
-                "addressCountry": "US"
+                "addressCountry": "ID"
               },
               "contactPoint": {
                 "@type": "ContactPoint",
-                "telephone": "+1-555-0123",
-                "contactType": "customer service",
-                "email": "contact@fineksi.com"
+                "telephone": SITE_CONFIG.phone,
+                "contactType": "support",
+                "email": SITE_CONFIG.email
               },
               "sameAs": [
-                "https://linkedin.com/company/fineksi",
-                "https://twitter.com/fineksi"
+                SITE_CONFIG.linkedinLink,
+                SITE_CONFIG.twitterLink
               ]
             })
           }}

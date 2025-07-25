@@ -1,5 +1,6 @@
 import { Metadata } from 'next'
 import PrivacyPage from '@/components/PrivacyPage'
+import { SITE_CONFIG } from '@/config/site'
 
 // Import translations directly
 import enTranslations from '../../../public/locales/en/common.json'
@@ -30,7 +31,7 @@ export async function generateMetadata({ params: { locale } }: { params: { local
   const title = t('metadata.privacy.title')
   const description = t('metadata.privacy.description')
 
-  const canonicalUrl = `https://fineksi.com/${locale}/privacy`
+  const canonicalUrl = `${SITE_CONFIG.baseUrl}/${locale}/privacy`
 
   return {
     title,
