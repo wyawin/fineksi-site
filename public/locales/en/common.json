@@ -25,6 +25,7 @@
   "nav": {
     "whyus": "Why Us", 
     "about": "About Us",
+    "blog": "Blog",
     "demo": "Request Demo",
     "privacy": "Privacy Policy",
     "terms": "Terms of Service",
@@ -156,7 +157,8 @@
       "member": "Member"
     },
     "whatsapp": "Whatsapp",
-    "email": "Email"
+    "email": "Email",
+    "follow_us": "Follow Us"
   },
   "solutions": {
     "hero": {

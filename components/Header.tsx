@@ -4,6 +4,7 @@ import React, { useState } from 'react'
 import { usePathname } from 'next/navigation'
 import { Menu, X } from 'lucide-react'
 import LanguageSwitcher from './LanguageSwitcher'
+import { SITE_CONFIG } from '@/config/site'
 
 // Import translations directly
 import enTranslations from '../public/locales/en/common.json'
@@ -76,6 +77,15 @@ const Header = ({ locale = 'en' }: { locale?: string }) => {
               >
                 {t('nav.about')}
               </a>
+              <a 
+                href={SITE_CONFIG.blogLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-3 py-2 text-sm font-medium text-gray-600 hover:text-[#1f51fe] transition-colors"
+                role="menuitem"
+              >
+                {t('nav.blog')}
+              </a>
               <LanguageSwitcher currentLocale={currentLocale} />
               <a href={`/${currentLocale}#calendly-contact`} className="bg-gradient-to-r from-[#1f51fe] to-[#072ba4] text-white px-4 py-2 rounded-lg text-sm font-medium hover:shadow-lg hover:shadow-[#1f51fe]/25 transition-all duration-200" role="menuitem">{t('nav.demo')}</a>
             </div>
@@ -117,6 +127,15 @@ const Header = ({ locale = 'en' }: { locale?: string }) => {
               onClick={() => setIsMenuOpen(false)}
             >
               {t('nav.about')}
+            </a>
+            <a 
+              href={SITE_CONFIG.blogLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block px-3 py-2 text-base font-medium text-gray-600 hover:text-[#1f51fe]"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              {t('nav.blog')}
             </a>
             <a 
               href={`/${currentLocale}#calendly-contact`} 

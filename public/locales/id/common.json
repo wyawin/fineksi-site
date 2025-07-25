@@ -25,6 +25,7 @@
   "nav": {
     "whyus": "Kenapa Kami",
     "about": "Tentang Kami",
+    "blog": "Blog",
     "demo": "Jadwalkan Demo",
     "privacy": "Kebijakan Privasi",
     "terms": "Syarat Layanan",
@@ -156,7 +157,8 @@
       "member": "Anggota"
     },
     "whatsapp": "Whatsapp",
-    "email": "Email"
+    "email": "Email",
+    "follow_us": "Ikuti Kami"
   },
   "solutions": {
     "hero": {
