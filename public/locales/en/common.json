@@ -28,7 +28,7 @@
     "blog": "Blog",
     "demo": "Request Demo",
     "privacy": "Privacy Policy",
-    "terms": "Terms of Service",
+    "terms": "Terms and Conditions",
     "solution": "Solutions",
     "home": "Home"
   },
@@ -326,46 +326,99 @@
   },
   "terms": {
     "hero": {
-      "badge": "Legal Terms",
+      "badge": "Terms of Services",
       "title": "Terms and Conditions",
-      "subtitle": "Please read these terms carefully before using Fineksi services.",
-      "last_updated": "Last updated: January 15, 2025"
+      "subtitle": "Welcome to the Fineksi platform operated by PT FINSKOR TEKNOLOGI INDONESIA. Please read these Terms and Conditions carefully and thoroughly.",
+      "last_updated": "Last updated: June 12, 2024"
     },
     "sections": {
-      "acceptance": {
-        "title": "1. Acceptance of Terms",
-        "content": "By accessing or using Fineksi's services, you agree to be bound by these Terms and Conditions (\"Terms\"). If you disagree with any part of these terms, you may not access our services.",
-        "additional": "These Terms apply to all visitors, users, and others who access or use our AI-powered document automation and credit analysis services."
+      "introduction": {
+        "title": "Introduction",
+        "content": "By accessing and/or using the Platform, you understand and agree to be subject to these Terms and Conditions. If you do not agree with these Terms and Conditions, you have the right not to access and/or not use the Platform."
       },
-      "service_description": {
-        "title": "2. Service Description",
-        "content": "Fineksi provides artificial intelligence-powered document automation, fraud detection, and credit analysis services to financial institutions including banks, multifinance companies, and peer-to-peer lending platforms.",
-        "services": [
-          "AI-powered document processing and data extraction",
-          "Neural network-based fraud and tampering detection",
-          "Cognitive credit risk analysis and scoring",
-          "Predictive analytics and financial insights",
-          "API integration and technical support"
+      "platform_usage": {
+        "title": "A. Platform Usage",
+        "content": "You can access or use the Platform after you complete the registration process on the Platform subject to the terms and conditions determined from time to time by the Company, and have an Account.",
+        "responsibilities": [
+          "You are fully responsible for each and all activities that occur in your Account.",
+          "You may only use your own Account and promise not to allow others to use your identity or Account.",
+          "You must protect your Account password for every access or identification you have created or the Company has provided to you.",
+          "You promise to immediately notify the Company if your Account is stolen and/or hacked.",
+          "You must delete all data and/or information from all electronic devices if you receive data unrelated to the Platform."
+        ],
+        "prohibited_activities": [
+          "violating the law or violating third party rights",
+          "conducting activities that are contrary to applicable laws and regulations",
+          "distributing copyrighted material without permission",
+          "accessing or attempting to gain unauthorized access to the Platform",
+          "sending material containing viruses or destructive programs",
+          "reverse engineering or accessing the Platform to create similar products",
+          "launching programs or scripts that may burden Platform performance"
         ]
       },
-      "user_responsibilities": {
-        "title": "3. User Responsibilities",
-        "warning": "Users must ensure compliance with all applicable financial regulations and data protection laws in their jurisdiction when using our AI services.",
-        "content": "As a user of our services, you agree to:",
-        "items": [
-          "Provide accurate and complete information when using our services",
-          "Maintain the confidentiality of your account credentials",
-          "Use our services only for lawful purposes and in accordance with applicable regulations",
-          "Not attempt to reverse engineer, decompile, or extract our AI algorithms",
-          "Comply with all data protection and privacy laws applicable to your jurisdiction",
-          "Notify us immediately of any unauthorized use of your account"
+      "representations": {
+        "title": "B. Representations and Warranties",
+        "content": "Users represent and warrant from time to time during User's access and use of the Platform as follows:",
+        "warranties": [
+          "User is a legal entity that is competent and authorized under applicable legal provisions",
+          "Opening and/or use of Account is not intended to commit criminal acts",
+          "Users may not grant rights to unauthorized parties to use the Account",
+          "Every data and information submitted is true, accurate and complete",
+          "You have read and understood these Terms and Conditions and Privacy Policy"
         ]
+      },
+      "default_events": {
+        "title": "C. Event of Default",
+        "content": "An 'Event of Default' occurs when one or more of the following events occur:",
+        "events": [
+          "You violate the provisions in these Terms and Conditions",
+          "use of Account that is contrary to the Terms and Conditions",
+          "Your statements and/or warranties are invalid or misleading",
+          "there are things that harm or potentially harm the Company"
+        ],
+        "company_rights": [
+          "terminate or block your access to Account and/or Platform",
+          "reject transactions you make",
+          "take other legal actions and/or efforts"
+        ]
+      },
+      "liabilities": {
+        "title": "D. Liabilities",
+        "content": "You are fully responsible for the validity, completeness and accuracy of personal data and information provided in connection with the use of the Platform.",
+        "company_disclaimers": [
+          "The Company makes no representations or warranties about the absence of disruptions to the Platform",
+          "Platform is provided 'as is' to you",
+          "Company is not responsible for losses that are not the result of Company's fault",
+          "We do not guarantee that the Platform will be free from interference"
+        ]
+      },
+      "intellectual_property": {
+        "title": "E. Intellectual Property",
+        "content": "As long as you comply with these Terms and Conditions, We grant you a limited, non-exclusive license to use the Platform.",
+        "ownership": "'Fineksi' or 'fineksi', including its name and logo are protected by copyright and intellectual property rights applicable under Indonesian law."
+      },
+      "governing_law": {
+        "title": "F. Governing Law",
+        "content": "These Terms and Conditions and their implementation are governed by and subject to the laws of the Republic of Indonesia."
+      },
+      "dispute_resolution": {
+        "title": "G. Dispute Resolution",
+        "content": "The Parties agree to resolve any disputes through deliberation to reach agreement. If it cannot be resolved within 30 days, then it will be resolved through the South Jakarta District Court."
       },
       "contact": {
-        "title": "10. Contact Information",
-        "content": "If you have questions about these Terms and Conditions, please contact us:",
-        "legal": "Legal Department: legal@fineksi.com",
-        "support": "Customer Support: support@fineksi.com"
+        "title": "H. Contact Us",
+        "content": "You can submit suggestions, requests, complaints or questions regarding the Platform to Us every Monday to Sunday from 06.00-24.00 WIB through channels provided by the Company."
+      },
+      "miscellaneous": {
+        "title": "I. Miscellaneous",
+        "content": "To be able to use the Platform, We may ask Users to activate cookies while accessing or using the Platform.",
+        "additional_terms": [
+          "We may provide links to third party sites",
+          "You agree to receive messages from the Company regarding the Platform",
+          "We have the right to monitor User access and activities",
+          "These Terms and Conditions apply from when you access the Platform",
+          "We have the right to change these Terms and Conditions at any time"
+        ]
       }
     }
   },
@@ -373,76 +426,61 @@
     "hero": {
       "badge": "Privacy & Security",
       "title": "Privacy Policy",
-      "subtitle": "Your privacy and data security are fundamental to Fineksi's services.",
+      "subtitle": "This Privacy Policy Statement establishes the privacy policy in connection with this Website operated by PT. Finskor Teknologi Indonesia (\"Fineksi\").",
       "last_updated": "Last updated: June 12, 2024"
     },
     "overview": {
-      "title": "Privacy Overview",
-      "content": "Fineksi is committed to protecting your privacy and maintaining the highest standards of data security. This Privacy Policy explains how we collect, use, process, and safeguard information when you use our AI-powered document automation and credit analysis services.",
-      "compliance": [
-        "SOC 2 Compliant",
-        "GDPR Compliant", 
-        "End-to-End Encrypted"
-      ]
+      "title": "Agreement to Use",
+      "content": "By using our Website, you agree to the terms set forth in this Privacy Policy Statement."
     },
     "sections": {
-      "information_collected": {
-        "title": "1. Information We Collect",
-        "account": {
-          "title": "Account Information",
-          "items": [
-            "Name, email address, and contact information",
-            "Company name and business details",
-            "Account credentials and authentication data",
-            "Billing and payment information"
-          ]
-        },
-        "financial": {
-          "title": "Financial Documents and Data",
-          "items": [
-            "Documents uploaded for AI processing (bank statements, loan applications, etc.)",
-            "Extracted data from financial documents",
-            "Credit scores and financial analysis results",
-            "Fraud detection and risk assessment data"
-          ]
-        },
-        "usage": {
-          "title": "Usage and Technical Data",
-          "items": [
-            "API usage logs and performance metrics",
-            "System access logs and security events",
-            "Device information and IP addresses",
-            "Service usage patterns and preferences"
-          ]
-        }
+      "personal_information": {
+        "title": "Definition of Personal Information",
+        "content": "For the purposes of this Privacy Policy Statement, \"Personal Information\" means any information that can be used to personally identify you, and includes your name, your telephone number, your email address, and the like."
       },
-      "data_security": {
-        "title": "3. Data Security Measures",
-        "content": "We implement military-grade security measures to protect your data throughout its lifecycle:",
-        "encryption": {
-          "title": "Encryption & Protection",
-          "items": [
-            "AES-256 encryption for data at rest",
-            "TLS 1.3 encryption for data in transit",
-            "End-to-end encryption for sensitive documents",
-            "Regular security audits and penetration testing"
-          ]
-        },
-        "access": {
-          "title": "Access Controls",
-          "items": [
-            "Multi-factor authentication (MFA)",
-            "Role-based access control (RBAC)",
-            "Zero-trust security architecture",
-            "Continuous monitoring and logging"
-          ]
-        }
+      "collection": {
+        "title": "Information Collection",
+        "content": "Fineksi collects Personal Information only when you voluntarily submit such Personal Information to us, such as when placing product orders through the Site.",
+        "web_server": "For each visitor to the Website, our web server automatically recognizes only information regarding the visitor's domain name (or visitor's access provider) and email address."
+      },
+      "usage": {
+        "title": "Use of Personal Information",
+        "content": "Regardless of the purpose of submission, Fineksi's policy is to maintain the confidentiality of all Personal Information, and to use such Personal Information only for the following purposes:",
+        "purposes": [
+          "for the specific purpose for which it was voluntarily submitted;",
+          "to improve the content, appearance and usability of the Website;",
+          "to analyze the use of the Website by our visitors for internal market research; and",
+          "to notify our visitors about Website updates."
+        ]
+      },
+      "disclosure": {
+        "title": "Information Disclosure",
+        "content": "Fineksi may disclose Personal Information to law enforcement and government agencies for security purposes and to comply with applicable laws, regulations, or legal processes. Additionally, Fineksi may disclose Personal Information to our legal advisors to establish, exercise or defend our legal rights, to our other professional advisors, or as permitted or required by law."
+      },
+      "retention": {
+        "title": "Data Storage and Access",
+        "content": "It is Fineksi's policy to retain Personal Information only as long as necessary for such purposes. At any time, you may obtain a summary of Personal Information recorded at Fineksi that has been collected about you through this Site.",
+        "deletion": "Except for Personal Information that we require to complete product purchases, you may request at any time that Fineksi delete some or all Personal Information about you."
+      },
+      "rights": {
+        "title": "Your Rights",
+        "content": "Additionally, at any time you may request:",
+        "items": [
+          "Fineksi to correct such Personal Information; or",
+          "that such Personal Information be deleted from Fineksi's marketing database."
+        ]
+      },
+      "contact_requests": {
+        "title": "Making Requests",
+        "content": "To make any of the requests described above, send an email to support@fineksi.com. When contacting us, be sure to provide us with your actual email address, name, and telephone number to ensure we handle your request properly."
+      },
+      "changes": {
+        "title": "Policy Changes",
+        "content": "Fineksi reserves the right, at its sole discretion, to change, modify, add, or remove portions of this Privacy Policy Statement at any time. You should check this page periodically for changes. If you continue to use this Site after changes to this Privacy Policy Statement are posted, it means you accept those changes."
       },
       "contact": {
-        "title": "7. Contact Us",
-        "content": "If you have questions about this Privacy Policy or our data practices, please contact us:",
-        "privacy_officer": "Privacy Officer: privacy@fineksi.com",
-        "data_protection": "Data Protection: dpo@fineksi.com"
+        "title": "Contact Us",
+        "content": "For further questions regarding this privacy policy, please contact us at support@fineksi.com"
       }
     }
   }

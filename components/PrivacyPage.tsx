@@ -1,5 +1,5 @@
 import React from 'react'
-import { Shield, Lock, Eye, Database, AlertCircle, CheckCircle } from 'lucide-react'
+import { Shield, Lock, Eye, Database, AlertCircle, CheckCircle, FileText, Users, Mail } from 'lucide-react'
 
 // Import translations directly
 import enTranslations from '../public/locales/en/common.json'
@@ -59,327 +59,146 @@ const PrivacyPage = ({ locale = 'en' }: { locale?: string }) => {
           <div className="mb-12">
             <div className="bg-gradient-to-r from-[#1f51fe]/5 to-[#fad85a]/5 p-8 rounded-2xl border border-[#1f51fe]/20 mb-8">
               <div className="flex items-center mb-4">
-                <Lock className="h-6 w-6 text-[#1f51fe] mr-2" aria-hidden="true" />
+                <CheckCircle className="h-6 w-6 text-[#1f51fe] mr-2" aria-hidden="true" />
                 <h2 id="privacy-overview" className="text-2xl font-bold text-gray-900 m-0">{t('privacy.overview.title')}</h2>
               </div>
-              <p className="text-gray-700 leading-relaxed mb-4">
+              <p className="text-gray-700 leading-relaxed">
                 {t('privacy.overview.content')}
               </p>
-              <div className="grid md:grid-cols-3 gap-4 mt-6">
-                {t('privacy.overview.compliance').map((item: string, index: number) => (
-                  <div key={index} className="text-center">
-                    <div className={`w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-2 ${
-                      index === 0 ? 'bg-green-100' : index === 1 ? 'bg-blue-100' : 'bg-purple-100'
-                    }`}>
-                      {index === 0 ? (
-                        <CheckCircle className="h-6 w-6 text-green-600" aria-hidden="true" />
-                      ) : index === 1 ? (
-                        <Shield className="h-6 w-6 text-blue-600" aria-hidden="true" />
-                      ) : (
-                        <Lock className="h-6 w-6 text-purple-600" aria-hidden="true" />
-                      )}
-                    </div>
-                    <p className="text-sm font-semibold text-gray-900">{item}</p>
-                  </div>
-                ))}
-              </div>
             </div>
           </div>
 
-          {/* Information We Collect */}
+          {/* Personal Information Definition */}
+          <div className="mb-12">
+            <div className="flex items-center mb-4">
+              <FileText className="h-6 w-6 text-[#1f51fe] mr-2" aria-hidden="true" />
+              <h2 className="text-2xl font-bold text-gray-900 m-0">{t('privacy.sections.personal_information.title')}</h2>
+            </div>
+            <div className="bg-blue-50 p-6 rounded-lg border-l-4 border-[#1f51fe]">
+              <p className="text-gray-700 leading-relaxed">
+                {t('privacy.sections.personal_information.content')}
+              </p>
+            </div>
+          </div>
+
+          {/* Information Collection */}
           <div className="mb-12">
             <div className="flex items-center mb-4">
               <Database className="h-6 w-6 text-[#1f51fe] mr-2" aria-hidden="true" />
-              <h2 className="text-2xl font-bold text-gray-900 m-0">{t('privacy.sections.information_collected.title')}</h2>
+              <h2 className="text-2xl font-bold text-gray-900 m-0">{t('privacy.sections.collection.title')}</h2>
             </div>
-            
-            <div className="space-y-6">
+            <div className="space-y-4">
               <div className="bg-gray-50 p-6 rounded-lg">
-                <h3 className="font-semibold text-gray-900 mb-3">{t('privacy.sections.information_collected.account.title')}</h3>
-                <ul className="list-disc pl-6 space-y-1 text-gray-700 text-sm">
-                  {t('privacy.sections.information_collected.account.items').map((item: string, index: number) => (
-                    <li key={index}>{item}</li>
-                  ))}
-                </ul>
-              </div>
-
-              <div className="bg-blue-50 p-6 rounded-lg">
-                <h3 className="font-semibold text-gray-900 mb-3">{t('privacy.sections.information_collected.financial.title')}</h3>
-                <ul className="list-disc pl-6 space-y-1 text-gray-700 text-sm">
-                  {t('privacy.sections.information_collected.financial.items').map((item: string, index: number) => (
-                    <li key={index}>{item}</li>
-                  ))}
-                </ul>
-              </div>
-
-              <div className="bg-yellow-50 p-6 rounded-lg">
-                <h3 className="font-semibold text-gray-900 mb-3">{t('privacy.sections.information_collected.usage.title')}</h3>
-                <ul className="list-disc pl-6 space-y-1 text-gray-700 text-sm">
-                  {t('privacy.sections.information_collected.usage.items').map((item: string, index: number) => (
-                    <li key={index}>{item}</li>
-                  ))}
-                </ul>
+                <p className="text-gray-700 leading-relaxed mb-4">
+                  {t('privacy.sections.collection.content')}
+                </p>
+                <p className="text-gray-700 leading-relaxed">
+                  {t('privacy.sections.collection.web_server')}
+                </p>
               </div>
             </div>
           </div>
 
-          {/* How We Use Information */}
-          <div className="mb-12">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">2. How We Use Your Information</h2>
-            <p className="text-gray-700 leading-relaxed mb-6">
-              We use the collected information solely to provide and improve our AI-powered financial services:
-            </p>
-            
-            <div className="grid md:grid-cols-2 gap-6">
-              <div className="space-y-4">
-                <div className="flex items-start">
-                  <div className="bg-[#1f51fe]/10 p-2 rounded-lg mr-3 mt-1">
-                    <CheckCircle className="h-4 w-4 text-[#1f51fe]" aria-hidden="true" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-gray-900 mb-1">Service Delivery</h3>
-                    <p className="text-gray-700 text-sm">Process documents, detect fraud, and provide credit analysis</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start">
-                  <div className="bg-[#072ba4]/10 p-2 rounded-lg mr-3 mt-1">
-                    <CheckCircle className="h-4 w-4 text-[#072ba4]" aria-hidden="true" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-gray-900 mb-1">AI Model Training</h3>
-                    <p className="text-gray-700 text-sm">Improve our neural networks and machine learning algorithms</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start">
-                  <div className="bg-[#fad85a]/20 p-2 rounded-lg mr-3 mt-1">
-                    <CheckCircle className="h-4 w-4 text-[#f59e0b]" aria-hidden="true" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-gray-900 mb-1">Account Management</h3>
-                    <p className="text-gray-700 text-sm">Manage your account, billing, and customer support</p>
-                  </div>
-                </div>
-              </div>
-              
-              <div className="space-y-4">
-                <div className="flex items-start">
-                  <div className="bg-green-500/10 p-2 rounded-lg mr-3 mt-1">
-                    <CheckCircle className="h-4 w-4 text-green-600" aria-hidden="true" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-gray-900 mb-1">Security Monitoring</h3>
-                    <p className="text-gray-700 text-sm">Detect and prevent unauthorized access and fraud</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start">
-                  <div className="bg-purple-500/10 p-2 rounded-lg mr-3 mt-1">
-                    <CheckCircle className="h-4 w-4 text-purple-600" aria-hidden="true" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-gray-900 mb-1">Compliance</h3>
-                    <p className="text-gray-700 text-sm">Meet regulatory requirements and legal obligations</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start">
-                  <div className="bg-orange-500/10 p-2 rounded-lg mr-3 mt-1">
-                    <CheckCircle className="h-4 w-4 text-orange-600" aria-hidden="true" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-gray-900 mb-1">Service Improvement</h3>
-                    <p className="text-gray-700 text-sm">Analyze usage patterns to enhance our AI services</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Data Security */}
+          {/* Usage of Personal Information */}
           <div className="mb-12">
             <div className="flex items-center mb-4">
-              <Lock className="h-6 w-6 text-[#1f51fe] mr-2 animate-pulse" aria-hidden="true" />
-             <h2 className="text-2xl font-bold text-gray-900 m-0">{t('privacy.sections.data_security.title')}</h2>
+              <Eye className="h-6 w-6 text-[#1f51fe] mr-2" aria-hidden="true" />
+              <h2 className="text-2xl font-bold text-gray-900 m-0">{t('privacy.sections.usage.title')}</h2>
             </div>
-            
-            <div className="bg-gradient-to-r from-[#1f51fe]/5 to-[#072ba4]/5 p-8 rounded-2xl border border-[#1f51fe]/20 mb-6">
-              <p className="text-gray-700 leading-relaxed mb-6">
-               {t('privacy.sections.data_security.content')}
+            <div className="bg-gradient-to-r from-[#1f51fe]/5 to-[#072ba4]/5 p-6 rounded-lg border border-[#1f51fe]/20 mb-4">
+              <p className="text-gray-700 leading-relaxed mb-4">
+                {t('privacy.sections.usage.content')}
               </p>
-              
-              <div className="grid md:grid-cols-2 gap-6">
-                <div>
-                  <h3 className="font-semibold text-gray-900 mb-3 flex items-center">
-                    <Shield className="h-5 w-5 text-[#1f51fe] mr-2" aria-hidden="true" />
-                   {t('privacy.sections.data_security.encryption.title')}
-                  </h3>
-                  <ul className="space-y-2 text-gray-700 text-sm">
-                   {t('privacy.sections.data_security.encryption.items').map((item: string, index: number) => (
-                     <li key={index}>• {item}</li>
-                   ))}
-                  </ul>
-                </div>
-                
-                <div>
-                  <h3 className="font-semibold text-gray-900 mb-3 flex items-center">
-                    <Eye className="h-5 w-5 text-[#072ba4] mr-2" aria-hidden="true" />
-                   {t('privacy.sections.data_security.access.title')}
-                  </h3>
-                  <ul className="space-y-2 text-gray-700 text-sm">
-                   {t('privacy.sections.data_security.access.items').map((item: string, index: number) => (
-                     <li key={index}>• {item}</li>
-                   ))}
-                  </ul>
-                </div>
-              </div>
+              <ul className="list-disc pl-6 space-y-2 text-gray-700">
+                {t('privacy.sections.usage.purposes').map((purpose: string, index: number) => (
+                  <li key={index}>{purpose}</li>
+                ))}
+              </ul>
             </div>
           </div>
 
-          {/* Data Sharing */}
+          {/* Information Disclosure */}
           <div className="mb-12">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">4. Data Sharing and Disclosure</h2>
-            
-            <div className="bg-red-50 p-6 rounded-lg border-l-4 border-red-400 mb-6">
-              <div className="flex items-start">
-                <AlertCircle className="h-5 w-5 text-red-600 mr-2 mt-0.5" aria-hidden="true" />
-                <div>
-                  <h3 className="font-semibold text-gray-900 mb-2">We Do NOT Sell Your Data</h3>
-                  <p className="text-gray-700 text-sm">
-                    Fineksi never sells, rents, or trades your personal information or financial data to third parties.
-                  </p>
-                </div>
-              </div>
+            <div className="flex items-center mb-4">
+              <Shield className="h-6 w-6 text-[#072ba4] mr-2" aria-hidden="true" />
+              <h2 className="text-2xl font-bold text-gray-900 m-0">{t('privacy.sections.disclosure.title')}</h2>
             </div>
-            
-            <p className="text-gray-700 leading-relaxed mb-4">
-              We may share information only in the following limited circumstances:
-            </p>
-            
+            <div className="bg-yellow-50 p-6 rounded-lg border-l-4 border-[#fad85a]">
+              <p className="text-gray-700 leading-relaxed">
+                {t('privacy.sections.disclosure.content')}
+              </p>
+            </div>
+          </div>
+
+          {/* Data Storage and Access */}
+          <div className="mb-12">
+            <div className="flex items-center mb-4">
+              <Lock className="h-6 w-6 text-[#1f51fe] mr-2" aria-hidden="true" />
+              <h2 className="text-2xl font-bold text-gray-900 m-0">{t('privacy.sections.retention.title')}</h2>
+            </div>
             <div className="space-y-4">
-              <div className="bg-gray-50 p-4 rounded-lg">
-                <h3 className="font-semibold text-gray-900 mb-2">Service Providers</h3>
-                <p className="text-gray-700 text-sm">
-                  Trusted third-party service providers who assist in delivering our services, 
-                  subject to strict confidentiality agreements.
+              <div className="bg-gray-50 p-6 rounded-lg">
+                <p className="text-gray-700 leading-relaxed mb-4">
+                  {t('privacy.sections.retention.content')}
                 </p>
-              </div>
-              
-              <div className="bg-gray-50 p-4 rounded-lg">
-                <h3 className="font-semibold text-gray-900 mb-2">Legal Requirements</h3>
-                <p className="text-gray-700 text-sm">
-                  When required by law, court order, or government regulation, 
-                  we may disclose information to comply with legal obligations.
+                <p className="text-gray-700 leading-relaxed">
+                  {t('privacy.sections.retention.deletion')}
                 </p>
-              </div>
-              
-              <div className="bg-gray-50 p-4 rounded-lg">
-                <h3 className="font-semibold text-gray-900 mb-2">Business Transfers</h3>
-                <p className="text-gray-700 text-sm">
-                  In the event of a merger, acquisition, or sale of assets, 
-                  data may be transferred as part of the business transaction.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Data Retention */}
-          <div className="mb-12">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">5. Data Retention and Deletion</h2>
-            <p className="text-gray-700 leading-relaxed mb-6">
-              We retain your information only as long as necessary to provide our services and comply with legal obligations:
-            </p>
-            
-            <div className="grid md:grid-cols-3 gap-4">
-              <div className="bg-blue-50 p-4 rounded-lg text-center">
-                <h3 className="font-semibold text-gray-900 mb-2">Account Data</h3>
-                <p className="text-2xl font-bold text-[#1f51fe] mb-1">Active + 7 years</p>
-                <p className="text-gray-700 text-xs">For compliance purposes</p>
-              </div>
-              
-              <div className="bg-green-50 p-4 rounded-lg text-center">
-                <h3 className="font-semibold text-gray-900 mb-2">Processing Logs</h3>
-                <p className="text-2xl font-bold text-green-600 mb-1">90 days</p>
-                <p className="text-gray-700 text-xs">For system monitoring</p>
-              </div>
-              
-              <div className="bg-yellow-50 p-4 rounded-lg text-center">
-                <h3 className="font-semibold text-gray-900 mb-2">Document Cache</h3>
-                <p className="text-2xl font-bold text-[#f59e0b] mb-1">30 days</p>
-                <p className="text-gray-700 text-xs">For processing optimization</p>
               </div>
             </div>
           </div>
 
           {/* Your Rights */}
           <div className="mb-12">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">6. Your Privacy Rights</h2>
-            <p className="text-gray-700 leading-relaxed mb-6">
-              Depending on your location, you may have the following rights regarding your personal information:
-            </p>
-            
-            <div className="grid md:grid-cols-2 gap-6">
-              <div className="space-y-3">
-                <div className="flex items-center">
-                  <CheckCircle className="h-5 w-5 text-green-600 mr-2" aria-hidden="true" />
-                  <span className="text-gray-900 font-medium">Access your data</span>
-                </div>
-                <div className="flex items-center">
-                  <CheckCircle className="h-5 w-5 text-green-600 mr-2" aria-hidden="true" />
-                  <span className="text-gray-900 font-medium">Correct inaccurate data</span>
-                </div>
-                <div className="flex items-center">
-                  <CheckCircle className="h-5 w-5 text-green-600 mr-2" aria-hidden="true" />
-                  <span className="text-gray-900 font-medium">Delete your data</span>
-                </div>
-              </div>
-              
-              <div className="space-y-3">
-                <div className="flex items-center">
-                  <CheckCircle className="h-5 w-5 text-green-600 mr-2" aria-hidden="true" />
-                  <span className="text-gray-900 font-medium">Restrict processing</span>
-                </div>
-                <div className="flex items-center">
-                  <CheckCircle className="h-5 w-5 text-green-600 mr-2" aria-hidden="true" />
-                  <span className="text-gray-900 font-medium">Data portability</span>
-                </div>
-                <div className="flex items-center">
-                  <CheckCircle className="h-5 w-5 text-green-600 mr-2" aria-hidden="true" />
-                  <span className="text-gray-900 font-medium">Withdraw consent</span>
-                </div>
-              </div>
+            <div className="flex items-center mb-4">
+              <Users className="h-6 w-6 text-[#1f51fe] mr-2" aria-hidden="true" />
+              <h2 className="text-2xl font-bold text-gray-900 m-0">{t('privacy.sections.rights.title')}</h2>
             </div>
-            
-            <div className="bg-[#1f51fe]/5 p-6 rounded-lg mt-6">
-              <h3 className="font-semibold text-gray-900 mb-2">Exercise Your Rights</h3>
-              <p className="text-gray-700 text-sm mb-3">
-                To exercise any of these rights, please contact our privacy team:
+            <div className="bg-green-50 p-6 rounded-lg border-l-4 border-green-500">
+              <p className="text-gray-700 leading-relaxed mb-4">
+                {t('privacy.sections.rights.content')}
               </p>
-              <p className="text-[#1f51fe] font-medium">support@fineksi.com</p>
+              <ul className="list-disc pl-6 space-y-2 text-gray-700">
+                {t('privacy.sections.rights.items').map((item: string, index: number) => (
+                  <li key={index}>{item}</li>
+                ))}
+              </ul>
+            </div>
+          </div>
+
+          {/* Making Requests */}
+          <div className="mb-12">
+            <div className="flex items-center mb-4">
+              <Mail className="h-6 w-6 text-[#1f51fe] mr-2" aria-hidden="true" />
+              <h2 className="text-2xl font-bold text-gray-900 m-0">{t('privacy.sections.contact_requests.title')}</h2>
+            </div>
+            <div className="bg-[#1f51fe]/5 p-6 rounded-lg border border-[#1f51fe]/20">
+              <p className="text-gray-700 leading-relaxed">
+                {t('privacy.sections.contact_requests.content')}
+              </p>
+            </div>
+          </div>
+
+          {/* Policy Changes */}
+          <div className="mb-12">
+            <div className="flex items-center mb-4">
+              <AlertCircle className="h-6 w-6 text-[#f59e0b] mr-2" aria-hidden="true" />
+              <h2 className="text-2xl font-bold text-gray-900 m-0">{t('privacy.sections.changes.title')}</h2>
+            </div>
+            <div className="bg-orange-50 p-6 rounded-lg border-l-4 border-[#f59e0b]">
+              <p className="text-gray-700 leading-relaxed">
+                {t('privacy.sections.changes.content')}
+              </p>
             </div>
           </div>
 
           {/* Contact Information */}
           <div className="mb-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-4">{t('privacy.sections.contact.title')}</h2>
-            <p className="text-gray-700 leading-relaxed mb-6">
-              {t('privacy.sections.contact.content')}
-            </p>
-            
             <div className="bg-gradient-to-r from-[#1f51fe]/5 to-[#fad85a]/5 p-8 rounded-2xl border border-[#1f51fe]/20">
-              <div className="grid md:grid-cols-2 gap-6">
-                <div>
-                  <h3 className="font-semibold text-gray-900 mb-3">Privacy Officer</h3>
-                  <p className="text-gray-700 text-sm mb-1">{t('privacy.sections.contact.privacy_officer')}</p>
-                  <p className="text-gray-700 text-sm">Response time: Within 48 hours</p>
-                </div>
-                <div>
-                  <h3 className="font-semibold text-gray-900 mb-3">Data Protection</h3>
-                  <p className="text-gray-700 text-sm mb-1">{t('privacy.sections.contact.data_protection')}</p>
-                  <p className="text-gray-700 text-sm">For GDPR-related inquiries</p>
-                </div>
-              </div>
+              <p className="text-gray-700 leading-relaxed text-center">
+                {t('privacy.sections.contact.content')}
+              </p>
             </div>
           </div>
 

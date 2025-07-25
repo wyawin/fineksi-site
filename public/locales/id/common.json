@@ -28,7 +28,7 @@
     "blog": "Blog",
     "demo": "Jadwalkan Demo",
     "privacy": "Kebijakan Privasi",
-    "terms": "Syarat Layanan",
+    "terms": "Syarat dan Ketentuan",
     "solution": "Solusi",
     "home": "Beranda"
   },
@@ -326,46 +326,99 @@
   },
   "terms": {
     "hero": {
-      "badge": "Ketentuan Hukum",
+      "badge": "Ketentuan Layanan",
       "title": "Syarat dan Ketentuan",
-      "subtitle": "Harap baca syarat-syarat ini dengan cermat sebelum menggunakan layanan Fineksi.",
-      "last_updated": "Terakhir diperbarui: 15 Januari 2025"
+      "subtitle": "Selamat datang di platform Fineksi yang dikelola oleh PT FINSKOR TEKNOLOGI INDONESIA. Mohon untuk membaca Syarat dan Ketentuan ini dengan seksama dan secara menyeluruh.",
+      "last_updated": "Terakhir diperbarui: 12 Juni 2024"
     },
     "sections": {
-      "acceptance": {
-        "title": "1. Penerimaan Ketentuan",
-        "content": "Dengan mengakses atau menggunakan layanan Fineksi, Anda setuju untuk terikat oleh Syarat dan Ketentuan ini (\"Ketentuan\"). Jika Anda tidak setuju dengan bagian mana pun dari ketentuan ini, Anda tidak boleh mengakses layanan kami.",
-        "additional": "Ketentuan ini berlaku untuk semua pengunjung, pengguna, dan pihak lain yang mengakses atau menggunakan layanan otomatisasi dokumen bertenaga AI dan analisis kredit kami."
+      "introduction": {
+        "title": "Pengantar",
+        "content": "Dengan mengakses dan/atau menggunakan Platform, Anda memahami dan setuju untuk tunduk terhadap Syarat dan Ketentuan ini. Dalam hal Anda tidak setuju dengan Syarat dan Ketentuan ini, Anda berhak untuk tidak mengakses dan/atau tidak menggunakan Platform."
       },
-      "service_description": {
-        "title": "2. Deskripsi Layanan",
-        "content": "Fineksi menyediakan layanan otomatisasi dokumen bertenaga kecerdasan buatan, deteksi penipuan, dan analisis kredit kepada institusi keuangan termasuk bank, perusahaan multifinance, dan platform peer-to-peer lending.",
-        "services": [
-          "Pemrosesan dokumen dan ekstraksi data bertenaga AI",
-          "Deteksi penipuan dan manipulasi berbasis jaringan neural",
-          "Analisis dan penilaian risiko kredit kognitif",
-          "Analitik prediktif dan wawasan keuangan",
-          "Integrasi API dan dukungan teknis"
+      "platform_usage": {
+        "title": "A. Penggunaan Platform",
+        "content": "Anda dapat mengakses atau menggunakan Platform setelah Anda menyelesaikan proses pendaftaran pada Platform dengan tunduk pada syarat dan ketentuan yang ditentukan dari waktu ke waktu oleh Perusahaan, dan memiliki Akun.",
+        "responsibilities": [
+          "Anda bertanggung jawab penuh atas setiap dan semua aktivitas yang terjadi di Akun Anda.",
+          "Anda hanya dapat menggunakan Akun Anda sendiri dan berjanji untuk tidak mengizinkan orang lain menggunakan identitas Anda atau Akun Anda.",
+          "Anda harus melindungi kata sandi Akun Anda setiap akses atau identifikasi yang telah Anda buat atau Perusahaan berikan kepada Anda.",
+          "Anda berjanji untuk segera memberitahu Perusahaan jika Akun Anda dicuri dan/atau diretas.",
+          "Anda harus menghapus semua data dan/atau informasi dari semua perangkat elektronik jika Anda menerima data yang tidak terkait dengan Platform."
+        ],
+        "prohibited_activities": [
+          "melanggar hukum atau melanggar hak pihak ketiga",
+          "melakukan kegiatan yang bertentangan dengan peraturan perundang-undangan yang berlaku",
+          "menyebarkan materi yang dilindungi hak cipta tanpa persetujuan",
+          "mengakses atau melakukan upaya untuk mendapatkan akses tidak sah ke Platform",
+          "mengirimkan materi yang mengandung virus atau program yang merusak",
+          "merekayasa balik atau mengakses Platform untuk membuat produk serupa",
+          "meluncurkan program atau skrip yang dapat membebani kinerja Platform"
         ]
       },
-      "user_responsibilities": {
-        "title": "3. Tanggung Jawab Pengguna",
-        "warning": "Pengguna harus memastikan kepatuhan terhadap semua peraturan keuangan dan undang-undang perlindungan data yang berlaku di yurisdiksi mereka saat menggunakan layanan AI kami.",
-        "content": "Sebagai pengguna layanan kami, Anda setuju untuk:",
-        "items": [
-          "Memberikan informasi yang akurat dan lengkap saat menggunakan layanan kami",
-          "Menjaga kerahasiaan kredensial akun Anda",
-          "Menggunakan layanan kami hanya untuk tujuan yang sah dan sesuai dengan peraturan yang berlaku",
-          "Tidak mencoba merekayasa balik, mendekompilasi, atau mengekstrak algoritma AI kami",
-          "Mematuhi semua undang-undang perlindungan data dan privasi yang berlaku di yurisdiksi Anda",
-          "Segera memberi tahu kami tentang penggunaan akun Anda yang tidak sah"
+      "representations": {
+        "title": "B. Pernyataan dan Jaminan",
+        "content": "Pengguna menyatakan dan menjamin dari waktu ke waktu selama akses dan penggunaan Platform oleh Pengguna sebagai berikut:",
+        "warranties": [
+          "Pengguna adalah subjek hukum yang cakap dan berwenang menurut ketentuan hukum yang berlaku",
+          "Pembukaan dan/atau penggunaan Akun tidak dimaksudkan untuk melakukan tindak pidana",
+          "Pengguna tidak boleh memberikan hak kepada pihak tidak berwenang untuk menggunakan Akun",
+          "Setiap data dan informasi yang disampaikan adalah benar, akurat dan lengkap",
+          "Anda telah membaca dan memahami Syarat dan Ketentuan dan Kebijakan Privasi ini"
         ]
+      },
+      "default_events": {
+        "title": "C. Cidera Janji",
+        "content": "Cidera Janji terjadi ketika satu atau lebih dari peristiwa berikut terjadi:",
+        "events": [
+          "Anda melanggar ketentuan dalam Syarat dan Ketentuan ini",
+          "penggunaan Akun yang bertentangan dengan Syarat dan Ketentuan",
+          "Pernyataan dan/atau jaminan Anda tidak sah atau menyesatkan",
+          "terdapat hal-hal yang merugikan atau berpotensi merugikan Perusahaan"
+        ],
+        "company_rights": [
+          "mengakhiri atau memblokir akses Anda ke Akun dan/atau Platform",
+          "menolak transaksi yang Anda lakukan",
+          "melakukan tindakan dan/atau upaya hukum lainnya"
+        ]
+      },
+      "liabilities": {
+        "title": "D. Pertanggung Jawaban",
+        "content": "Anda bertanggung jawab penuh atas validitas, kelengkapan dan keakuratan data dan informasi pribadi yang diberikan sehubungan dengan penggunaan Platform.",
+        "company_disclaimers": [
+          "Perusahaan tidak membuat pernyataan atau jaminan tentang tidak adanya gangguan pada Platform",
+          "Platform diberikan 'sebagaimana adanya' untuk Anda",
+          "Perusahaan tidak bertanggung jawab atas kerugian yang bukan akibat kesalahan Perusahaan",
+          "Kami tidak memberikan jaminan bahwa Platform akan bebas dari gangguan"
+        ]
+      },
+      "intellectual_property": {
+        "title": "E. Hak Kekayaan Intelektual",
+        "content": "Sepanjang Anda mematuhi Syarat dan Ketentuan ini, Kami memberikan Anda lisensi terbatas, non-eksklusif untuk menggunakan Platform.",
+        "ownership": "'Fineksi' atau 'fineksi', termasuk nama dan logonya dilindungi oleh hak cipta dan hak kekayaan intelektual yang berlaku berdasarkan hukum Republik Indonesia."
+      },
+      "governing_law": {
+        "title": "F. Hukum Yang Berlaku",
+        "content": "Syarat dan Ketentuan ini dan pelaksanaannya diatur oleh dan tunduk pada hukum Republik Indonesia."
+      },
+      "dispute_resolution": {
+        "title": "G. Penyelesaian Sengketa",
+        "content": "Para Pihak sepakat untuk menyelesaikan setiap perselisihan dengan musyawarah untuk mencapai kesepakatan. Apabila tidak dapat diselesaikan dalam waktu 30 hari, maka diselesaikan melalui Pengadilan Negeri Jakarta Selatan."
       },
       "contact": {
-        "title": "10. Informasi Kontak",
-        "content": "Jika Anda memiliki pertanyaan tentang Syarat dan Ketentuan ini, silakan hubungi kami:",
-        "legal": "Departemen Hukum: legal@fineksi.com",
-        "support": "Dukungan Pelanggan: support@fineksi.com"
+        "title": "H. Hubungi Kami",
+        "content": "Anda dapat menyampaikan saran, permintaan, keluhan atau pertanyaan mengenai Platform kepada Kami setiap hari Senin s.d Minggu pada pukul 06.00-24.00 WIB melalui saluran yang disediakan oleh Perusahaan."
+      },
+      "miscellaneous": {
+        "title": "I. Lain-Lain",
+        "content": "Untuk dapat menggunakan Platform, Kami dapat meminta Pengguna untuk mengaktifkan cookie selama mengakses atau menggunakan Platform.",
+        "additional_terms": [
+          "Kami dapat menyediakan tautan ke situs pihak ketiga",
+          "Anda setuju untuk menerima pesan dari Perusahaan terkait Platform",
+          "Kami berhak memantau akses dan aktivitas Pengguna",
+          "Syarat dan Ketentuan ini berlaku sejak Anda mengakses Platform",
+          "Kami berhak mengubah Syarat dan Ketentuan ini setiap saat"
+        ]
       }
     }
   },
@@ -373,76 +426,61 @@
     "hero": {
       "badge": "Privasi & Keamanan",
       "title": "Kebijakan Privasi",
-      "subtitle": "Privasi dan keamanan data Anda adalah fundamental bagi layanan Fineksi.",
+      "subtitle": "Pernyataan Kebijakan Privasi ini menetapkan kebijakan privasi sehubungan dengan Situs Web ini yang dikelola oleh PT. Finskor Teknologi Indonesia (\"Fineksi\").",
       "last_updated": "Terakhir diperbarui: 12 Juni 2024"
     },
     "overview": {
-      "title": "Ikhtisar Privasi",
-      "content": "Fineksi berkomitmen untuk melindungi privasi Anda dan mempertahankan standar keamanan data tertinggi. Kebijakan Privasi ini menjelaskan bagaimana kami mengumpulkan, menggunakan, memproses, dan melindungi informasi saat Anda menggunakan layanan otomatisasi dokumen bertenaga AI dan analisis kredit kami.",
-      "compliance": [
-        "Patuh SOC 2",
-        "Patuh GDPR",
-        "Terenkripsi End-to-End"
-      ]
+      "title": "Persetujuan Penggunaan",
+      "content": "Dengan menggunakan Situs Web kami, Anda menyetujui persyaratan yang ditetapkan dalam Pernyataan Kebijakan Privasi ini."
     },
     "sections": {
-      "information_collected": {
-        "title": "1. Informasi yang Kami Kumpulkan",
-        "account": {
-          "title": "Informasi Akun",
-          "items": [
-            "Nama, alamat email, dan informasi kontak",
-            "Nama perusahaan dan detail bisnis",
-            "Kredensial akun dan data autentikasi",
-            "Informasi penagihan dan pembayaran"
-          ]
-        },
-        "financial": {
-          "title": "Dokumen dan Data Keuangan",
-          "items": [
-            "Dokumen yang diunggah untuk pemrosesan AI (rekening koran, aplikasi pinjaman, dll.)",
-            "Data yang diekstrak dari dokumen keuangan",
-            "Skor kredit dan hasil analisis keuangan",
-            "Data deteksi penipuan dan penilaian risiko"
-          ]
-        },
-        "usage": {
-          "title": "Data Penggunaan dan Teknis",
-          "items": [
-            "Log penggunaan API dan metrik kinerja",
-            "Log akses sistem dan kejadian keamanan",
-            "Informasi perangkat dan alamat IP",
-            "Pola penggunaan layanan dan preferensi"
-          ]
-        }
+      "personal_information": {
+        "title": "Definisi Informasi Pribadi",
+        "content": "Untuk tujuan Pernyataan Kebijakan Privasi ini, \"Informasi Pribadi\" berarti informasi apa pun yang dapat digunakan untuk mengidentifikasi Anda secara pribadi, dan mencakup nama Anda, nomor telepon Anda, alamat email Anda, dan sejenisnya."
       },
-      "data_security": {
-        "title": "3. Langkah-langkah Keamanan Data",
-        "content": "Kami menerapkan langkah-langkah keamanan tingkat militer untuk melindungi data Anda sepanjang siklus hidupnya:",
-        "encryption": {
-          "title": "Enkripsi & Perlindungan",
-          "items": [
-            "Enkripsi AES-256 untuk data saat istirahat",
-            "Enkripsi TLS 1.3 untuk data dalam transit",
-            "Enkripsi end-to-end untuk dokumen sensitif",
-            "Audit keamanan dan pengujian penetrasi reguler"
-          ]
-        },
-        "access": {
-          "title": "Kontrol Akses",
-          "items": [
-            "Autentikasi multi-faktor (MFA)",
-            "Kontrol akses berbasis peran (RBAC)",
-            "Arsitektur keamanan zero-trust",
-            "Pemantauan dan pencatatan berkelanjutan"
-          ]
-        }
+      "collection": {
+        "title": "Pengumpulan Informasi",
+        "content": "Fineksi mengumpulkan Informasi Pribadi hanya ketika Anda secara sukarela menyerahkan Informasi Pribadi tersebut kepada kami, seperti ketika melakukan pemesanan produk melalui Situs.",
+        "web_server": "Untuk setiap pengunjung Situs Web, server web kami secara otomatis hanya mengenali informasi mengenai nama domain pengunjung (atau penyedia akses pengunjung) dan alamat email."
+      },
+      "usage": {
+        "title": "Penggunaan Informasi Pribadi",
+        "content": "Terlepas dari tujuan penyampaiannya, kebijakan Fineksi adalah menjaga kerahasiaan semua Informasi Pribadi, dan menggunakan Informasi Pribadi tersebut hanya untuk tujuan berikut:",
+        "purposes": [
+          "untuk tujuan khusus yang menjadi tujuan sukarelanya;",
+          "untuk meningkatkan konten, tampilan dan kegunaan Situs Web;",
+          "untuk menganalisa penggunaan Situs Web oleh pengunjung kami untuk riset pasar internal; dan",
+          "untuk memberi tahu pengunjung kami tentang pembaruan Situs Web."
+        ]
+      },
+      "disclosure": {
+        "title": "Pengungkapan Informasi",
+        "content": "Fineksi dapat mengungkapkan Informasi Pribadi kepada lembaga penegak hukum dan pemerintah untuk tujuan keamanan dan mematuhi undang-undang, peraturan, atau proses hukum yang berlaku. Selain itu, Fineksi dapat mengungkapkan Informasi Pribadi kepada penasihat hukum kami untuk menetapkan, melaksanakan atau membela hak hukum kami, kepada penasihat profesional kami yang lain, atau sebagaimana diizinkan atau diwajibkan oleh hukum."
+      },
+      "retention": {
+        "title": "Penyimpanan dan Akses Data",
+        "content": "Merupakan kebijakan Fineksi untuk menyimpan Informasi Pribadi hanya selama diperlukan untuk tujuan tersebut. Kapan saja, Anda dapat memperoleh ringkasan Informasi Pribadi yang tercatat di Fineksi yang telah dikumpulkan tentang Anda melalui Situs ini.",
+        "deletion": "Kecuali Informasi Pribadi yang kami perlukan untuk menyelesaikan pembelian produk, Anda dapat meminta kapan saja agar Fineksi membuang sebagian atau seluruh Informasi Pribadi tentang Anda."
+      },
+      "rights": {
+        "title": "Hak Anda",
+        "content": "Selain itu, kapan saja Anda dapat meminta:",
+        "items": [
+          "Fineksi mengoreksi Informasi Pribadi tersebut; atau",
+          "bahwa Informasi Pribadi tersebut dihapus dari basis data pemasaran Fineksi."
+        ]
+      },
+      "contact_requests": {
+        "title": "Mengajukan Permintaan",
+        "content": "Untuk mengajukan permintaan apa pun yang dijelaskan di atas, kirim email ke support@fineksi.com. Saat menghubungi kami, pastikan untuk memberikan kami alamat email, nama, dan nomor telepon Anda yang sebenarnya untuk memastikan kami menangani permintaan Anda dengan benar."
+      },
+      "changes": {
+        "title": "Perubahan Kebijakan",
+        "content": "Fineksi berhak, atas kebijakannya sendiri, untuk mengubah, memodifikasi, menambah, atau menghapus bagian dari Pernyataan Kebijakan Privasi ini kapan saja. Anda harus memeriksa halaman ini secara berkala untuk mengetahui adanya perubahan. Jika Anda terus menggunakan Situs ini setelah perubahan pada Pernyataan Kebijakan Privasi ini diposting, berarti Anda menerima perubahan tersebut."
       },
       "contact": {
-        "title": "7. Hubungi Kami",
-        "content": "Jika Anda memiliki pertanyaan tentang Kebijakan Privasi ini atau praktik data kami, silakan hubungi kami:",
-        "privacy_officer": "Petugas Privasi: privacy@fineksi.com",
-        "data_protection": "Perlindungan Data: dpo@fineksi.com"
+        "title": "Hubungi Kami",
+        "content": "Untuk pertanyaan lebih lanjut mengenai kebijakan privasi ini, silakan hubungi kami di support@fineksi.com"
       }
     }
   }
