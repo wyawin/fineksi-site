@@ -6,5 +6,5 @@ export const revalidate = 0
 
 export default function RootPage() {
   // Redirect to default locale
-  redirect('/en')
+  redirect('/id')
 }
