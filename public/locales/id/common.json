@@ -1,31 +1,29 @@
 {
   "site": {
-    "title": "Fineksi - Otomatisasi Dokumen Bertenaga AI untuk Institusi Keuangan",
-    "description": "Transformasikan proses kredit Anda dengan otomatisasi dokumen AI canggih, deteksi penipuan, dan analisis kognitif. Dipercaya oleh bank, multifinance, dan platform P2P lending.",
+    "title": "Fineksi - Otomatisasi Kognitif Dokumen Berbasis AI untuk Institusi Keuangan",
+    "description": "Transformasikan proses kredit Anda dengan otomatisasi kognitif dokumen berbasis AI, deteksi pemalsuan, dan analisis kredit dengan kecepatan dan akurat yang tinggi. Dipercaya oleh bank, multifinance, dan platform P2P lending.",
     "name": "Fineksi"
   },
   "metadata": {
     "about": {
-      "title": "Tentang Kami - Ahli AI Terkemuka dalam Teknologi Keuangan",
+      "title": "Tentang Kami",
       "description": "Temui tim AI kelas dunia di balik Fineksi. Pelajari misi kami untuk mendemokratisasi AI untuk institusi keuangan dan teknologi jaringan neural terdepan kami."
     },
     "solutions": {
-      "title": "Analisa Rekening Koran & Analisa Laporan Keuangan dengan AI - Fineksi",
-      "description": "Temukan solusi analisis dokumen bertenaga AI komprehensif Fineksi untuk bank, multifinance, dan P2P lending. Proses laporan bank, laporan keuangan, dokumen legal, dan lainnya dengan proses yang cepat dan tingkat akurasi yang tinggi."
+      "title": "Analisa Rekening Koran & Analisa Laporan Keuangan dengan AI",
+      "description": "Temukan solusi analisis dokumen berbasis AI komprehensif Fineksi untuk bank, multifinance, dan P2P lending. Proses rekening koran, laporan keuangan, dokumen legal, dan lainnya dengan proses yang cepat dan tingkat akurasi yang tinggi."
     },
     "privacy": {
-      "title": "Kebijakan Privasi - Bagaimana Fineksi Melindungi Data Anda",
-      "description": "Pelajari bagaimana Fineksi melindungi dan menangani data Anda dengan keamanan tingkat militer, kepatuhan SOC 2, dan kepatuhan GDPR dalam layanan keuangan bertenaga AI kami."
+      "title": "Kebijakan Privasi",
+      "description": "Pelajari bagaimana Fineksi melindungi dan menangani data Anda dengan keamanan tinggi, kepatuhan ISO 27001, dan kepatuhan GDPR dalam layanan berbasis AI kami."
     },
     "terms": {
-      "title": "Syarat dan Ketentuan - Perjanjian Layanan Fineksi",
-      "description": "Baca syarat dan ketentuan untuk menggunakan layanan otomatisasi dokumen dan analisis kredit Fineksi. Diperbarui Januari 2025."
+      "title": "Syarat dan Ketentuan",
+      "description": "Baca syarat dan ketentuan untuk menggunakan layanan Fineksi."
     }
   },
   "nav": {
-    "features": "Fitur AI",
-    "benefits": "Manfaat",
-    "industries": "Industri", 
+    "whyus": "Kenapa Kami",
     "about": "Tentang Kami",
     "demo": "Jadwalkan Demo",
     "privacy": "Kebijakan Privasi",
@@ -34,13 +32,12 @@
     "home": "Beranda"
   },
   "hero": {
-    "badge": "Teknologi AI Generasi Terbaru",
-    "title": "Transformasikan Proses Kredit Anda dengan Kecerdasan AI",
-    "subtitle": "Manfaatkan kekuatan AI canggih untuk menyederhanakan pemrosesan dokumen, mendeteksi manipulasi dengan jaringan neural, dan mempercepat keputusan kredit dengan platform otomatisasi dokumen kognitif kami.",
+    "badge": "Analisis Kredit Berbasis AI",
+    "title": "Transformasikan Analisa Kredit Anda dengan AI Kami",
+    "subtitle": "Manfaatkan kekuatan AI kami untuk menyederhanakan pemrosesan dokumen untuk analisa kredit dan mempercepat keputusan kredit dengan cepat dan akurat.",
     "cta_primary": "Jadwalkan Demo",
-    "cta_secondary": "Tonton Demo AI",
     "stat_label": "Kecepatan Pemrosesan AI",
-    "stat_value": "10x Lebih Cepat"
+    "stat_value": "40x Lebih Cepat"
   },
   "features": {
     "badge": "Fitur Bertenaga AI",
@@ -71,48 +68,48 @@
       "description": "Dashboard AI real-time dengan pemodelan prediktif, deteksi anomali, dan peramalan cerdas untuk pengambilan keputusan proaktif."
     }
   },
-  "benefits": {
-    "badge": "Hasil Didorong AI",
-    "title": "Dampak AI yang Terukur pada Bisnis Anda",
-    "reduce_time": {
-      "title": "Kurangi Waktu Pemrosesan hingga 95%",
-      "description": "AI mengubah minggu tinjauan manual menjadi detik analisis otomatis."
+  "whyus": {
+    "badge": "Kenapa Fineksi",
+    "title": "Kami Mengerti Apa yang Sudah Anda Lalui",
+    "large_document": {
+      "title": "Memproses Dokumen yang Banyak",
+      "description": "Kami menerjemahkan semua dokumen ke dalam format digital dan insight dalam hitungan menit."
     },
-    "improve_fraud": {
-      "title": "Tingkatkan Deteksi Penipuan hingga 99,9%",
-      "description": "Jaringan neural menangkap upaya penipuan canggih yang tidak terlihat oleh tinjauan manusia."
+    "long_process": {
+      "title": "Manual dan Waktu Proses yang Lama",
+      "description": "Mempercepat proses hingga 40x dan mengurangi subjektivitas dalam proses analisis."
     },
-    "increase_approval": {
-      "title": "Tingkatkan Tingkat Persetujuan hingga 40%",
-      "description": "AI menemukan pemohon yang layak kredit yang terlewat oleh metode penilaian tradisional."
+    "fraud_detection": {
+      "title": "Pemalsuan yang Susah Terdeteksi",
+      "description": "Memverifikasi dan memberikan indikasi pemalsuan terhadap dokumen yang dianalisa."
     },
-    "scale_infinitely": {
-      "title": "Skala Tak Terbatas dengan AI",
-      "description": "Tangani 100x lebih banyak aplikasi dengan agen AI yang bekerja 24/7."
+    "hidden_risk": {
+      "title": "Risiko Tersembunyi, di Luar Kemampuan Manusia",
+      "description": "AI kami membantu Anda menganalisis semua dokumen, mengidentifikasi risiko dan anomali tersembunyi."
     }
   },
   "workflow": {
     "badge": "Alur Kerja AI",
     "title": "Cara Kerja AI Kami",
-    "subtitle": "Integrasi sederhana, hasil AI revolusioner. Deploy jaringan neural canggih dalam hitungan jam, bukan bulan.",
+    "subtitle": "Integrasi sederhana, hasil AI revolusioner. Deploy AI untuk membantu dalam proses analisa kredit dalam hitungan jam, bukan bulan.",
     "ingestion": {
-      "title": "Penyerapan Dokumen AI",
-      "description": "Unggah dokumen melalui API aman kami. OCR dan computer vision canggih secara instan mendigitalkan dan menyusun format dokumen keuangan apa pun."
+      "title": "Pemrosesan Dokumen dengan AI",
+      "description": "Unggah dokumen melalui API dan Aplikasi kami. Sistem kami akan segera mengekstraksi dan menyusun format dokumen keuangan apa pun."
     },
     "analysis": {
-      "title": "Analisis Jaringan Neural",
-      "description": "Model pembelajaran mendalam mengekstrak data, memverifikasi keaslian, mendeteksi manipulasi, dan melakukan analisis keuangan komprehensif dengan akurasi superhuman."
+      "title": "Analisis berbasis AI",
+      "description": "Model kami akan menganalisa, memverifikasi indikasi pemalsuan, mendeteksi manipulasi, dan melakukan analisis keuangan komprehensif dengan akurasi dan kecepatan yang tinggi."
     },
     "insights": {
-      "title": "Wawasan Cerdas",
-      "description": "Terima laporan yang dihasilkan AI dengan rekomendasi kredit, skor risiko, analitik prediktif, dan wawasan yang dapat ditindaklanjuti untuk keputusan instan."
+      "title": "AI Insight",
+      "description": "Terima laporan yang dihasilkan AI dengan rekomendasi kredit, penilaian risiko, analitik prediktif, dan insight yang dapat digunakan untuk keputusan kredit."
     }
   },
   "stats": {
     "faster": "Proses Lebih Cepat",
     "productivity": "Produktivitas Meningkat",
     "human_error": "Human Error Berkurang", 
-    "fraud": "Mengurangi Resiko Fraud"
+    "fraud": "Mengurangi Risiko Fraud"
   },
   "industries": {
     "badge": "Solusi Berbasis AI",
@@ -175,7 +172,7 @@
     "hero": {
       "badge": "Otomasi Dokumen dengan AI",
       "title": "Analisa Dokumen Berbasis AI untuk Credit Underwriting",
-      "subtitle": "Transformasikan dokumen analisa kredit menjadi insight untuk pengambilan keputusan kredit dengan teknologi AI kami. Dari rekening koran, laporan keuangan hingga dokumen legal dan kontrak, AI kami memproses semuanya dengan akurasi superhuman.",
+      "subtitle": "Transformasikan dokumen analisa kredit menjadi insight untuk pengambilan keputusan kredit dengan teknologi AI kami. Dari rekening koran, laporan keuangan hingga dokumen legal dan kontrak, AI kami memproses semuanya dengan akurasi dan kecepatan yang tinggi.",
       "cta_primary": "Jelajahi Solusi"
     },
     "documents": {
@@ -295,8 +292,8 @@
         "description": "Mendeteksi indikasi pemalsuan pada dokumen yang dianalisa yang sering terlewatkan oleh manusia."
       },
       "cost_effective": {
-        "title": "Produktivitas Meningkat",
-        "description": "Meningkatkan produktivitas tim hingga 80%, sehingga bisnis berkembang."
+        "title": "Insights Analisis Kredit",
+        "description": "Solusi kami tidak hanya membantu ekstraksi, tetapi memberikan insight komprehensif untuk analisis kredit."
       }
     },
     "cta": {
@@ -440,7 +437,7 @@
         "financial": {
           "title": "Dokumen dan Data Keuangan",
           "items": [
-            "Dokumen yang diunggah untuk pemrosesan AI (laporan bank, aplikasi pinjaman, dll.)",
+            "Dokumen yang diunggah untuk pemrosesan AI (rekening koran, aplikasi pinjaman, dll.)",
             "Data yang diekstrak dari dokumen keuangan",
             "Skor kredit dan hasil analisis keuangan",
             "Data deteksi penipuan dan penilaian risiko"

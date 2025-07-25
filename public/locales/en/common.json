@@ -1,31 +1,29 @@
 {
   "site": {
     "title": "Fineksi - AI-Powered Document Automation for Financial Institutions",
-    "description": "Transform your credit process with advanced AI document automation, fraud detection, and cognitive analysis. Trusted by banks, multifinance, and P2P lending platforms.",
+    "description": "Transform your credit process with advanced AI cognitive document automation, fraud detection, and credit analysis with high speed and accuracy. Trusted by banks, multifinance, and P2P lending platforms.",
     "name": "Fineksi"
   },
   "metadata": {
     "about": {
-      "title": "About Us - Leading AI Experts in Financial Technology",
+      "title": "About Us",
       "description": "Meet the world-class AI team behind Fineksi. Learn about our mission to democratize AI for financial institutions and our cutting-edge neural network technology."
     },
     "solutions": {
-      "title": "AI Bank Statement Analysis & Financial Statement Analysis - Fineksi",
+      "title": "AI Bank Statement Analysis & Financial Statement Analysis",
       "description": "Discover Fineksi's comprehensive AI-powered document analysis solutions for banks, multifinance, and P2P lending. Process bank statements, financial reports, legal documents, and more with faster process and high accuracy."
     },
     "privacy": {
-      "title": "Privacy Policy - How Fineksi Protects Your Data",
-      "description": "Learn how Fineksi protects and handles your data with military-grade security, SOC 2 compliance, and GDPR adherence in our AI-powered financial services."
+      "title": "Privacy Policy",
+      "description": "Learn how Fineksi protects and handles your data with high security, ISO 27001 compliance, and GDPR adherence in our AI-powered services."
     },
     "terms": {
-      "title": "Terms and Conditions - Fineksi Service Agreement",
-      "description": "Read the terms and conditions for using Fineksi's document automation and credit analysis services. Updated January 2025."
+      "title": "Terms and Conditions",
+      "description": "Read the terms and conditions for using Fineksi's services."
     }
   },
   "nav": {
-    "features": "AI Features",
-    "benefits": "Benefits", 
-    "industries": "Industries",
+    "whyus": "Why Us", 
     "about": "About Us",
     "demo": "Request Demo",
     "privacy": "Privacy Policy",
@@ -34,13 +32,12 @@
     "home": "Home"
   },
   "hero": {
-    "badge": "Next-Gen AI Technology",
-    "title": "Transform Your Credit Process with AI Intelligence",
-    "subtitle": "Harness the power of advanced AI to streamline document processing, detect tampering with neural networks, and accelerate credit decisions with our cognitive automation platform.",
+    "badge": "AI-Powered Credit Analysis",
+    "title": "Transform Your Credit Underwriting with Advanced AI",
+    "subtitle": "Harness the power of advanced AI to streamline document processing for credit analysis and accelerate credit decisions with high speed and accuracy.",
     "cta_primary": "Request Demo",
-    "cta_secondary": "Watch AI Demo",
     "stat_label": "AI Processing Speed",
-    "stat_value": "10x Faster"
+    "stat_value": "40x Faster"
   },
   "features": {
     "badge": "AI-Powered Features",
@@ -71,41 +68,41 @@
       "description": "Real-time AI dashboards with predictive modeling, anomaly detection, and intelligent forecasting for proactive decision-making."
     }
   },
-  "benefits": {
-    "badge": "AI-Driven Results",
-    "title": "Measurable AI Impact on Your Business",
-    "reduce_time": {
-      "title": "Reduce Processing Time by 95%",
-      "description": "AI transforms weeks of manual review into seconds of automated analysis."
+  "whyus": {
+    "badge": "Why Fineksi",
+    "title": "We Understand What You've Been Going Through",
+    "large_document": {
+      "title": "Processing Large Amounts of Documents",
+      "description": "We translate the documents into a digital format and insight in a minute."
     },
-    "improve_fraud": {
-      "title": "Improve Fraud Detection by 99.9%", 
-      "description": "Neural networks catch sophisticated fraud attempts invisible to human review."
+    "long_process": {
+      "title": "Manual and Long Process Time", 
+      "description": "Faster the process by 40x and reduce subjectivity in the analysis process."
     },
-    "increase_approval": {
-      "title": "Increase Approval Rates by 40%",
-      "description": "AI discovers creditworthy applicants missed by traditional scoring methods."
+    "fraud_detection": {
+      "title": "Hard-to-Detect Frauds",
+      "description": "Verify and provide fraud indications of the documents being analyzed."
     },
-    "scale_infinitely": {
-      "title": "Scale Infinitely with AI",
-      "description": "Handle 100x more applications with AI agents working 24/7."
+    "hidden_risk": {
+      "title": "Hidden Risk, Beyond Human Capability",
+      "description": "Our AI help you analyze all of the documents, identify hidden risk and anomaly."
     }
   },
   "workflow": {
     "badge": "AI Workflow",
     "title": "How Our AI Works",
-    "subtitle": "Simple integration, revolutionary AI results. Deploy advanced neural networks in hours, not months.",
+    "subtitle": "Simple to use, revolutionary AI results. Deploy AI to help you in credit underwriting in hours, not months.",
     "ingestion": {
       "title": "AI Document Ingestion",
-      "description": "Upload documents through our secure API. Advanced OCR and computer vision instantly digitize and structure any financial document format."
+      "description": "Upload documents through our secure API or Application. Our system will instantly extract and structure any financial document format."
     },
     "analysis": {
-      "title": "Neural Network Analysis", 
-      "description": "Deep learning models extract data, verify authenticity, detect tampering, and perform comprehensive financial analysis with superhuman accuracy."
+      "title": "AI-based Analysis", 
+      "description": "Our model will do analysis, verify fraud indication, detect tampering, and perform comprehensive financial analysis with high speed and accuracy."
     },
     "insights": {
-      "title": "Intelligent Insights",
-      "description": "Receive AI-generated reports with credit recommendations, risk scores, predictive analytics, and actionable insights for instant decisions."
+      "title": "AI Insights",
+      "description": "Receive AI-generated reports with credit recommendations, credit risk assessment, predictive analytics, and actionable insights for credit decision."
     }
   },
   "stats": {
@@ -175,7 +172,7 @@
     "hero": {
       "badge": "AI Document Automation",
       "title": "Comprehensive AI-Powered Document Analysis for Credit Underwriting",
-      "subtitle": "Transform credit related documents into actionable insights with our advanced AI technology. From bank statements, financial statements to legal and contract documents, our AI process everything with superhuman accuracy.",
+      "subtitle": "Transform credit related documents into actionable insights with our advanced AI technology. From bank statements, financial statements to legal and contract documents, our AI process everything with high accuracy and speed.",
       "cta_primary": "Explore Solutions"
     },
     "documents": {
@@ -295,8 +292,8 @@
         "description": "Detecting indications of forgery in analyzed documents that are often missed by humans"
       },
       "cost_effective": {
-        "title": "Productivity Increase",
-        "description": "Increase team productivity by up to 80%, so business grows."
+        "title": "Credit Analysis Insights",
+        "description": "Our solution not only help you extract, but provide you with comprehensive credit analysis insights."
       }
     },
     "cta": {

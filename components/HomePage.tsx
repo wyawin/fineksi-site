@@ -314,8 +314,8 @@ const HomePage = ({ locale = 'en' }: { locale?: string }) => {
         </div>
       </section>
 
-      {/* Benefits Section */}
-      <section id="benefits" className="py-20 bg-gray-50 relative" aria-labelledby="benefits-heading">
+      {/* Why Us Section */}
+      <section id="whyus" className="py-20 bg-gray-50 relative" aria-labelledby="whyus-heading">
         <div className="absolute inset-0" aria-hidden="true">
           <div className="absolute top-0 right-0 w-96 h-96 bg-[#1f51fe]/5 rounded-full blur-3xl"></div>
           <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#fad85a]/10 rounded-full blur-3xl"></div>
@@ -325,37 +325,37 @@ const HomePage = ({ locale = 'en' }: { locale?: string }) => {
             <div>
               <div className="flex items-center mb-4">
                 <Network className="h-6 w-6 text-[#1f51fe] mr-2 animate-pulse" aria-hidden="true" />
-                <span className="text-[#1f51fe] font-semibold text-sm uppercase tracking-wider">{t('benefits.badge')}</span>
+                <span className="text-[#1f51fe] font-semibold text-sm uppercase tracking-wider">{t('whyus.badge')}</span>
               </div>
-              <h2 id="benefits-heading" className="text-3xl md:text-4xl font-bold text-gray-900 mb-8">{t('benefits.title')}</h2>
+              <h2 id="whyus-heading" className="text-3xl md:text-4xl font-bold text-gray-900 mb-8">{t('whyus.title')}</h2>
               <div className="space-y-6">
                 <div className="flex items-start">
                   <div className="bg-gradient-to-r from-green-500/10 to-teal-500/10 p-2 rounded-lg mr-4 mt-1">
-                    <Clock className="h-5 w-5 text-green-600" aria-hidden="true" />
+                    <TrendingUp className="h-5 w-5 text-green-600" aria-hidden="true" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-gray-900 mb-2">{t('benefits.reduce_time.title')}</h3>
-                    <p className="text-gray-600">{t('benefits.reduce_time.description')}</p>
+                    <h3 className="text-lg font-semibold text-gray-900 mb-2">{t('whyus.large_document.title')}</h3>
+                    <p className="text-gray-600">{t('whyus.large_document.description')}</p>
                   </div>
                 </div>
                 
                 <div className="flex items-start">
                   <div className="bg-gradient-to-r from-[#072ba4]/10 to-red-500/10 p-2 rounded-lg mr-4 mt-1">
-                    <Shield className="h-5 w-5 text-[#072ba4]" aria-hidden="true" />
+                    <Clock className="h-5 w-5 text-[#072ba4]" aria-hidden="true" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-gray-900 mb-2">{t('benefits.improve_fraud.title')}</h3>
-                    <p className="text-gray-600">{t('benefits.improve_fraud.description')}</p>
+                    <h3 className="text-lg font-semibold text-gray-900 mb-2">{t('whyus.long_process.title')}</h3>
+                    <p className="text-gray-600">{t('whyus.long_process.description')}</p>
                   </div>
                 </div>
                 
                 <div className="flex items-start">
                   <div className="bg-gradient-to-r from-[#1f51fe]/10 to-blue-500/10 p-2 rounded-lg mr-4 mt-1">
-                    <TrendingUp className="h-5 w-5 text-[#1f51fe]" aria-hidden="true" />
+                    <Shield className="h-5 w-5 text-[#1f51fe]" aria-hidden="true" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-gray-900 mb-2">{t('benefits.increase_approval.title')}</h3>
-                    <p className="text-gray-600">{t('benefits.increase_approval.description')}</p>
+                    <h3 className="text-lg font-semibold text-gray-900 mb-2">{t('whyus.fraud_detection.title')}</h3>
+                    <p className="text-gray-600">{t('whyus.fraud_detection.description')}</p>
                   </div>
                 </div>
                 
@@ -364,8 +364,8 @@ const HomePage = ({ locale = 'en' }: { locale?: string }) => {
                     <Bot className="h-5 w-5 text-[#f59e0b]" aria-hidden="true" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-gray-900 mb-2">{t('benefits.scale_infinitely.title')}</h3>
-                    <p className="text-gray-600">{t('benefits.scale_infinitely.description')}</p>
+                    <h3 className="text-lg font-semibold text-gray-900 mb-2">{t('whyus.hidden_risk.title')}</h3>
+                    <p className="text-gray-600">{t('whyus.hidden_risk.description')}</p>
                   </div>
                 </div>
               </div>

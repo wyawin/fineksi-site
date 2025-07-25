@@ -71,7 +71,7 @@ export async function generateMetadata({ params: { locale } }: { params: { local
       card: 'summary_large_image',
       title,
       description,
-      images: ['https://fineksi.com/twitter-image.jpg'],
+      images: ['/images/twitter-image.png'],
       creator: '@fineksi',
     },
     verification: {

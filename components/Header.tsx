@@ -41,15 +41,13 @@ const Header = ({ locale = 'en' }: { locale?: string }) => {
   return (
     <header className="bg-white/95 backdrop-blur-md border-b border-gray-200 sticky top-0 z-50 shadow-sm" role="banner" suppressHydrationWarning>
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" role="navigation" aria-label="Main navigation">
-        <div className="flex justify-between items-center h-16">
+        <div className="flex justify-between items-center h-20">
           <div className="flex items-center">
             <a href={`/${currentLocale}`} className="flex-shrink-0 flex items-center">
               <img 
                 src="/images/1.png" 
                 alt="Fineksi Logo" 
-                className="h-8 w-auto mr-2"
-                width={32}
-                height={32}
+                className="h-11 w-auto mr-2"
               />
             </a>
           </div>
