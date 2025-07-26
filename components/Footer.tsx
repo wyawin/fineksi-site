@@ -1,6 +1,9 @@
-import React from 'react'
+'use client'
+
+import React, { useState, useEffect } from 'react'
 import { Linkedin } from 'lucide-react'
 import { SITE_CONFIG } from '@/config/site'
+import { detectCountryFromIP, isIndonesia } from '@/utils/ipDetection'
 
 // Import translations directly
 import enTranslations from '../public/locales/en/common.json'
@@ -12,6 +15,26 @@ const translations = {
 }
 
 const Footer = ({ locale = 'en' }: { locale?: string }) => {
+  const [isFromIndonesia, setIsFromIndonesia] = useState<boolean | null>(null)
+  const [isLoading, setIsLoading] = useState(true)
+
+  useEffect(() => {
+    const detectLocation = async () => {
+      try {
+        const countryInfo = await detectCountryFromIP()
+        setIsFromIndonesia(isIndonesia(countryInfo.countryCode))
+      } catch (error) {
+        console.error('Failed to detect country:', error)
+        // Default to Singapore entity on error
+        setIsFromIndonesia(false)
+      } finally {
+        setIsLoading(false)
+      }
+    }
+
+    detectLocation()
+  }, [])
+
   const t = (key: string) => {
     const keys = key.split('.')
     let value: any = translations[locale as keyof typeof translations] || translations.en
@@ -24,6 +47,31 @@ const Footer = ({ locale = 'en' }: { locale?: string }) => {
   }
   
   const currentLocale = locale || 'en'
+
+  // Get appropriate legal entity information based on location
+  const getLegalEntityInfo = () => {
+    if (isLoading) {
+      // Show Indonesia entity as default while loading
+      return {
+        name: SITE_CONFIG.idLegalEntity,
+        address: SITE_CONFIG.idAddress
+      }
+    }
+
+    if (isFromIndonesia) {
+      return {
+        name: SITE_CONFIG.idLegalEntity,
+        address: SITE_CONFIG.idAddress
+      }
+    } else {
+      return {
+        name: SITE_CONFIG.sgLegalEntity,
+        address: SITE_CONFIG.sgAddress
+      }
+    }
+  }
+
+  const legalEntity = getLegalEntityInfo()
   
   return (
     <footer className="bg-gray-900 text-white py-12 border-t border-gray-800" role="contentinfo">
@@ -39,11 +87,11 @@ const Footer = ({ locale = 'en' }: { locale?: string }) => {
                 height={32}
               />
             </div>
-            <p className="text-gray-400 mb-2 max-w-md">
-              PT Finskor Teknologi Indonesia
+            <p className="text-gray-400 mb-2 max-w-md" suppressHydrationWarning>
+              {legalEntity.name}
             </p>
-            <p className="text-gray-400 mb-6 max-w-md">
-              Gedung AD Premier Office Park Lantai 9<br/>Jalan TB Simatupang No.5,  Kelurahan Ragunan, Kecamatan Pasar Minggu, Jakarta Selatan
+            <p className="text-gray-400 mb-6 max-w-md" suppressHydrationWarning>
+              {legalEntity.address}
             </p>
             {/* Contact Information */}
             <div className="flex space-x-10 mb-6">
@@ -57,35 +105,48 @@ const Footer = ({ locale = 'en' }: { locale?: string }) => {
               </div>
             </div>
             <div className="flex space-x-4">
-              {/* Komdigi Logo */}
-              <div className="flex flex-col sm:flex-row items-center sm:space-x-3 space-y-2 sm:space-y-0 bg-white/10 px-4 py-3 rounded-lg hover:bg-white/20 transition-colors">
-                <img 
-                  src="/images/komdigi-2024.png" 
-                  alt="Komdigi - Ministry of Communication and Digital Indonesia"
-                  className="w-10 h-10 object-contain bg-white rounded p-1"
-                  width={40}
-                  height={40}
-                />
-                <div className="text-xs text-gray-300 text-center sm:text-left">
-                  <div className="font-semibold">Komdigi</div>
-                  <div className="text-gray-400">{t('footer.compliance_item.registered')}</div>
-                </div>
-              </div>
+             
+              {
+                isFromIndonesia ?
+                  <>
+                    {/* Komdigi Logo */} 
+                    <div className="flex flex-col sm:flex-row items-center sm:space-x-3 space-y-2 sm:space-y-0 bg-white/10 px-4 py-3 rounded-lg hover:bg-white/20 transition-colors">
+                      <img 
+                        src="/images/komdigi-2024.png" 
+                        alt="Komdigi - Ministry of Communication and Digital Indonesia"
+                        className="w-10 h-10 object-contain bg-white rounded p-1"
+                        width={40}
+                        height={40}
+                      />
+                      <div className="text-xs text-gray-300 text-center sm:text-left">
+                        <div className="font-semibold">Komdigi</div>
+                        <div className="text-gray-400">{t('footer.compliance_item.registered')}</div>
+                      </div>
+                    </div>
+                  </>
+                : null
+              }
               
-              {/* AFTECh Logo */}
-              <div className="flex flex-col sm:flex-row items-center sm:space-x-3 space-y-2 sm:space-y-0 bg-white/10 px-4 py-3 rounded-lg hover:bg-white/20 transition-colors">
-                <img 
-                  src="/images/fintech-aftech.png" 
-                  alt="AFTECH - Asosiasi Fintech Indonesia (Indonesian Fintech Association)"
-                  className="w-10 h-10 object-contain bg-white rounded p-1"
-                  width={40}
-                  height={40}
-                />
-                <div className="text-xs text-gray-300 text-center sm:text-left">
-                  <div className="font-semibold">AFTECH</div>
-                  <div className="text-gray-400">{t('footer.compliance_item.member')}</div>
-                </div>
-              </div>
+              {
+                isFromIndonesia ?
+                  <>
+                    {/* AFTECh Logo */}
+                    <div className="flex flex-col sm:flex-row items-center sm:space-x-3 space-y-2 sm:space-y-0 bg-white/10 px-4 py-3 rounded-lg hover:bg-white/20 transition-colors">
+                      <img 
+                        src="/images/fintech-aftech.png" 
+                        alt="AFTECH - Asosiasi Fintech Indonesia (Indonesian Fintech Association)"
+                        className="w-10 h-10 object-contain bg-white rounded p-1"
+                        width={40}
+                        height={40}
+                      />
+                      <div className="text-xs text-gray-300 text-center sm:text-left">
+                        <div className="font-semibold">AFTECH</div>
+                        <div className="text-gray-400">{t('footer.compliance_item.member')}</div>
+                      </div>
+                    </div>
+                  </>
+                : null
+              }
               
               {/* ISO 27001:2013 Logo */}
               <div className="flex flex-col sm:flex-row items-center sm:space-x-3 space-y-2 sm:space-y-0 bg-white/10 px-4 py-3 rounded-lg hover:bg-white/20 transition-colors">
@@ -102,9 +163,13 @@ const Footer = ({ locale = 'en' }: { locale?: string }) => {
                 </div>
               </div>
             </div>
-            <p className="text-gray-400 text-xs mt-6 max-w-md">
-              {t('footer.compliance')}
-            </p>
+            {
+              isFromIndonesia ? 
+              <p className="text-gray-400 text-xs mt-6 max-w-md">
+                {t('footer.compliance')}
+              </p> : null
+            }
+            
           </div>
           
           <div>

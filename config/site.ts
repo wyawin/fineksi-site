@@ -9,7 +9,7 @@ export const SITE_CONFIG = {
     idLegalEntity: process.env.NEXT_PUBLIC_ID_LEGAL_ENTITY || 'PT Finskor Teknologi Indonesia',
     sgLegalEntity: process.env.NEXT_PUBLIC_SG_LEGAL_ENTITY || 'Fineksi Pte Ltd',
     idAddress: process.env.NEXT_PUBLIC_ID_ADDRESS || 'Gedung AD Premier Office Park Lantai 9, Jalan TB Simatupang No.5, Kelurahan Ragunan, Kecamatan Pasar Minggu, Jakarta Selatan',
-    sgAddress: process.env.NEXT_PUBLIC_SG_ADDRESS || '160 ROBINSON ROAD #14-04 SINGAPORE (068914)',
+    sgAddress: process.env.NEXT_PUBLIC_SG_ADDRESS || '160 Robinson Road #14-04, Singapore 068914',
     linkedinLink: process.env.NEXT_PUBLIC_LINKEDIN_URL || 'https://linkedin.com/company/finskor',
     twitterLink: process.env.NEXT_PUBLIC_TWITTER_URL || 'https://twitter.com/fineksiofficial',
     instagramLink: process.env.NEXT_PUBLIC_INSTAGRAM_URL || 'https://www.instagram.com/fineksi.official/',

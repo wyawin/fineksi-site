@@ -17,7 +17,7 @@ const nextConfig = {
               "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://assets.calendly.com",
               "img-src 'self' data: blob: https://www.google-analytics.com https://www.googletagmanager.com https://assets.calendly.com https://*.stripe.com",
               "font-src 'self' data: https://fonts.gstatic.com https://assets.calendly.com",
-              "connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://www.googletagmanager.com https://calendly.com https://api.calendly.com https://api.stripe.com",
+              "connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://www.googletagmanager.com https://calendly.com https://api.calendly.com https://ipapi.co https://ip-api.com https://ipinfo.io",
               "frame-src 'self' https://calendly.com",
               "media-src 'self'",
               "object-src 'none'",
