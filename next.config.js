@@ -3,7 +3,9 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   // Disable client-side navigation optimizations
-
+  experimental: {
+    appDir: true,
+  },
   // Force full page reloads for navigation
   async headers() {
     return [
