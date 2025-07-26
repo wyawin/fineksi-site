@@ -3,9 +3,6 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   // Disable client-side navigation optimizations
-  experimental: {
-    appDir: true,
-  },
   // Force full page reloads for navigation
   async headers() {
     return [
@@ -20,7 +17,7 @@ const nextConfig = {
               "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com https://calendly.com https://assets.calendly.com",
               "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://assets.calendly.com",
               "img-src 'self' data: blob: https://images.pexels.com https://www.google-analytics.com https://www.googletagmanager.com https://assets.calendly.com",
-              "font-src 'self' https://fonts.gstatic.com https://assets.calendly.com",
+              "font-src 'self' data: https://fonts.gstatic.com https://assets.calendly.com",
               "connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://www.googletagmanager.com https://calendly.com https://api.calendly.com",
               "frame-src 'self' https://calendly.com",
               "object-src 'none'",

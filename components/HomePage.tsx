@@ -26,6 +26,14 @@ import {
   Scan
 } from 'lucide-react'
 import { SITE_CONFIG } from '@/config/site'
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay, Navigation, Pagination } from 'swiper/modules';
+
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/autoplay';
 
 // Import translations directly
 import enTranslations from '../public/locales/en/common.json'
@@ -188,7 +196,7 @@ const HomePage = ({ locale = 'en' }: { locale?: string }) => {
       </section>
 
       {/* Client Logo Carousel Section */}
-      <section className="py-20 bg-white relative overflow-hidden" aria-labelledby="clients-heading">
+      <section className="py-5 bg-white relative overflow-hidden" aria-labelledby="clients-heading">
         <div className="absolute inset-0" aria-hidden="true">
           <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-[#1f51fe]/5 rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-[#fad85a]/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
@@ -198,35 +206,61 @@ const HomePage = ({ locale = 'en' }: { locale?: string }) => {
           {/* Logo Carousel */}
           <div className="relative">
             <div className="overflow-hidden">
-              <div className="flex animate-marquee hover:pause-marquee">
-                {/* First set of logos */}
-                <div className="flex items-center justify-around min-w-full flex-shrink-0 gap-8 md:gap-12">
-                  {logos.map((client: any) => (
-                    <div key={`first-${client.id}`} className="flex-shrink-0 group">
-                      <img 
-                        src={client.image}
-                        alt={`${client.name}`}
-                        className="h-8 md:h-8 w-auto"
-                        title={client.name}
-                      />
-                    </div>
-                  ))}
-                </div>
-                
-                {/* Second set of logos (duplicate for seamless loop) */}
-                <div className="flex items-center justify-around min-w-full flex-shrink-0 gap-8 md:gap-12 ml-8 md:ml-12">
-                  {logos.map((client: any) => (
-                    <div key={`second-${client.id}`} className="flex-shrink-0 group cursor-pointer">
-                      <img 
-                        src={client.image}
-                        alt={`${client.name}`}
-                        className="h-8 md:h-8 w-auto"
-                        title={client.name}
-                      />
-                    </div>
-                  ))}
-                </div>
-              </div>
+              {/* Left fade overlay */}
+              <div className="absolute left-0 top-0 w-20 h-full bg-gradient-to-r from-white to-transparent z-10 pointer-events-none"></div>
+              
+              {/* Right fade overlay */}
+              <div className="absolute right-0 top-0 w-20 h-full bg-gradient-to-l from-white to-transparent z-10 pointer-events-none"></div>
+              
+              <Swiper
+                modules={[Autoplay, Navigation, Pagination]}
+                spaceBetween={15}
+                slidesPerView={2}
+                autoplay={{
+                  delay: 0,
+                  disableOnInteraction: false,
+                  pauseOnMouseEnter: false,
+                }}
+                speed={2000}
+                loop={true}
+                allowTouchMove={true}
+                breakpoints={{
+                  640: {
+                    slidesPerView: 3,
+                    spaceBetween: 20,
+                  },
+                  768: {
+                    slidesPerView: 4,
+                    spaceBetween: 25,
+                  },
+                  1024: {
+                    slidesPerView: 5,
+                    spaceBetween: 30,
+                  },
+                  1280: {
+                    slidesPerView: 6,
+                    spaceBetween: 35,
+                  },
+                }}
+                className="logo-slider"
+              >
+                {logos.map((logo, index) => {
+                  return (
+                    <SwiperSlide key={`${logo.name}-${logo.id}`}>
+                      <div className="group flex flex-col p-6 items-center justify-center">
+                        <div className=" h-20 flex items-center justify-center">
+                          <img 
+                            src={logo.image}
+                            alt={logo.name}
+                            className=" max-h-12 w-auto h-auto object-contain"
+                            loading="lazy"
+                          />
+                        </div>
+                      </div>
+                    </SwiperSlide>
+                  );
+                })}
+              </Swiper>
             </div>
             
             {/* Gradient overlays for seamless effect */}
