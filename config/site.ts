@@ -15,5 +15,6 @@ export const SITE_CONFIG = {
     instagramLink: process.env.NEXT_PUBLIC_INSTAGRAM_URL || 'https://www.instagram.com/fineksi.official/',
     blogLink: process.env.NEXT_PUBLIC_BLOG_URL || 'https://blog.fineksi.com',
     industry: process.env.NEXT_PUBLIC_INDUSTRY || 'Information Technology',
-    foundingYear: process.env.NEXT_PUBLIC_FOUNDING_YEAR || '2024'
+    foundingYear: process.env.NEXT_PUBLIC_FOUNDING_YEAR || '2024',
+    gaTrackingId: process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || ''
 } as const

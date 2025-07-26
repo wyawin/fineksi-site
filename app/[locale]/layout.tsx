@@ -5,6 +5,8 @@ import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import { notFound } from 'next/navigation'
 import { SITE_CONFIG } from '@/config/site'
+import Script from 'next/script'
+import GoogleAnalytics from '@/components/GoogleAnalytics'
 
 // Import translations directly
 import enTranslations from '../../public/locales/en/common.json'
@@ -122,6 +124,21 @@ export default function LocaleLayout({
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+        
+        {/* Google Analytics */}
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${SITE_CONFIG.gaTrackingId}`}
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${SITE_CONFIG.gaTrackingId}');
+          `}
+        </Script>
+        
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -154,6 +171,7 @@ export default function LocaleLayout({
       </head>
       <body className={inter.className}>
         <div className="min-h-screen bg-white">
+          <GoogleAnalytics />
           <Header locale={locale} />
           <main>
             {children}
