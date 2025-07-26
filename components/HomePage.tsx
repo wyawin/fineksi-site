@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState, useEffect, useRef } from 'react'
+import React, { useState } from 'react'
 import Image from 'next/image'
 import { 
   Shield, 
@@ -44,37 +44,6 @@ const translations = {
   id: idTranslations
 }
 
-// Custom hook for scroll animations
-const useScrollAnimation = (threshold = 0.1) => {
-  const [isVisible, setIsVisible] = useState(false)
-  const ref = useRef<HTMLDivElement>(null)
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true)
-          // Once visible, stop observing to prevent re-triggering
-          observer.unobserve(entry.target)
-        }
-      },
-      { threshold }
-    )
-
-    if (ref.current) {
-      observer.observe(ref.current)
-    }
-
-    return () => {
-      if (ref.current) {
-        observer.unobserve(ref.current)
-      }
-    }
-  }, [threshold])
-
-  return [ref, isVisible] as const
-}
-
 const HomePage = ({ locale = 'en' }: { locale?: string }) => {
   const t = (key: string) => {
     const keys = key.split('.')
@@ -86,16 +55,6 @@ const HomePage = ({ locale = 'en' }: { locale?: string }) => {
     
     return value || key
   }
-
-  // Scroll animation refs
-  const [heroRef, heroVisible] = useScrollAnimation(0.1)
-  const [clientsRef, clientsVisible] = useScrollAnimation(0.1)
-  const [featuresRef, featuresVisible] = useScrollAnimation(0.1)
-  const [whyUsRef, whyUsVisible] = useScrollAnimation(0.1)
-  const [workflowRef, workflowVisible] = useScrollAnimation(0.1)
-  const [statsRef, statsVisible] = useScrollAnimation(0.1)
-  const [industriesRef, industriesVisible] = useScrollAnimation(0.1)
-  const [contactRef, contactVisible] = useScrollAnimation(0.1)
 
   const logos = [
     {
@@ -168,10 +127,7 @@ const HomePage = ({ locale = 'en' }: { locale?: string }) => {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section 
-        className="relative bg-gradient-to-br from-blue-50 via-white to-yellow-50 pt-16 pb-20 overflow-hidden" 
-        aria-labelledby="hero-heading"
-      >
+      <section className="relative bg-gradient-to-br from-blue-50 via-white to-yellow-50 pt-16 pb-20 overflow-hidden" aria-labelledby="hero-heading">
         {/* Animated Background */}
         <div className="absolute inset-0" aria-hidden="true">
           <div className="absolute top-0 left-1/4 w-96 h-96 bg-[#1f51fe]/5 rounded-full blur-3xl animate-pulse"></div>
@@ -187,12 +143,7 @@ const HomePage = ({ locale = 'en' }: { locale?: string }) => {
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="lg:grid lg:grid-cols-12 lg:gap-8 items-center">
-            <div 
-              ref={heroRef}
-              className={`lg:col-span-6 relative z-10 transition-all duration-1000 ${
-                heroVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-              }`}
-            >
+            <div className="lg:col-span-6 relative z-10">
               <div className="text-center lg:text-left">
                 <div className="flex items-center justify-center lg:justify-start mb-4">
                   <Sparkles className="h-6 w-6 text-[#1f51fe] mr-2 animate-pulse" aria-hidden="true" />
@@ -216,9 +167,7 @@ const HomePage = ({ locale = 'en' }: { locale?: string }) => {
                 </div>
               </div>
             </div>
-            <div className={`lg:col-span-6 mt-12 lg:mt-0 relative z-10 transition-all duration-1000 ${
-              heroVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-            }`} style={{ transitionDelay: heroVisible ? '200ms' : '0ms' }}>
+            <div className="lg:col-span-6 mt-12 lg:mt-0 relative z-10">
               <div className="relative">
                 <div className="absolute inset-0 bg-gradient-to-r from-[#1f51fe]/10 to-[#fad85a]/10 rounded-2xl blur-xl" aria-hidden="true"></div>
                 <Image 
@@ -247,21 +196,13 @@ const HomePage = ({ locale = 'en' }: { locale?: string }) => {
       </section>
 
       {/* Client Logo Carousel Section */}
-      <section 
-        className="py-5 bg-white relative overflow-hidden" 
-        aria-labelledby="clients-heading"
-      >
+      <section className="py-5 bg-white relative overflow-hidden" aria-labelledby="clients-heading">
         <div className="absolute inset-0" aria-hidden="true">
           <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-[#1f51fe]/5 rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-[#fad85a]/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
         </div>
         
-        <div 
-          ref={clientsRef}
-          className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 transition-all duration-1000 ${
-            clientsVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-          }`}
-        >
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           {/* Logo Carousel */}
           <div className="relative">
             <div className="overflow-hidden">
@@ -330,19 +271,10 @@ const HomePage = ({ locale = 'en' }: { locale?: string }) => {
       </section>
 
       {/* Features Section */}
-      <section 
-        id="features" 
-        className="py-20 bg-white relative" 
-        aria-labelledby="features-heading"
-      >
+      <section id="features" className="py-20 bg-white relative" aria-labelledby="features-heading">
         <div className="absolute inset-0 bg-gradient-to-b from-gray-50/50 via-white to-gray-50/50" aria-hidden="true"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div 
-            ref={featuresRef}
-            className={`text-center mb-16 relative z-10 transition-all duration-1000 ${
-              featuresVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-            }`}
-          >
+          <div className="text-center mb-16 relative z-10">
             <div className="flex items-center justify-center mb-4">
               <Cpu className="h-8 w-8 text-[#1f51fe] mr-3 animate-pulse" aria-hidden="true" />
               <span className="text-[#1f51fe] font-semibold text-sm uppercase tracking-wider">{t('features.badge')}</span>
@@ -354,9 +286,7 @@ const HomePage = ({ locale = 'en' }: { locale?: string }) => {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 relative z-10">
-            <article className={`bg-white p-8 rounded-2xl border border-gray-200 hover:border-[#1f51fe]/30 hover:shadow-lg hover:shadow-[#1f51fe]/10 transition-all duration-500 group ${
-              featuresVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-            }`} style={{ transitionDelay: featuresVisible ? '400ms' : '0ms' }}>
+            <article className="bg-white p-8 rounded-2xl border border-gray-200 hover:border-[#1f51fe]/30 hover:shadow-lg hover:shadow-[#1f51fe]/10 transition-all duration-300 group">
               <div className="bg-gradient-to-r from-[#1f51fe]/10 to-blue-500/10 p-3 rounded-lg w-fit mb-6 group-hover:scale-110 transition-transform">
                 <FileCheck className="h-8 w-8 text-[#1f51fe]" aria-hidden="true" />
               </div>
@@ -366,9 +296,7 @@ const HomePage = ({ locale = 'en' }: { locale?: string }) => {
               </p>
             </article>
 
-            <article className={`bg-white p-8 rounded-2xl border border-gray-200 hover:border-[#072ba4]/30 hover:shadow-lg hover:shadow-[#072ba4]/10 transition-all duration-500 group ${
-              featuresVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-            }`} style={{ transitionDelay: featuresVisible ? '500ms' : '0ms' }}>
+            <article className="bg-white p-8 rounded-2xl border border-gray-200 hover:border-[#072ba4]/30 hover:shadow-lg hover:shadow-[#072ba4]/10 transition-all duration-300 group">
               <div className="bg-gradient-to-r from-[#072ba4]/10 to-red-500/10 p-3 rounded-lg w-fit mb-6 group-hover:scale-110 transition-transform">
                 <Shield className="h-8 w-8 text-[#072ba4]" aria-hidden="true" />
               </div>
@@ -378,9 +306,7 @@ const HomePage = ({ locale = 'en' }: { locale?: string }) => {
               </p>
             </article>
 
-            <article className={`bg-white p-8 rounded-2xl border border-gray-200 hover:border-[#fad85a]/50 hover:shadow-lg hover:shadow-[#fad85a]/20 transition-all duration-500 group ${
-              featuresVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-            }`} style={{ transitionDelay: featuresVisible ? '600ms' : '0ms' }}>
+            <article className="bg-white p-8 rounded-2xl border border-gray-200 hover:border-[#fad85a]/50 hover:shadow-lg hover:shadow-[#fad85a]/20 transition-all duration-300 group">
               <div className="bg-gradient-to-r from-[#fad85a]/20 to-yellow-500/20 p-3 rounded-lg w-fit mb-6 group-hover:scale-110 transition-transform">
                 <Brain className="h-8 w-8 text-[#f59e0b] animate-pulse" aria-hidden="true" />
               </div>
@@ -390,9 +316,7 @@ const HomePage = ({ locale = 'en' }: { locale?: string }) => {
               </p>
             </article>
 
-            <article className={`bg-white p-8 rounded-2xl border border-gray-200 hover:border-green-500/30 hover:shadow-lg hover:shadow-green-500/10 transition-all duration-500 group ${
-              featuresVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-            }`} style={{ transitionDelay: featuresVisible ? '700ms' : '0ms' }}>
+            <article className="bg-white p-8 rounded-2xl border border-gray-200 hover:border-green-500/30 hover:shadow-lg hover:shadow-green-500/10 transition-all duration-300 group">
               <div className="bg-gradient-to-r from-green-500/10 to-teal-500/10 p-3 rounded-lg w-fit mb-6 group-hover:scale-110 transition-transform">
                 <Zap className="h-8 w-8 text-green-600" aria-hidden="true" />
               </div>
@@ -402,9 +326,7 @@ const HomePage = ({ locale = 'en' }: { locale?: string }) => {
               </p>
             </article>
 
-            <article className={`bg-white p-8 rounded-2xl border border-gray-200 hover:border-indigo-500/30 hover:shadow-lg hover:shadow-indigo-500/10 transition-all duration-500 group ${
-              featuresVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-            }`} style={{ transitionDelay: featuresVisible ? '800ms' : '0ms' }}>
+            <article className="bg-white p-8 rounded-2xl border border-gray-200 hover:border-indigo-500/30 hover:shadow-lg hover:shadow-indigo-500/10 transition-all duration-300 group">
               <div className="bg-gradient-to-r from-indigo-500/10 to-purple-500/10 p-3 rounded-lg w-fit mb-6 group-hover:scale-110 transition-transform">
                 <Lock className="h-8 w-8 text-indigo-600" aria-hidden="true" />
               </div>
@@ -414,9 +336,7 @@ const HomePage = ({ locale = 'en' }: { locale?: string }) => {
               </p>
             </article>
 
-            <article className={`bg-white p-8 rounded-2xl border border-gray-200 hover:border-orange-500/30 hover:shadow-lg hover:shadow-orange-500/10 transition-all duration-500 group ${
-              featuresVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-            }`} style={{ transitionDelay: featuresVisible ? '900ms' : '0ms' }}>
+            <article className="bg-white p-8 rounded-2xl border border-gray-200 hover:border-orange-500/30 hover:shadow-lg hover:shadow-orange-500/10 transition-all duration-300 group">
               <div className="bg-gradient-to-r from-orange-500/10 to-red-500/10 p-3 rounded-lg w-fit mb-6 group-hover:scale-110 transition-transform">
                 <BarChart3 className="h-8 w-8 text-orange-600" aria-hidden="true" />
               </div>
@@ -430,23 +350,14 @@ const HomePage = ({ locale = 'en' }: { locale?: string }) => {
       </section>
 
       {/* Why Us Section */}
-      <section 
-        id="whyus" 
-        className="py-20 bg-gray-50 relative" 
-        aria-labelledby="whyus-heading"
-      >
+      <section id="whyus" className="py-20 bg-gray-50 relative" aria-labelledby="whyus-heading">
         <div className="absolute inset-0" aria-hidden="true">
           <div className="absolute top-0 right-0 w-96 h-96 bg-[#1f51fe]/5 rounded-full blur-3xl"></div>
           <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#fad85a]/10 rounded-full blur-3xl"></div>
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div 
-            ref={whyUsRef}
-            className="lg:grid lg:grid-cols-2 lg:gap-16 items-center relative z-10"
-          >
-            <div className={`transition-all duration-1000 ${
-              whyUsVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'
-            }`}>
+          <div className="lg:grid lg:grid-cols-2 lg:gap-16 items-center relative z-10">
+            <div>
               <div className="flex items-center mb-4">
                 <Network className="h-6 w-6 text-[#1f51fe] mr-2 animate-pulse" aria-hidden="true" />
                 <span className="text-[#1f51fe] font-semibold text-sm uppercase tracking-wider">{t('whyus.badge')}</span>
@@ -494,9 +405,7 @@ const HomePage = ({ locale = 'en' }: { locale?: string }) => {
                 </div>
               </div>
             </div>
-            <div className={`mt-12 lg:mt-0 transition-all duration-1000 ${
-              whyUsVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'
-            }`} style={{ transitionDelay: whyUsVisible ? '200ms' : '0ms' }}>
+            <div className="mt-12 lg:mt-0">
               <div className="relative">
                 <div className="absolute inset-0 blur-xl" aria-hidden="true"></div>
                 <Image 
@@ -513,18 +422,10 @@ const HomePage = ({ locale = 'en' }: { locale?: string }) => {
       </section>
 
       {/* How It Works */}
-      <section 
-        className="py-20 bg-white relative" 
-        aria-labelledby="how-it-works-heading"
-      >
+      <section className="py-20 bg-white relative" aria-labelledby="how-it-works-heading">
         <div className="absolute inset-0 bg-gradient-to-b from-gray-50/50 via-white to-gray-50/50" aria-hidden="true"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div 
-            ref={workflowRef}
-            className={`text-center mb-16 relative z-10 transition-all duration-1000 ${
-              workflowVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-            }`}
-          >
+          <div className="text-center mb-16 relative z-10">
             <div className="flex items-center justify-center mb-4">
               <Layers className="h-6 w-6 text-[#1f51fe] mr-2 animate-pulse" aria-hidden="true" />
               <span className="text-[#1f51fe] font-semibold text-sm uppercase tracking-wider">{t('workflow.badge')}</span>
@@ -536,9 +437,7 @@ const HomePage = ({ locale = 'en' }: { locale?: string }) => {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8 relative z-10">
-            <div className={`text-center group transition-all duration-700 ${
-              workflowVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-            }`} style={{ transitionDelay: workflowVisible ? '200ms' : '0ms' }} role="article">
+            <div className="text-center group" role="article">
               <div className="relative">
                 <div className="bg-gradient-to-r from-[#1f51fe] to-[#072ba4] text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6 group-hover:scale-110 transition-transform duration-200 shadow-lg shadow-[#1f51fe]/25">
                   <Scan className="h-8 w-8" aria-hidden="true" />
@@ -551,9 +450,7 @@ const HomePage = ({ locale = 'en' }: { locale?: string }) => {
               </p>
             </div>
 
-            <div className={`text-center group transition-all duration-700 ${
-              workflowVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-            }`} style={{ transitionDelay: workflowVisible ? '400ms' : '0ms' }} role="article">
+            <div className="text-center group" role="article">
               <div className="relative">
                 <div className="bg-gradient-to-r from-[#fad85a] to-[#f59e0b] text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6 group-hover:scale-110 transition-transform duration-200 shadow-lg shadow-[#fad85a]/25">
                   <Brain className="h-8 w-8 animate-pulse" aria-hidden="true" />
@@ -566,9 +463,7 @@ const HomePage = ({ locale = 'en' }: { locale?: string }) => {
               </p>
             </div>
 
-            <div className={`text-center group transition-all duration-700 ${
-              workflowVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-            }`} style={{ transitionDelay: workflowVisible ? '600ms' : '0ms' }} role="article">
+            <div className="text-center group" role="article">
               <div className="relative">
                 <div className="bg-gradient-to-r from-green-500 to-teal-600 text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6 group-hover:scale-110 transition-transform duration-200 shadow-lg shadow-green-500/25">
                   <Sparkles className="h-8 w-8" aria-hidden="true" />
@@ -585,35 +480,23 @@ const HomePage = ({ locale = 'en' }: { locale?: string }) => {
       </section>
 
       {/* Stats Section */}
-      <section 
-        className="py-16 bg-gradient-to-r from-[#1f51fe]/5 via-[#fad85a]/5 to-[#1f51fe]/5 border-y border-[#1f51fe]/10" 
-        aria-labelledby="stats-heading"
-      >
+      <section className="py-16 bg-gradient-to-r from-[#1f51fe]/5 via-[#fad85a]/5 to-[#1f51fe]/5 border-y border-[#1f51fe]/10" aria-labelledby="stats-heading">
         <h2 id="stats-heading" className="sr-only">Solutions</h2>
-        <div 
-          ref={statsRef}
-          className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
-        >
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-3 md:grid-cols-3 gap-8 text-center">
-            <div className={`group transition-all duration-700 ${
-              statsVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
-            }`}>
+            <div className="group">
               <div className="text-4xl font-bold bg-gradient-to-r from-[#1f51fe] to-[#072ba4] bg-clip-text text-transparent mb-2 group-hover:scale-110 transition-transform">
                 40x
               </div>
               <div className="text-gray-600 text-sm">{t('stats.faster')}</div>
             </div>
-            <div className={`group transition-all duration-700 ${
-              statsVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
-            }`} style={{ transitionDelay: statsVisible ? '200ms' : '0ms' }}>
+            <div className="group">
               <div className="text-4xl font-bold bg-gradient-to-r from-[#fad85a] to-[#f59e0b] bg-clip-text text-transparent mb-2 group-hover:scale-110 transition-transform">
                 80%
               </div>
               <div className="text-gray-600 text-sm">{t('stats.productivity')}</div>
             </div>
-            <div className={`group transition-all duration-700 ${
-              statsVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
-            }`} style={{ transitionDelay: statsVisible ? '400ms' : '0ms' }}>
+            <div className="group">
               <div className="text-4xl font-bold bg-gradient-to-r from-green-500 to-teal-500 bg-clip-text text-transparent mb-2 group-hover:scale-110 transition-transform">
                 95%
               </div>
@@ -624,22 +507,13 @@ const HomePage = ({ locale = 'en' }: { locale?: string }) => {
       </section>
 
       {/* Industries Section */}
-      <section 
-        id="industries" 
-        className="py-20 bg-gray-50 relative" 
-        aria-labelledby="industries-heading"
-      >
+      <section id="industries" className="py-20 bg-gray-50 relative" aria-labelledby="industries-heading">
         <div className="absolute inset-0" aria-hidden="true">
           <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-[#1f51fe]/5 rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-[#fad85a]/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div 
-            ref={industriesRef}
-            className={`text-center mb-16 relative z-10 transition-all duration-1000 ${
-              industriesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-            }`}
-          >
+          <div className="text-center mb-16 relative z-10">
             <div className="flex items-center justify-center mb-4">
               <Building2 className="h-6 w-6 text-[#1f51fe] mr-2" aria-hidden="true" />
               <span className="text-[#1f51fe] font-semibold text-sm uppercase tracking-wider">{t('industries.badge')}</span>
@@ -651,9 +525,7 @@ const HomePage = ({ locale = 'en' }: { locale?: string }) => {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8 relative z-10">
-            <article className={`bg-white p-8 rounded-2xl border border-gray-200 hover:border-[#1f51fe]/30 shadow-lg hover:shadow-[#1f51fe]/10 transition-all duration-700 group ${
-              industriesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-            }`} style={{ transitionDelay: industriesVisible ? '200ms' : '0ms' }}>
+            <article className="bg-white p-8 rounded-2xl border border-gray-200 hover:border-[#1f51fe]/30 shadow-lg hover:shadow-[#1f51fe]/10 transition-all duration-300 group">
               <div className="bg-gradient-to-r from-[#1f51fe]/10 to-blue-500/10 p-4 rounded-lg w-fit mb-6 group-hover:scale-110 transition-transform">
                 <Building2 className="h-10 w-10 text-[#1f51fe]" aria-hidden="true" />
               </div>
@@ -671,9 +543,7 @@ const HomePage = ({ locale = 'en' }: { locale?: string }) => {
               </ul>
             </article>
 
-            <article className={`bg-white p-8 rounded-2xl border border-gray-200 hover:border-[#072ba4]/30 shadow-lg hover:shadow-[#072ba4]/10 transition-all duration-700 group ${
-              industriesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-            }`} style={{ transitionDelay: industriesVisible ? '400ms' : '0ms' }}>
+            <article className="bg-white p-8 rounded-2xl border border-gray-200 hover:border-[#072ba4]/30 shadow-lg hover:shadow-[#072ba4]/10 transition-all duration-300 group">
               <div className="bg-gradient-to-r from-[#072ba4]/10 to-purple-500/10 p-4 rounded-lg w-fit mb-6 group-hover:scale-110 transition-transform">
                 <CreditCard className="h-10 w-10 text-[#072ba4]" aria-hidden="true" />
               </div>
@@ -691,9 +561,7 @@ const HomePage = ({ locale = 'en' }: { locale?: string }) => {
               </ul>
             </article>
 
-            <article className={`bg-white p-8 rounded-2xl border border-gray-200 hover:border-green-500/30 shadow-lg hover:shadow-green-500/10 transition-all duration-700 group ${
-              industriesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-            }`} style={{ transitionDelay: industriesVisible ? '600ms' : '0ms' }}>
+            <article className="bg-white p-8 rounded-2xl border border-gray-200 hover:border-green-500/30 shadow-lg hover:shadow-green-500/10 transition-all duration-300 group">
               <div className="bg-gradient-to-r from-green-500/10 to-teal-500/10 p-4 rounded-lg w-fit mb-6 group-hover:scale-110 transition-transform">
                 <TrendingUp className="h-10 w-10 text-green-600" aria-hidden="true" />
               </div>
@@ -715,23 +583,14 @@ const HomePage = ({ locale = 'en' }: { locale?: string }) => {
       </section>
 
       {/* CTA Section */}
-      <section 
-        id="contact" 
-        className="py-20 bg-gradient-to-r from-[#1f51fe]/5 via-[#fad85a]/5 to-[#1f51fe]/5 relative overflow-hidden" 
-        aria-labelledby="contact-heading"
-      >
+      <section id="contact" className="py-20 bg-gradient-to-r from-[#1f51fe]/5 via-[#fad85a]/5 to-[#1f51fe]/5 relative overflow-hidden" aria-labelledby="contact-heading">
         <div className="absolute inset-0" aria-hidden="true">
           <div className="absolute top-0 left-1/4 w-96 h-96 bg-[#1f51fe]/10 rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-[#fad85a]/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div 
-            ref={contactRef}
-            className="lg:grid lg:grid-cols-2 lg:gap-16 items-center relative z-10"
-          >
-            <div className={`text-gray-900 transition-all duration-1000 ${
-              contactVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'
-            }`}>
+          <div className="lg:grid lg:grid-cols-2 lg:gap-16 items-center relative z-10">
+            <div className="text-gray-900">
               <div className="flex items-center mb-4">
                 <Sparkles className="h-6 w-6 text-[#1f51fe] mr-2 animate-pulse" aria-hidden="true" />
                 <span className="text-[#1f51fe] font-semibold text-sm uppercase tracking-wider">{t('contact.badge')}</span>
@@ -756,9 +615,7 @@ const HomePage = ({ locale = 'en' }: { locale?: string }) => {
               </div>
             </div>
             
-            <div className={`mt-12 lg:mt-0 transition-all duration-1000 ${
-              contactVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'
-            }`} style={{ transitionDelay: contactVisible ? '200ms' : '0ms' }} id="calendly-contact">
+            <div className="mt-12 lg:mt-0" id="calendly-contact">
               <div className="bg-white/90 backdrop-blur-md p-8 rounded-2xl shadow-xl border border-[#1f51fe]/20">
                 <div className="flex items-center mb-6">
                   <Bot className="h-6 w-6 text-[#1f51fe] mr-2 animate-pulse" aria-hidden="true" />
