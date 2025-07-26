@@ -155,7 +155,9 @@
     "compliance_item": {
       "registered": "Registered",
       "certified": "Certified",
-      "member": "Member"
+      "member": "Member",
+      "secure_access": "Secure Access",
+      "protected": "Protected"
     },
     "whatsapp": "Whatsapp",
     "email": "Email",

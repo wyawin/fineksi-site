@@ -155,7 +155,9 @@
     "compliance_item": {
       "registered": "Terdaftar",
       "certified": "Bersertifikat",
-      "member": "Anggota"
+      "member": "Anggota",
+      "secure_access": "Akses Aman",
+      "protected": "Terlindungi"
     },
     "whatsapp": "Whatsapp",
     "email": "Email",

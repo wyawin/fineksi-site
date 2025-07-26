@@ -130,7 +130,7 @@ const Footer = ({ locale = 'en' }: { locale?: string }) => {
               {
                 isFromIndonesia ?
                   <>
-                    {/* AFTECh Logo */}
+                    {/* AFTECH Logo */}
                     <div className="flex flex-col sm:flex-row items-center sm:space-x-3 space-y-2 sm:space-y-0 bg-white/10 px-4 py-3 rounded-lg hover:bg-white/20 transition-colors">
                       <img 
                         src="/images/fintech-aftech.png" 
@@ -162,6 +162,25 @@ const Footer = ({ locale = 'en' }: { locale?: string }) => {
                   <div className="text-gray-400">{t('footer.compliance_item.certified')}</div>
                 </div>
               </div>
+
+              {
+                !isFromIndonesia ?
+                  <>
+                    {/* Secure Access Logo */}
+                    <div className="flex flex-col sm:flex-row items-center sm:space-x-3 space-y-2 sm:space-y-0 bg-white/10 px-4 py-3 rounded-lg hover:bg-white/20 transition-colors">
+                      <div className="w-10 h-10 bg-gradient-to-r from-green-500 to-teal-600 rounded p-2 flex items-center justify-center">
+                        <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                        </svg>
+                      </div>
+                      <div className="text-xs text-gray-300 text-center sm:text-left">
+                        <div className="font-semibold">{t('footer.compliance_item.secure_access')}</div>
+                        <div className="text-gray-400">{t('footer.compliance_item.protected')}</div>
+                      </div>
+                    </div>
+                  </>
+                : null
+              }
             </div>
             {
               isFromIndonesia ? 
