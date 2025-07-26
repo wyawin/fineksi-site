@@ -1,0 +1,23 @@
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://fineksi.com/sitemap.xml
+
+# Disallow admin and private areas
+Disallow: /admin/
+Disallow: /api/
+Disallow: /_next/
+Disallow: /private/
+
+# Allow important pages
+Allow: /en/
+Allow: /id/
+Allow: /en/about
+Allow: /id/about
+Allow: /en/solutions
+Allow: /id/solutions
+Allow: /en/privacy
+Allow: /id/privacy
+Allow: /en/terms
+Allow: /id/terms

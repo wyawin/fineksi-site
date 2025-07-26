@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google'
 import './globals.css'
 import { SITE_CONFIG } from '@/config/site'
 import Script from 'next/script'
+import { headers } from 'next/headers'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -65,6 +66,10 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+  // Get nonce from headers for CSP
+  const headersList = headers()
+  const nonce = headersList.get('x-nonce') || ''
+  
   return (
     <html lang="id">
       <head>
@@ -81,10 +86,12 @@ export default function RootLayout({
         <Script
           src={`https://www.googletagmanager.com/gtag/js?id=${SITE_CONFIG.gaTrackingId}`}
           strategy="afterInteractive"
+          nonce={nonce}
         />
         <Script 
           id="google-analytics" 
           strategy="afterInteractive"
+          nonce={nonce}
         >
           {`
             window.dataLayer = window.dataLayer || [];
@@ -96,6 +103,7 @@ export default function RootLayout({
         
         <script
           type="application/ld+json"
+          nonce={nonce}
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",

@@ -7,6 +7,7 @@ import { notFound } from 'next/navigation'
 import { SITE_CONFIG } from '@/config/site'
 import Script from 'next/script'
 import GoogleAnalytics from '@/components/GoogleAnalytics'
+import { headers } from 'next/headers'
 
 // Import translations directly
 import enTranslations from '../../public/locales/en/common.json'
@@ -114,6 +115,10 @@ export default function LocaleLayout({
     notFound()
   }
   
+  // Get nonce from headers for CSP
+  const headersList = headers()
+  const nonce = headersList.get('x-nonce') || ''
+  
   return (
     <html lang={locale}>
       <head>
@@ -130,10 +135,12 @@ export default function LocaleLayout({
         <Script
           src={`https://www.googletagmanager.com/gtag/js?id=${SITE_CONFIG.gaTrackingId}`}
           strategy="afterInteractive"
+          nonce={nonce}
         />
         <Script 
           id="google-analytics" 
           strategy="afterInteractive"
+          nonce={nonce}
         >
           {`
             window.dataLayer = window.dataLayer || [];
@@ -145,6 +152,7 @@ export default function LocaleLayout({
         
         <script
           type="application/ld+json"
+          nonce={nonce}
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
