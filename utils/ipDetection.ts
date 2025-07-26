@@ -4,12 +4,23 @@ export interface CountryInfo {
   }
   
   export async function detectCountryFromIP(): Promise<CountryInfo> {
+    // Check if running on localhost and return Indonesia as default
+    if (typeof window !== 'undefined') {
+      const hostname = window.location.hostname;
+      if (hostname === 'localhost' || hostname === '127.0.0.1' || hostname.startsWith('192.168.') || hostname.startsWith('10.') || hostname.startsWith('172.')) {
+        return {
+          country: 'Indonesia',
+          countryCode: 'ID'
+        };
+      }
+    }
+
     try {
       // Try multiple IP geolocation services for reliability
       const services = [
+        'https://ipinfo.io/json',
         'https://ipapi.co/json/',
         'https://ip-api.com/json/',
-        'https://ipinfo.io/json'
       ];
   
       for (const service of services) {
