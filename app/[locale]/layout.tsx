@@ -43,6 +43,7 @@ export async function generateMetadata({ params: { locale } }: { params: { local
   const canonicalUrl = `${SITE_CONFIG.baseUrl}/${locale}`
 
   return {
+    metadataBase: new URL(SITE_CONFIG.baseUrl),
     title: {
       default: title,
       template: `%s | ${t('site.name')}`
@@ -130,7 +131,10 @@ export default function LocaleLayout({
           src={`https://www.googletagmanager.com/gtag/js?id=${SITE_CONFIG.gaTrackingId}`}
           strategy="afterInteractive"
         />
-        <Script id="google-analytics" strategy="afterInteractive">
+        <Script 
+          id="google-analytics" 
+          strategy="afterInteractive"
+        >
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}

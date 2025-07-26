@@ -389,9 +389,9 @@ const SolutionsPage = ({ locale = 'en' }: { locale?: string }) => {
               <div className="relative">
                 <div className="absolute inset-0 bg-gradient-to-r from-[#1f51fe]/10 to-[#fad85a]/10 rounded-2xl blur-xl" aria-hidden="true"></div>
                 <Image 
-                  src="https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=800" 
+                  src="/images/whyus.svg" 
                   alt="AI-powered document analysis dashboard showing real-time processing and validation workflow"
-                  className="relative rounded-2xl shadow-xl border border-[#1f51fe]/20"
+                  className="relative"
                   width={800}
                   height={600}
                 />

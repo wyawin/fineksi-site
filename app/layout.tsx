@@ -11,6 +11,7 @@ export const dynamic = 'force-dynamic'
 export const revalidate = 0
 
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_CONFIG.baseUrl),
   title: {
     default: SITE_CONFIG.siteTitle,
     template: '%s | Fineksi'
@@ -81,7 +82,10 @@ export default function RootLayout({
           src={`https://www.googletagmanager.com/gtag/js?id=${SITE_CONFIG.gaTrackingId}`}
           strategy="afterInteractive"
         />
-        <Script id="google-analytics" strategy="afterInteractive">
+        <Script 
+          id="google-analytics" 
+          strategy="afterInteractive"
+        >
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
