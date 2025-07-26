@@ -1,6 +1,7 @@
 'use client'
 
 import React from 'react'
+import { useRef, useState, useEffect } from 'react'
 import Image from 'next/image'
 import { 
   FileText, 
@@ -38,6 +39,37 @@ const translations = {
   id: idTranslations
 }
 
+// Custom hook for scroll animations
+const useScrollAnimation = (threshold = 0.1) => {
+  const [isVisible, setIsVisible] = useState(false)
+  const ref = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true)
+          // Once visible, stop observing to prevent re-triggering
+          observer.unobserve(entry.target)
+        }
+      },
+      { threshold }
+    )
+
+    if (ref.current) {
+      observer.observe(ref.current)
+    }
+
+    return () => {
+      if (ref.current) {
+        observer.unobserve(ref.current)
+      }
+    }
+  }, [threshold])
+
+  return [ref, isVisible] as const
+}
+
 const SolutionsPage = ({ locale = 'en' }: { locale?: string }) => {
   const t = (key: string) => {
     const keys = key.split('.')
@@ -50,6 +82,13 @@ const SolutionsPage = ({ locale = 'en' }: { locale?: string }) => {
     return value || key
   }
   
+  // Scroll animation refs
+  const [heroRef, heroVisible] = useScrollAnimation(0.1)
+  const [documentsRef, documentsVisible] = useScrollAnimation(0.1)
+  const [workflowRef, workflowVisible] = useScrollAnimation(0.1)
+  const [benefitsRef, benefitsVisible] = useScrollAnimation(0.1)
+  const [ctaRef, ctaVisible] = useScrollAnimation(0.1)
+  
   const currentLocale = locale || 'en'
   
   return (
@@ -61,7 +100,12 @@ const SolutionsPage = ({ locale = 'en' }: { locale?: string }) => {
           <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-[#fad85a]/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
         </div>
         
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div 
+          ref={heroRef}
+          className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 transition-all duration-1000 ${
+            heroVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+          }`}
+        >
           <div className="text-center">
             <div className="flex items-center justify-center mb-4">
               <Scan className="h-8 w-8 text-[#1f51fe] mr-3 animate-pulse" aria-hidden="true" />
@@ -73,7 +117,9 @@ const SolutionsPage = ({ locale = 'en' }: { locale?: string }) => {
             <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
               {t('solutions.hero.subtitle')}
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className={`flex flex-col sm:flex-row gap-4 justify-center transition-all duration-700 ${
+              heroVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
+            }`} style={{ transitionDelay: heroVisible ? '200ms' : '0ms' }}>
               <a 
                 href={`/${currentLocale}#calendly-contact`} 
                 className="bg-gradient-to-r from-[#1f51fe] to-[#072ba4] text-white px-8 py-4 rounded-lg text-lg font-semibold hover:shadow-lg hover:shadow-[#1f51fe]/25 transition-all duration-200 transform hover:scale-105 flex items-center justify-center group"
@@ -91,7 +137,12 @@ const SolutionsPage = ({ locale = 'en' }: { locale?: string }) => {
       <section className="py-20 bg-white relative" aria-labelledby="document-types-heading">
         <div className="absolute inset-0 bg-gradient-to-b from-gray-50/50 via-white to-gray-50/50" aria-hidden="true"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16 relative z-10">
+          <div 
+            ref={documentsRef}
+            className={`text-center mb-16 relative z-10 transition-all duration-1000 ${
+              documentsVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+            }`}
+          >
             <div className="flex items-center justify-center mb-4">
               <FileText className="h-8 w-8 text-[#1f51fe] mr-3" aria-hidden="true" />
               <span className="text-[#1f51fe] font-semibold text-sm uppercase tracking-wider">{t('solutions.documents.badge')}</span>
@@ -104,7 +155,9 @@ const SolutionsPage = ({ locale = 'en' }: { locale?: string }) => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 relative z-10">
             {/* Bank Statement Analysis */}
-            <article className="bg-white p-8 rounded-2xl border border-gray-200 hover:border-[#1f51fe]/30 hover:shadow-lg hover:shadow-[#1f51fe]/10 transition-all duration-300 group">
+            <article className={`bg-white p-8 rounded-2xl border border-gray-200 hover:border-[#1f51fe]/30 hover:shadow-lg hover:shadow-[#1f51fe]/10 transition-all duration-500 group ${
+              documentsVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+            }`} style={{ transitionDelay: documentsVisible ? '200ms' : '0ms' }}>
               <div className="bg-gradient-to-r from-[#1f51fe]/10 to-blue-500/10 p-3 rounded-lg w-fit mb-6 group-hover:scale-110 transition-transform">
                 <Banknote className="h-8 w-8 text-[#1f51fe]" aria-hidden="true" />
               </div>
@@ -123,7 +176,9 @@ const SolutionsPage = ({ locale = 'en' }: { locale?: string }) => {
             </article>
 
             {/* Financial Statement Analysis */}
-            <article className="bg-white p-8 rounded-2xl border border-gray-200 hover:border-[#072ba4]/30 hover:shadow-lg hover:shadow-[#072ba4]/10 transition-all duration-300 group">
+            <article className={`bg-white p-8 rounded-2xl border border-gray-200 hover:border-[#072ba4]/30 hover:shadow-lg hover:shadow-[#072ba4]/10 transition-all duration-500 group ${
+              documentsVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+            }`} style={{ transitionDelay: documentsVisible ? '300ms' : '0ms' }}>
               <div className="bg-gradient-to-r from-[#072ba4]/10 to-purple-500/10 p-3 rounded-lg w-fit mb-6 group-hover:scale-110 transition-transform">
                 <BarChart3 className="h-8 w-8 text-[#072ba4]" aria-hidden="true" />
               </div>
@@ -142,7 +197,9 @@ const SolutionsPage = ({ locale = 'en' }: { locale?: string }) => {
             </article>
 
             {/* Legal Documents */}
-            <article className="bg-white p-8 rounded-2xl border border-gray-200 hover:border-green-500/30 hover:shadow-lg hover:shadow-green-500/10 transition-all duration-300 group">
+            <article className={`bg-white p-8 rounded-2xl border border-gray-200 hover:border-green-500/30 hover:shadow-lg hover:shadow-green-500/10 transition-all duration-500 group ${
+              documentsVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+            }`} style={{ transitionDelay: documentsVisible ? '400ms' : '0ms' }}>
               <div className="bg-gradient-to-r from-green-500/10 to-teal-500/10 p-3 rounded-lg w-fit mb-6 group-hover:scale-110 transition-transform">
                 <Scale className="h-8 w-8 text-green-600" aria-hidden="true" />
               </div>
@@ -161,7 +218,9 @@ const SolutionsPage = ({ locale = 'en' }: { locale?: string }) => {
             </article>
 
             {/* Collateral Documents */}
-            <article className="bg-white p-8 rounded-2xl border border-gray-200 hover:border-orange-500/30 hover:shadow-lg hover:shadow-orange-500/10 transition-all duration-300 group">
+            <article className={`bg-white p-8 rounded-2xl border border-gray-200 hover:border-orange-500/30 hover:shadow-lg hover:shadow-orange-500/10 transition-all duration-500 group ${
+              documentsVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+            }`} style={{ transitionDelay: documentsVisible ? '500ms' : '0ms' }}>
               <div className="bg-gradient-to-r from-orange-500/10 to-red-500/10 p-3 rounded-lg w-fit mb-6 group-hover:scale-110 transition-transform">
                 <Home className="h-8 w-8 text-orange-600" aria-hidden="true" />
               </div>
@@ -180,7 +239,9 @@ const SolutionsPage = ({ locale = 'en' }: { locale?: string }) => {
             </article>
 
             {/* Identity Documents */}
-            <article className="bg-white p-8 rounded-2xl border border-gray-200 hover:border-indigo-500/30 hover:shadow-lg hover:shadow-indigo-500/10 transition-all duration-300 group">
+            <article className={`bg-white p-8 rounded-2xl border border-gray-200 hover:border-indigo-500/30 hover:shadow-lg hover:shadow-indigo-500/10 transition-all duration-500 group ${
+              documentsVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+            }`} style={{ transitionDelay: documentsVisible ? '600ms' : '0ms' }}>
               <div className="bg-gradient-to-r from-indigo-500/10 to-purple-500/10 p-3 rounded-lg w-fit mb-6 group-hover:scale-110 transition-transform">
                 <CreditCard className="h-8 w-8 text-indigo-600" aria-hidden="true" />
               </div>
@@ -199,7 +260,9 @@ const SolutionsPage = ({ locale = 'en' }: { locale?: string }) => {
             </article>
 
             {/* Invoice & Purchase Orders */}
-            <article className="bg-white p-8 rounded-2xl border border-gray-200 hover:border-[#fad85a]/50 hover:shadow-lg hover:shadow-[#fad85a]/20 transition-all duration-300 group">
+            <article className={`bg-white p-8 rounded-2xl border border-gray-200 hover:border-[#fad85a]/50 hover:shadow-lg hover:shadow-[#fad85a]/20 transition-all duration-500 group ${
+              documentsVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+            }`} style={{ transitionDelay: documentsVisible ? '700ms' : '0ms' }}>
               <div className="bg-gradient-to-r from-[#fad85a]/20 to-yellow-500/20 p-3 rounded-lg w-fit mb-6 group-hover:scale-110 transition-transform">
                 <Receipt className="h-8 w-8 text-[#f59e0b]" aria-hidden="true" />
               </div>
@@ -219,7 +282,9 @@ const SolutionsPage = ({ locale = 'en' }: { locale?: string }) => {
           </div>
 
           {/* Additional Documents */}
-          <div className="mt-12 text-center relative z-10">
+          <div className={`mt-12 text-center relative z-10 transition-all duration-1000 ${
+            documentsVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+          }`} style={{ transitionDelay: documentsVisible ? '800ms' : '0ms' }}>
             <div className="bg-gradient-to-r from-[#1f51fe]/5 to-[#fad85a]/5 p-8 rounded-2xl border border-[#1f51fe]/20">
               <div className="flex items-center justify-center mb-4">
                 <Sparkles className="h-6 w-6 text-[#1f51fe] mr-2 animate-pulse" aria-hidden="true" />
@@ -250,7 +315,12 @@ const SolutionsPage = ({ locale = 'en' }: { locale?: string }) => {
           <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-[#fad85a]/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16 relative z-10">
+          <div 
+            ref={workflowRef}
+            className={`text-center mb-16 relative z-10 transition-all duration-1000 ${
+              workflowVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+            }`}
+          >
             <div className="flex items-center justify-center mb-4">
               <Bot className="h-6 w-6 text-[#1f51fe] mr-2 animate-pulse" aria-hidden="true" />
               <span className="text-[#1f51fe] font-semibold text-sm uppercase tracking-wider">{t('solutions.workflow.badge')}</span>
@@ -263,7 +333,9 @@ const SolutionsPage = ({ locale = 'en' }: { locale?: string }) => {
 
           <div className="grid md:grid-cols-4 gap-8 relative z-10">
             {/* Step 1: Upload */}
-            <div className="text-center group" role="article">
+            <div className={`text-center group transition-all duration-700 ${
+              workflowVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+            }`} style={{ transitionDelay: workflowVisible ? '200ms' : '0ms' }} role="article">
               <div className="relative mb-6">
                 <div className="bg-gradient-to-r from-[#1f51fe] to-[#072ba4] text-white w-20 h-20 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4 group-hover:scale-110 transition-transform duration-200 shadow-lg shadow-[#1f51fe]/25">
                   <Upload className="h-10 w-10" aria-hidden="true" />
@@ -280,7 +352,9 @@ const SolutionsPage = ({ locale = 'en' }: { locale?: string }) => {
             </div>
 
             {/* Step 2: AI Process */}
-            <div className="text-center group" role="article">
+            <div className={`text-center group transition-all duration-700 ${
+              workflowVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+            }`} style={{ transitionDelay: workflowVisible ? '400ms' : '0ms' }} role="article">
               <div className="relative mb-6">
                 <div className="bg-gradient-to-r from-[#fad85a] to-[#f59e0b] text-white w-20 h-20 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4 group-hover:scale-110 transition-transform duration-200 shadow-lg shadow-[#fad85a]/25">
                   <Brain className="h-10 w-10 animate-pulse" aria-hidden="true" />
@@ -297,7 +371,9 @@ const SolutionsPage = ({ locale = 'en' }: { locale?: string }) => {
             </div>
 
             {/* Step 3: Human Validation */}
-            <div className="text-center group" role="article">
+            <div className={`text-center group transition-all duration-700 ${
+              workflowVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+            }`} style={{ transitionDelay: workflowVisible ? '600ms' : '0ms' }} role="article">
               <div className="relative mb-6">
                 <div className="bg-gradient-to-r from-green-500 to-teal-600 text-white w-20 h-20 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4 group-hover:scale-110 transition-transform duration-200 shadow-lg shadow-green-500/25">
                   <UserCheck className="h-10 w-10" aria-hidden="true" />
@@ -314,7 +390,9 @@ const SolutionsPage = ({ locale = 'en' }: { locale?: string }) => {
             </div>
 
             {/* Step 4: Credit Analysis Ready */}
-            <div className="text-center group" role="article">
+            <div className={`text-center group transition-all duration-700 ${
+              workflowVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+            }`} style={{ transitionDelay: workflowVisible ? '800ms' : '0ms' }} role="article">
               <div className="relative mb-6">
                 <div className="bg-gradient-to-r from-purple-500 to-indigo-600 text-white w-20 h-20 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4 group-hover:scale-110 transition-transform duration-200 shadow-lg shadow-purple-500/25">
                   <TrendingUp className="h-10 w-10" aria-hidden="true" />
@@ -337,7 +415,12 @@ const SolutionsPage = ({ locale = 'en' }: { locale?: string }) => {
       <section className="py-20 bg-white relative" aria-labelledby="solutions-benefits-heading">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="lg:grid lg:grid-cols-2 lg:gap-16 items-center relative z-10">
-            <div>
+            <div 
+              ref={benefitsRef}
+              className={`transition-all duration-1000 ${
+                benefitsVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'
+              }`}
+            >
               <div className="flex items-center mb-4">
                 <Zap className="h-6 w-6 text-[#1f51fe] mr-2 animate-pulse" aria-hidden="true" />
                 <span className="text-[#1f51fe] font-semibold text-sm uppercase tracking-wider">{t('solutions.benefits.badge')}</span>
@@ -385,7 +468,9 @@ const SolutionsPage = ({ locale = 'en' }: { locale?: string }) => {
                 </div>
               </div>
             </div>
-            <div className="mt-12 lg:mt-0">
+            <div className={`mt-12 lg:mt-0 transition-all duration-1000 ${
+              benefitsVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'
+            }`} style={{ transitionDelay: benefitsVisible ? '200ms' : '0ms' }}>
               <div className="relative">
                 <div className="absolute inset-0 bg-gradient-to-r from-[#1f51fe]/10 to-[#fad85a]/10 rounded-2xl blur-xl" aria-hidden="true"></div>
                 <Image 
@@ -407,7 +492,12 @@ const SolutionsPage = ({ locale = 'en' }: { locale?: string }) => {
           <div className="absolute top-0 left-1/4 w-96 h-96 bg-[#1f51fe]/10 rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-[#fad85a]/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
         </div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+        <div 
+          ref={ctaRef}
+          className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 transition-all duration-1000 ${
+            ctaVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+          }`}
+        >
           <div className="flex items-center justify-center mb-4">
             <Sparkles className="h-6 w-6 text-[#1f51fe] mr-2 animate-pulse" aria-hidden="true" />
             <span className="text-[#1f51fe] font-semibold text-sm uppercase tracking-wider">{t('solutions.cta.badge')}</span>
@@ -416,7 +506,9 @@ const SolutionsPage = ({ locale = 'en' }: { locale?: string }) => {
           <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
             {t('solutions.cta.subtitle')}
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className={`flex flex-col sm:flex-row gap-4 justify-center transition-all duration-700 ${
+            ctaVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
+          }`} style={{ transitionDelay: ctaVisible ? '200ms' : '0ms' }}>
             <a 
               href={`/${currentLocale}#calendly-contact`} 
               className="bg-gradient-to-r from-[#1f51fe] to-[#072ba4] text-white px-8 py-4 rounded-lg text-lg font-semibold hover:shadow-lg hover:shadow-[#1f51fe]/25 transition-all duration-200 transform hover:scale-105 flex items-center justify-center group"
